@@ -4,10 +4,11 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.no.mal
 canonical: http://hl7.no/fhir/ig/mal
-name: Lmdi
+name: Mal
 title: "Mal for implementasjonsguide"
 description: Mal som kan kopieres fritt og brukes som utgangspunkt for en norsk implementasjonsguide
 status: draft
+# FSHOnly: false
 version: 0.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2024+
@@ -26,5 +27,4 @@ publisher:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-  Informasjonsmodell: informasjonsmodell.html
   TOC: toc.html
