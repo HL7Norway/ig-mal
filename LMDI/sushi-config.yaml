@@ -2,21 +2,20 @@
 # │  The properties below are used to create the ImplementationGuide resource. For a list of       │
 # │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: hl7.fhir.no.mal
-canonical: http://hl7.no/fhir/ig/mal
-name: Mal
-title: "Mal for implementasjonsguide"
-description: Mal som kan kopieres fritt og brukes som utgangspunkt for en norsk implementasjonsguide
+id: hl7.fhir.no.lmdi
+canonical: http://hl7.no/fhir/ig/lmdi
+name: Lmdi
+title: "Legemiddeldata fra institusjon til Legemiddelregisteret"
+description: Implementasjonsguide for å overføre data om legemiddelbruk i institusjoner til Legemiddelregisteret
 status: draft
-FSHOnly: false
-version: 0.1.0
+version: 0.9.1
 fhirVersion: 4.0.1
 copyrightYear: 2024+
 releaseLabel: ci-build
 jurisdiction: urn:iso:std:iso:3166#NO "Norway"
 publisher:
-  name: HL7 Norge
-  url: https://www.hl7.no
+  name: Folkehelseinstituttet (FHI)
+  url: https://www.fhi.no
 # dependencies:
 # hl7.fhir.no.basis: 2.1.1
 # hl7.fhir.no.basis: 2.2.0
