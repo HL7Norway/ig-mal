@@ -26,5 +26,5 @@ publisher:
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
-  Home: index.html
-  TOC: toc.html
+#  Home: index.html
+#  TOC: toc.html
