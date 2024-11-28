@@ -4,11 +4,11 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.no.mal
 canonical: http://hl7.no/fhir/ig/mal
-name: Lmdi
-title: "Legemiddeldata fra institusjon til Legemiddelregisteret"
-description: Implementasjonsguide for å overføre data om legemiddelbruk i institusjoner til Legemiddelregisteret
+name: Mal
+title: "TODO"
+description: Implementasjonsguide for å TODO
 status: draft
-version: 0.9.1
+version: 0.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2024+
 releaseLabel: ci-build
