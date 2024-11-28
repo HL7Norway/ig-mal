@@ -1,0 +1,33 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.no/fhir/ig/lmdi/Condition/Diagnose-1-ICD10-OID> a fhir:Condition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Diagnose-1-ICD10-OID"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition-diagnose"^^xsd:anyURI ;
+       fhir:link <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition-diagnose>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Condition Diagnose-1-ICD10-OID</b></p><a name=\"Diagnose-1-ICD10-OID\"> </a><a name=\"hcDiagnose-1-ICD10-OID\"> </a><a name=\"Diagnose-1-ICD10-OID-no-NO\"> </a><p><b>code</b>: <span title=\"Codes:{urn:oid:2.16.578.1.12.4.1.1.7110 R63.3}\">Vanskeligheter med inntak og tilførsel av mat</span></p><p><b>subject</b>: <a href=\"eksempel-pasient-1234567890\">eksempel-pasient-1234567890</a></p></div>"
+  ] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:oid:2.16.578.1.12.4.1.1.7110"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "R63.3" ] ;
+       fhir:display [ fhir:v "Vanskeligheter med inntak og tilførsel av mat" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "eksempel-pasient-1234567890" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

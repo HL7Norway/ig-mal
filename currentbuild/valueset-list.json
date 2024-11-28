@@ -1,0 +1,13 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministration-status",
+      "version" : "0.9.1",
+      "status" : "draft",
+      "name" : "LegemiddeladministreringStatus",
+      "title" : "Status for legemiddeladministrasjon",
+      "description" : "Verdisett som begrenses status til Legemiddeladministrasjon til henholdsvis 'Gjennomført' eller 'Feilregistrert'.",
+      "systems" : ["http://hl7.org/fhir/ValueSet/medication-admin-status"]
+    }
+  ]
+}
