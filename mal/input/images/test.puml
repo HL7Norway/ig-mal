@@ -1,16 +1,16 @@
 @startuml
 
 title Hallo, verden!
-footer SPECIMEN
+footer Undertekst
 
-class Espen
+class Folk
 class Datamaskin
 class Sykkel
-class Yngve
+class Tastatur
 
-Espen <-- Datamaskin
-Espen <-- Sykkel
-Datamaskin <--o Yngve
+Folk <-- Datamaskin
+Folk <-- Sykkel
+Tastatur --o Datamaskin
 
 @enduml
 
