@@ -3,6 +3,3 @@
 Tekst
 
 
----
-
-{% include footer.md %}
