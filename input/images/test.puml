@@ -1,0 +1,14 @@
+@startuml
+
+title Hallo, verden!
+footer SPECIMEN
+
+class Espen
+class Datamaskin
+class Sykkel
+
+Espen <-- Datamaskin
+Espen <-- Sykkel
+
+@enduml
+
