@@ -8,7 +8,7 @@ name: Mal
 title: "Mal for implementasjonsguide"
 description: Mal som kan kopieres fritt og brukes som utgangspunkt for en norsk implementasjonsguide
 status: draft
-# FSHOnly: false
+FSHOnly: false
 version: 0.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2024+
@@ -26,5 +26,5 @@ publisher:
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
-#  Home: index.html
-#  TOC: toc.html
+  Home: index.html
+  TOC: toc.html
