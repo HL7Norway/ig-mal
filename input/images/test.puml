@@ -1,14 +1,14 @@
 @startuml
 
 title Hallo, verden!
-footer SPECIMEN
+footer Dette er en mal!
 
-class Espen
+class Person
 class Datamaskin
 class Sykkel
 
-Espen <-- Datamaskin
-Espen <-- Sykkel
+Person <-- Datamaskin
+Person <-- Sykkel
 
 @enduml
 
