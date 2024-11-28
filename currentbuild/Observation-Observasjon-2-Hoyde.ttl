@@ -6,13 +6,13 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.no/fhir/ig/lmdi/Observation/Observasjon-2-Hoyde> a fhir:Observation ;
+<http://hl7.no/fhir/ig/mal/Observation/Observasjon-2-Hoyde> a fhir:Observation ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "Observasjon-2-Hoyde"] ; # 
   fhir:meta [
      fhir:profile ( [
-       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-observation-tmp"^^xsd:anyURI ;
-       fhir:link <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-observation-tmp>
+       fhir:v "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-observation-tmp"^^xsd:anyURI ;
+       fhir:link <http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-observation-tmp>
      ] )
   ] ; # 
   fhir:text [

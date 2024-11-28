@@ -6,13 +6,13 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.no/fhir/ig/lmdi/Medication/Medisin-1-LegemiddelDose-Oxycodone> a fhir:Medication ;
+<http://hl7.no/fhir/ig/mal/Medication/Medisin-1-LegemiddelDose-Oxycodone> a fhir:Medication ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "Medisin-1-LegemiddelDose-Oxycodone"] ; # 
   fhir:meta [
      fhir:profile ( [
-       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-legemiddel"^^xsd:anyURI ;
-       fhir:link <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-legemiddel>
+       fhir:v "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-legemiddel"^^xsd:anyURI ;
+       fhir:link <http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-legemiddel>
      ] )
   ] ; # 
   fhir:text [

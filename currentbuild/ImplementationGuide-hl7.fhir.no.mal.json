@@ -1,25 +1,25 @@
 {
   "resourceType" : "ImplementationGuide",
-  "id" : "hl7.fhir.no.lmdi",
+  "id" : "hl7.fhir.no.mal",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.no.lmdi</b></p><a name=\"hl7.fhir.no.lmdi\"> </a><a name=\"hchl7.fhir.no.lmdi\"> </a><a name=\"hl7.fhir.no.lmdi-no-NO\"> </a><h2>Lmdi</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi</pre><div><p>Implementasjonsguide for å overføre data om legemiddelbruk i institusjoner til Legemiddelregisteret</p>\n</div></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.no.mal</b></p><a name=\"hl7.fhir.no.mal\"> </a><a name=\"hchl7.fhir.no.mal\"> </a><a name=\"hl7.fhir.no.mal-no-NO\"> </a><h2>Mal</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.no/fhir/ig/mal/ImplementationGuide/hl7.fhir.no.mal</pre><div><p>Implementasjonsguide for å TODO</p>\n</div></div>"
   },
-  "url" : "http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi",
-  "version" : "0.9.1",
-  "name" : "Lmdi",
-  "title" : "Legemiddeldata fra institusjon til Legemiddelregisteret",
+  "url" : "http://hl7.no/fhir/ig/mal/ImplementationGuide/hl7.fhir.no.mal",
+  "version" : "0.1.0",
+  "name" : "Mal",
+  "title" : "TODO",
   "status" : "draft",
-  "date" : "2024-11-28T12:27:32+00:00",
-  "publisher" : "Folkehelseinstituttet (FHI)",
+  "date" : "2024-11-28T12:51:19+00:00",
+  "publisher" : "HL7 Norge",
   "contact" : [{
-    "name" : "Folkehelseinstituttet (FHI)",
+    "name" : "HL7 Norge",
     "telecom" : [{
       "system" : "url",
-      "value" : "https://www.fhi.no"
+      "value" : "https://www.hl7.no"
     }]
   }],
-  "description" : "Implementasjonsguide for å overføre data om legemiddelbruk i institusjoner til Legemiddelregisteret",
+  "description" : "Implementasjonsguide for å TODO",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -27,7 +27,7 @@
       "display" : "Norway"
     }]
   }],
-  "packageId" : "hl7.fhir.no.lmdi",
+  "packageId" : "hl7.fhir.no.mal",
   "license" : "CC0-1.0",
   "fhirVersion" : ["4.0.1"],
   "dependsOn" : [{
@@ -157,7 +157,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "http://hl7.no/fhir/ig/lmdi/history.html"
+        "valueString" : "http://hl7.no/fhir/ig/mal/history.html"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -436,7 +436,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "http://hl7.no/fhir/ig/lmdi/history.html"
+        "valueString" : "http://hl7.no/fhir/ig/mal/history.html"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -615,7 +615,7 @@
       },
       "name" : "Administrering-1-Oralt",
       "description" : "Eksempel på administrering av legemiddel",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-legemiddeladministrasjon"
+      "exampleCanonical" : "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-legemiddeladministrasjon"
     },
     {
       "extension" : [{
@@ -639,7 +639,7 @@
       },
       "name" : "Administrering-2-Infusjon",
       "description" : "Eksempel på administrering av legemiddel - infusjon",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-legemiddeladministrasjon"
+      "exampleCanonical" : "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-legemiddeladministrasjon"
     },
     {
       "extension" : [{
@@ -699,7 +699,7 @@
       },
       "name" : "Diagnose-1-ICD10-OID",
       "description" : "Eksempel på diagnose ICD-10",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition-diagnose"
+      "exampleCanonical" : "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-condition-diagnose"
     },
     {
       "extension" : [{
@@ -711,7 +711,7 @@
       },
       "name" : "Diagnose-2-SNOMED-CT",
       "description" : "Eksempel på diagnose SNOMED CT og ICD-10",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition-diagnose"
+      "exampleCanonical" : "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-condition-diagnose"
     },
     {
       "extension" : [{
@@ -735,7 +735,7 @@
       },
       "name" : "Helsepersonell-1-HPR-nummer",
       "description" : "Eksempel på helsepersonell med HPR-nummer",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"
+      "exampleCanonical" : "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-practitioner"
     },
     {
       "extension" : [{
@@ -759,7 +759,7 @@
       },
       "name" : "Institusjonsopphold-1-Sykehjem",
       "description" : "Eksempel på institusjonsopphold med EpisodeOfCare",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-episodeofcare-institusjonsopphold"
+      "exampleCanonical" : "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-episodeofcare-institusjonsopphold"
     },
     {
       "extension" : [{
@@ -807,7 +807,7 @@
       },
       "name" : "Medisin-1-LegemiddelDose-Oxycodone",
       "description" : "Eksempel på legemiddel",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-legemiddel"
+      "exampleCanonical" : "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-legemiddel"
     },
     {
       "extension" : [{
@@ -819,7 +819,7 @@
       },
       "name" : "Medisin-2-Paracetamol",
       "description" : "Eksempel på legemiddel - Paracetamol - UTKAST",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-legemiddel"
+      "exampleCanonical" : "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-legemiddel"
     },
     {
       "extension" : [{
@@ -831,7 +831,7 @@
       },
       "name" : "Medisin-3-LegemiddelPakning-Monoket",
       "description" : "Eksempel på legemiddel - paking",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-legemiddel"
+      "exampleCanonical" : "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-legemiddel"
     },
     {
       "extension" : [{
@@ -915,7 +915,7 @@
       },
       "name" : "Observasjon-1-Kroppsvekt",
       "description" : "Eksempel på observasjon - kroppsvekt",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-observation-tmp"
+      "exampleCanonical" : "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-observation-tmp"
     },
     {
       "extension" : [{
@@ -927,7 +927,7 @@
       },
       "name" : "Observasjon-2-Hoyde",
       "description" : "Eksempel på observasjon - høyde",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-observation-tmp"
+      "exampleCanonical" : "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-observation-tmp"
     },
     {
       "extension" : [{
@@ -951,7 +951,7 @@
       },
       "name" : "Organisasjon-1-Eldrehjem",
       "description" : "Eksempel på organisasjon - Primærhelsetjeneste",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
+      "exampleCanonical" : "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-organization"
     },
     {
       "extension" : [{
@@ -963,7 +963,7 @@
       },
       "name" : "Organisasjon-2-Spesialist-RESH",
       "description" : "Eksempel på organisasjon - spesialisthelsetjenesten med RESH.",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
+      "exampleCanonical" : "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-organization"
     },
     {
       "extension" : [{
@@ -975,7 +975,7 @@
       },
       "name" : "Organisasjon-3-Spesialist-topp",
       "description" : "Eksempel på organisasjon - spesialisthelsetjenesten med RESH - toppnivå.",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
+      "exampleCanonical" : "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-organization"
     },
     {
       "extension" : [{
@@ -999,7 +999,7 @@
       },
       "name" : "Pasient-1-Uten-FNR",
       "description" : "Eksempel på pasient med kjønn og fødselsdato",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"
+      "exampleCanonical" : "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-patient"
     },
     {
       "extension" : [{
@@ -1011,7 +1011,7 @@
       },
       "name" : "Pasient-2-FNR",
       "description" : "Eksempel på pasient med fødselsnummer",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"
+      "exampleCanonical" : "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-patient"
     },
     {
       "extension" : [{
@@ -1035,7 +1035,7 @@
       },
       "name" : "RolleHelsepersonell-1-Hjemmehjelp",
       "description" : "Eksempel på rolle (Hjemmehjelp), ikke komplett kodeverk",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitionerrole"
+      "exampleCanonical" : "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-practitionerrole"
     },
     {
       "extension" : [{

@@ -1,8 +1,8 @@
 {
   "codeSystems" : [
     {
-      "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministration-status",
-      "version" : "0.9.1",
+      "url" : "http://hl7.no/fhir/ig/mal/ValueSet/lmdi-medicationadministration-status",
+      "version" : "0.1.0",
       "status" : "draft",
       "name" : "LegemiddeladministreringStatus",
       "title" : "Status for legemiddeladministrasjon",

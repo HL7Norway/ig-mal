@@ -6,7 +6,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.no/fhir/ig/lmdi/MedicationAdministration/Administrering-10> a fhir:MedicationAdministration ;
+<http://hl7.no/fhir/ig/mal/MedicationAdministration/Administrering-10> a fhir:MedicationAdministration ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "Administrering-10"] ; # 
   fhir:text [

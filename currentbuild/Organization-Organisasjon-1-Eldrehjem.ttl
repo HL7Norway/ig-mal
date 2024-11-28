@@ -5,13 +5,13 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.no/fhir/ig/lmdi/Organization/Organisasjon-1-Eldrehjem> a fhir:Organization ;
+<http://hl7.no/fhir/ig/mal/Organization/Organisasjon-1-Eldrehjem> a fhir:Organization ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "Organisasjon-1-Eldrehjem"] ; # 
   fhir:meta [
      fhir:profile ( [
-       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"^^xsd:anyURI ;
-       fhir:link <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization>
+       fhir:v "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-organization"^^xsd:anyURI ;
+       fhir:link <http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-organization>
      ] )
   ] ; # 
   fhir:text [
@@ -27,7 +27,7 @@
      fhir:district [
        fhir:v "Sigdal" ;
        fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/no-basis-municipalitycode"^^xsd:anyURI ] ;
+         fhir:url [ fhir:v "http://hl7.no/fhir/ig/mal/StructureDefinition/no-basis-municipalitycode"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:Coding ;
            fhir:code [ fhir:v "3034" ]

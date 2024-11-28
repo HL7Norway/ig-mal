@@ -5,13 +5,13 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.no/fhir/ig/lmdi/Condition/Diagnose-1-ICD10-OID> a fhir:Condition ;
+<http://hl7.no/fhir/ig/mal/Condition/Diagnose-1-ICD10-OID> a fhir:Condition ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "Diagnose-1-ICD10-OID"] ; # 
   fhir:meta [
      fhir:profile ( [
-       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition-diagnose"^^xsd:anyURI ;
-       fhir:link <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition-diagnose>
+       fhir:v "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-condition-diagnose"^^xsd:anyURI ;
+       fhir:link <http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-condition-diagnose>
      ] )
   ] ; # 
   fhir:text [

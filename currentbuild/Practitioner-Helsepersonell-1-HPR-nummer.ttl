@@ -5,13 +5,13 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.no/fhir/ig/lmdi/Practitioner/Helsepersonell-1-HPR-nummer> a fhir:Practitioner ;
+<http://hl7.no/fhir/ig/mal/Practitioner/Helsepersonell-1-HPR-nummer> a fhir:Practitioner ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "Helsepersonell-1-HPR-nummer"] ; # 
   fhir:meta [
      fhir:profile ( [
-       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"^^xsd:anyURI ;
-       fhir:link <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner>
+       fhir:v "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-practitioner"^^xsd:anyURI ;
+       fhir:link <http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-practitioner>
      ] )
   ] ; # 
   fhir:text [

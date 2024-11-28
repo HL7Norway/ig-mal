@@ -2,7 +2,7 @@
   "resourceType" : "Organization",
   "id" : "Organisasjon-1-Eldrehjem",
   "meta" : {
-    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"]
+    "profile" : ["http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-organization"]
   },
   "text" : {
     "status" : "generated",
@@ -17,7 +17,7 @@
     "district" : "Sigdal",
     "_district" : {
       "extension" : [{
-        "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/no-basis-municipalitycode",
+        "url" : "http://hl7.no/fhir/ig/mal/StructureDefinition/no-basis-municipalitycode",
         "valueCoding" : {
           "code" : "3034"
         }

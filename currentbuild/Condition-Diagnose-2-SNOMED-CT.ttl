@@ -6,13 +6,13 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.no/fhir/ig/lmdi/Condition/Diagnose-2-SNOMED-CT> a fhir:Condition ;
+<http://hl7.no/fhir/ig/mal/Condition/Diagnose-2-SNOMED-CT> a fhir:Condition ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "Diagnose-2-SNOMED-CT"] ; # 
   fhir:meta [
      fhir:profile ( [
-       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition-diagnose"^^xsd:anyURI ;
-       fhir:link <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition-diagnose>
+       fhir:v "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-condition-diagnose"^^xsd:anyURI ;
+       fhir:link <http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-condition-diagnose>
      ] )
   ] ; # 
   fhir:text [

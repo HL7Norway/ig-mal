@@ -1,128 +1,128 @@
 [
   {
-    "id" : "hl7.fhir.no.lmdi",
+    "id" : "hl7.fhir.no.mal",
     "type" : "ImplementationGuide",
-    "url" : "http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi",
-    "version" : "0.9.1",
-    "name" : "Lmdi"
+    "url" : "http://hl7.no/fhir/ig/mal/ImplementationGuide/hl7.fhir.no.mal",
+    "version" : "0.1.0",
+    "name" : "Mal"
   },
   {
     "id" : "no-basis-fest-legemiddeldose",
     "type" : "NamingSystem",
-    "url" : "http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddeldose",
-    "version" : "0.9.1",
+    "url" : "http://hl7.no/fhir/ig/mal/NamingSystem/no-basis-fest-legemiddeldose",
+    "version" : "0.1.0",
     "name" : "festLegemiddelDose"
   },
   {
     "id" : "no-basis-fest-legemiddelmerkevare",
     "type" : "NamingSystem",
-    "url" : "http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddelmerkevare",
-    "version" : "0.9.1",
+    "url" : "http://hl7.no/fhir/ig/mal/NamingSystem/no-basis-fest-legemiddelmerkevare",
+    "version" : "0.1.0",
     "name" : "festLegemiddelMerkevare"
   },
   {
     "id" : "no-basis-fest-legemiddelpakning",
     "type" : "NamingSystem",
-    "url" : "http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddelpakning",
-    "version" : "0.9.1",
+    "url" : "http://hl7.no/fhir/ig/mal/NamingSystem/no-basis-fest-legemiddelpakning",
+    "version" : "0.1.0",
     "name" : "festLegemiddelPakning"
   },
   {
     "id" : "no-basis-fest-legemiddelvirkestoff",
     "type" : "NamingSystem",
-    "url" : "http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddelvirkestoff",
-    "version" : "0.9.1",
+    "url" : "http://hl7.no/fhir/ig/mal/NamingSystem/no-basis-fest-legemiddelvirkestoff",
+    "version" : "0.1.0",
     "name" : "festLegemiddelVirkestoff"
   },
   {
     "id" : "Legemiddelrekvirering",
     "type" : "StructureDefinition",
-    "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/Legemiddelrekvirering",
-    "version" : "0.9.1",
+    "url" : "http://hl7.no/fhir/ig/mal/StructureDefinition/Legemiddelrekvirering",
+    "version" : "0.1.0",
     "name" : "Legemiddelrekvirering"
   },
   {
     "id" : "lmdi-address",
     "type" : "StructureDefinition",
-    "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-address",
-    "version" : "0.9.1",
+    "url" : "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-address",
+    "version" : "0.1.0",
     "name" : "LmdiAdresse"
   },
   {
     "id" : "lmdi-condition-diagnose",
     "type" : "StructureDefinition",
-    "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition-diagnose",
-    "version" : "0.9.1",
+    "url" : "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-condition-diagnose",
+    "version" : "0.1.0",
     "name" : "LmdiDiagnose"
   },
   {
     "id" : "lmdi-episodeofcare-institusjonsopphold",
     "type" : "StructureDefinition",
-    "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-episodeofcare-institusjonsopphold",
-    "version" : "0.9.1",
+    "url" : "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-episodeofcare-institusjonsopphold",
+    "version" : "0.1.0",
     "name" : "LmdiEpisodeOfCareInstitusjonsopphold"
   },
   {
     "id" : "lmdi-legemiddel",
     "type" : "StructureDefinition",
-    "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-legemiddel",
-    "version" : "0.9.1",
+    "url" : "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-legemiddel",
+    "version" : "0.1.0",
     "name" : "Legemiddel"
   },
   {
     "id" : "lmdi-legemiddeladministrasjon",
     "type" : "StructureDefinition",
-    "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-legemiddeladministrasjon",
-    "version" : "0.9.1",
+    "url" : "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-legemiddeladministrasjon",
+    "version" : "0.1.0",
     "name" : "Legemiddeladministrasjon"
   },
   {
     "id" : "lmdi-observation-tmp",
     "type" : "StructureDefinition",
-    "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-observation-tmp",
-    "version" : "0.9.1",
+    "url" : "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-observation-tmp",
+    "version" : "0.1.0",
     "name" : "LmdiObservation"
   },
   {
     "id" : "lmdi-organization",
     "type" : "StructureDefinition",
-    "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization",
-    "version" : "0.9.1",
+    "url" : "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-organization",
+    "version" : "0.1.0",
     "name" : "LmdiOrganization"
   },
   {
     "id" : "lmdi-patient",
     "type" : "StructureDefinition",
-    "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient",
-    "version" : "0.9.1",
+    "url" : "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-patient",
+    "version" : "0.1.0",
     "name" : "LmdiPatient"
   },
   {
     "id" : "lmdi-practitioner",
     "type" : "StructureDefinition",
-    "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner",
-    "version" : "0.9.1",
+    "url" : "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-practitioner",
+    "version" : "0.1.0",
     "name" : "LmdiPractitioner"
   },
   {
     "id" : "lmdi-practitionerrole",
     "type" : "StructureDefinition",
-    "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitionerrole",
-    "version" : "0.9.1",
+    "url" : "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-practitionerrole",
+    "version" : "0.1.0",
     "name" : "LmdiPractitionerRole"
   },
   {
     "id" : "no-basis-municipalitycode",
     "type" : "StructureDefinition",
-    "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/no-basis-municipalitycode",
-    "version" : "0.9.1",
+    "url" : "http://hl7.no/fhir/ig/mal/StructureDefinition/no-basis-municipalitycode",
+    "version" : "0.1.0",
     "name" : "NoBasisMunicipalitycode"
   },
   {
     "id" : "lmdi-medicationadministration-status",
     "type" : "ValueSet",
-    "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministration-status",
-    "version" : "0.9.1",
+    "url" : "http://hl7.no/fhir/ig/mal/ValueSet/lmdi-medicationadministration-status",
+    "version" : "0.1.0",
     "name" : "LegemiddeladministreringStatus"
   }
 ]

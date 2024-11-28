@@ -5,13 +5,13 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.no/fhir/ig/lmdi/Organization/Organisasjon-2-Spesialist-RESH> a fhir:Organization ;
+<http://hl7.no/fhir/ig/mal/Organization/Organisasjon-2-Spesialist-RESH> a fhir:Organization ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "Organisasjon-2-Spesialist-RESH"] ; # 
   fhir:meta [
      fhir:profile ( [
-       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"^^xsd:anyURI ;
-       fhir:link <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization>
+       fhir:v "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-organization"^^xsd:anyURI ;
+       fhir:link <http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-organization>
      ] )
   ] ; # 
   fhir:text [
@@ -24,7 +24,7 @@
   ] ) ; # 
   fhir:name [ fhir:v "Avdeling for epilepsi, poliklinikk"] ; # 
   fhir:partOf [
-     fhir:link <http://hl7.no/fhir/ig/lmdi/Organization/Organisasjon-3-Spesialist-topp> ;
+     fhir:link <http://hl7.no/fhir/ig/mal/Organization/Organisasjon-3-Spesialist-topp> ;
      fhir:reference [ fhir:v "Organization/Organisasjon-3-Spesialist-topp" ]
   ] . # 
 
