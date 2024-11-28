@@ -3,96 +3,16 @@
   "version": "0.1.0",
   "fhirVersion": "4.0.1",
   "jurisdiction": "NO",
-  "extensions": [
-    {
-      "url": "http://hl7.no/fhir/ig/mal/StructureDefinition/no-basis-municipalitycode",
-      "title": "no-basis-municipalitycode",
-      "types": [
-        "Coding",
-        "string",
-        "Extension",
-        "uri",
-        "string",
-        "code",
-        "string",
-        "boolean"
-      ]
-    }
-  ],
+  "extensions": [],
   "profiles": {
-    "MedicationRequest": [
-      {
-        "url": "http://hl7.no/fhir/ig/mal/StructureDefinition/Legemiddelrekvirering",
-        "title": "Legemiddelrekvirering"
-      }
-    ],
-    "Condition": [
-      {
-        "url": "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-condition-diagnose",
-        "title": "Diagnose"
-      }
-    ],
-    "EpisodeOfCare": [
-      {
-        "url": "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-episodeofcare-institusjonsopphold",
-        "title": "Institusjonsopphold"
-      }
-    ],
-    "Medication": [
-      {
-        "url": "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-legemiddel",
-        "title": "Legemiddel"
-      }
-    ],
-    "MedicationAdministration": [
-      {
-        "url": "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-legemiddeladministrasjon",
-        "title": "Legemiddeladministrasjon"
-      }
-    ],
-    "Observation": [
-      {
-        "url": "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-observation-tmp",
-        "title": "Observasjon (kladd)"
-      }
-    ],
-    "Organization": [
-      {
-        "url": "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-organization",
-        "title": "Organisasjon"
-      }
-    ],
     "Patient": [
       {
-        "url": "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-patient",
+        "url": "http://hl7.no/fhir/ig/mal/StructureDefinition/mal-patient",
         "title": "Pasient"
-      }
-    ],
-    "Practitioner": [
-      {
-        "url": "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-practitioner",
-        "title": "Helsepersonell"
-      }
-    ],
-    "PractitionerRole": [
-      {
-        "url": "http://hl7.no/fhir/ig/mal/StructureDefinition/lmdi-practitionerrole",
-        "title": "Rolle helsepersonell"
       }
     ]
   },
   "usage": {
-    "http://hl7.no/fhir/ig/mal/StructureDefinition/no-basis-municipalitycode": [
-      "Address.district",
-      "Organization.address.district",
-      "Patient.address.district"
-    ],
-    "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url": [
-      "NamingSystem"
-    ],
-    "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version": [
-      "NamingSystem"
-    ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
       "StructureDefinition.snapshot.element.constraint"
     ],
@@ -104,15 +24,6 @@
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
       "StructureDefinition.snapshot.element.binding"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
-      "StructureDefinition.snapshot.element"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/regex": [
-      "StructureDefinition.snapshot.element.type"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
-      "StructureDefinition.snapshot.element"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
       "StructureDefinition.snapshot.element.type"
