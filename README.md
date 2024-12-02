@@ -16,6 +16,9 @@ Det skal skilles på "private" og "offentlige" IGer, som skal publiseres og regi
 
 - [Standarder (Helsedirektoratet)](https://www.ehelse.no/standardisering/standarder)
 - [Implementation Guide Registry](https://www.fhir.org/guides/registry/)
+- [HL7 Norge på Simplifier.net](https://simplifier.net/organization/hl7norway/) (også publisering)
+
+[HL7 Norge sin GitbHub](https://github.com/HL7Norway) anses kun som *midlertidig* publisering av f.eks. arbeidsversjonger (builds). 
 
 ## Kilder
 
