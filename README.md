@@ -8,6 +8,15 @@ Under arbeid.
 2. Malen skal gjøre det enkelt å følge beste praksis for IGer i henhold til nasjonal og internasjonal beste praksis
 3. Enkelt kunne publisere og distribuere IGen på en valgfri måte (egen www, Simplifier.net, etc) ved hjelp av pakker, herunder opprettholde versjoner/history
 
+### Publisering
+
+Det skal skilles på "private" og "offentlige" IGer, som skal publiseres og registreres på forskjellige steder avhengig av innhold.
+
+#### Registre
+
+- [Standarder (Helsedirektoratet)](https://www.ehelse.no/standardisering/standarder)
+- [Implementation Guide Registry](https://www.fhir.org/guides/registry/)
+
 ## Kilder
 
 - [Den gode implementasjonsguide](https://hl7norway.github.io/best-practice/docs/dgi/#den-gode-implementasjonsguide)
