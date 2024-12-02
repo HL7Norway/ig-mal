@@ -13,6 +13,7 @@ Under arbeid.
 - [Den gode implementasjonsguide](https://hl7norway.github.io/best-practice/docs/dgi/#den-gode-implementasjonsguide)
 - [FHIR IG Review](https://confluence.hl7.org/display/FHIR/FHIR+IG+Review)
 - [IG Best Practices](https://build.fhir.org/ig/FHIR/ig-guidance/best-practice.html)
+- [Da Vinci - Documentation Templates and Rules](http://hl7.org/fhir/us/davinci-dtr/2.1.0-preview/index.html)
 
 
 
