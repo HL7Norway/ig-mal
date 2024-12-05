@@ -8,7 +8,14 @@ Plan for pågående utviklingsprosjekt, ikke bare denne IG-malen
 
 1. IGen skal være en mal som skal kunne være grunnlag for nye IGer.
 2. Malen skal gjøre det enkelt å følge beste praksis for IGer i henhold til nasjonal og internasjonal beste praksis
-3. Enkelt kunne publisere og distribuere IGen på en valgfri måte (egen www, Simplifier.net, etc) ved hjelp av pakker, herunder opprettholde versjoner/history
+3. Verktøystøtte, fortrinnsvis alt online
+4. Enkelt kunne publisere og distribuere IGen på en valgfri måte (egen www, Simplifier.net, etc) ved hjelp av pakker, herunder opprettholde versjoner/history
+
+Oppgaver som må på startes/planlegges/utføres i parallell:
+
+1. Tilrettelegge no-basis for FHIR Shorthand (FSH)
+2. Ny publiseringsløsning / enkel konseptutredning
+3. Ny web-løsning for HL7 Norge (sammenheng med pkt 2.)
 
 ### Publisering
 
