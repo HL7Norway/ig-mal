@@ -29,9 +29,10 @@ Det skal skilles på "private" og "offentlige" IGer, som skal publiseres og regi
 
 [HL7 Norge sin GitbHub](https://github.com/HL7Norway) anses kun som *midlertidig* publisering av f.eks. arbeidsversjonger (builds). 
 
-## Kilder
+## Referanser og inspirasjon
 
 - [Den gode implementasjonsguide](https://hl7norway.github.io/best-practice/docs/dgi/#den-gode-implementasjonsguide)
+- [Metode for utvikling av områdeprofiler](https://hl7norway.github.io/best-practice/docs/no-domain-metode/)
 - [FHIR IG Review](https://confluence.hl7.org/display/FHIR/FHIR+IG+Review)
 - [IG Best Practices](https://build.fhir.org/ig/FHIR/ig-guidance/best-practice.html)
 - [Da Vinci - Documentation Templates and Rules](http://hl7.org/fhir/us/davinci-dtr/2.1.0-preview/index.html)
