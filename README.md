@@ -37,6 +37,9 @@ Det skal skilles på "private" og "offentlige" IGer, som skal publiseres og regi
 - [IG Best Practices](https://build.fhir.org/ig/FHIR/ig-guidance/best-practice.html)
 - [Da Vinci - Documentation Templates and Rules](http://hl7.org/fhir/us/davinci-dtr/2.1.0-preview/index.html)
 
+### Verktøy
+
+- https://github.com/FHIR/auto-ig-builder
 
 
 
