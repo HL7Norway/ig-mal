@@ -41,5 +41,8 @@ Det skal skilles på "private" og "offentlige" IGer, som skal publiseres og regi
 
 - https://github.com/FHIR/auto-ig-builder
 
+### Note to self
+
+- https://github.com/HL7/fhir-ig-publisher/releases
 
 
