@@ -12,7 +12,7 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       # Persist the FHIR Package Cache between runners.
       # Doc: https://confluence.hl7.org/display/FHIR/FHIR+Package+Cache
