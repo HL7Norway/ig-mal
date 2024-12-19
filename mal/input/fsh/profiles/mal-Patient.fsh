@@ -8,3 +8,4 @@ Description: "Informasjon om pasienten"
 * ^publisher = "Organisasjonen min"
 
 * identifier MS
+* name.family MS
