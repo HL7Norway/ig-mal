@@ -10,7 +10,7 @@
   "name" : "Mal",
   "title" : "Mal",
   "status" : "draft",
-  "date" : "2024-12-19T11:08:21+00:00",
+  "date" : "2024-12-19T12:50:46+00:00",
   "publisher" : "HL7 Norge",
   "contact" : [{
     "name" : "HL7 Norge",
@@ -606,6 +606,17 @@
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     }],
     "resource" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/example"
+      },
+      "name" : "example",
+      "exampleBoolean" : true
+    },
+    {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"

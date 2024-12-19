@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "Mal"] ; # 
   fhir:title [ fhir:v "Mal"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-12-19T11:08:21+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-12-19T12:50:46+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 Norge"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 Norge" ] ;
@@ -518,6 +518,17 @@
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] ) ;
      fhir:resource ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Patient" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.no/fhir/ig/mal/Patient/example> ;
+         fhir:reference [ fhir:v "Patient/example" ]
+       ] ;
+       fhir:name [ fhir:v "example" ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "StructureDefinition:resource" ]
