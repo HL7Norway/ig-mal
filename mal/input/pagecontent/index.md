@@ -6,7 +6,7 @@ Introduksjonstekst
 
 #### Figur
 
-<img src="../images/test.svg" width="50%" />
+<img src="test.svg" width="50%" />
 
 ---
 
