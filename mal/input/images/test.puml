@@ -1,7 +1,7 @@
 @startuml
 
 title Eksempel-diagram
-footer Undertekst
+footer Undertekst A
 
 class Folk
 class Datamaskin
