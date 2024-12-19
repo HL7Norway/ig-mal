@@ -25,6 +25,18 @@
       "http://hl7.org/fhir/R4/valueset-link-type.html" : "LinkType"
     },
     {
+      "url" : "http://hl7.org/fhir/name-use",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "NameUse",
+      "title" : "NameUse",
+      "description" : "The use of a human name.",
+      "oids" : ["2.16.840.1.113883.4.642.4.66"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-name-use.html" : "NameUse"
+    },
+    {
       "url" : "http://terminology.hl7.org/CodeSystem/v2-0131",
       "version" : "2.0.0",
       "status" : "active",

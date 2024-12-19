@@ -60,6 +60,20 @@
       "StructureDefinition-mal-patient.html" : "Pasient"
     },
     {
+      "url" : "http://hl7.org/fhir/ValueSet/name-use",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "NameUse",
+      "title" : "NameUse",
+      "description" : "The use of a human name.",
+      "systems" : ["http://hl7.org/fhir/name-use"],
+      "oids" : ["2.16.840.1.113883.4.642.3.65"],
+      "sources" : ["2.16.840.1.113883.4.642.3.65"],
+      "uses" : {
+      },
+      "StructureDefinition-mal-patient.html" : "Pasient"
+    },
+    {
       "url" : "http://hl7.org/fhir/ValueSet/patient-contactrelationship",
       "version" : "4.0.1",
       "status" : "active",
