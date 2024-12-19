@@ -1,7 +1,7 @@
 @startuml
 
-title Hallo, verden!
-footer Undertekst
+title Eksempel-diagram
+footer Undertekst A
 
 class Folk
 class Datamaskin
