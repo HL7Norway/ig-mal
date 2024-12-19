@@ -1,6 +1,8 @@
 # Mal for IG
 
-Under arbeid. 
+Under arbeid.
+
+[![ig-mal-gh-pages](https://github.com/HL7Norway/ig-mal/actions/workflows/mal-gh-pages.yml/badge.svg)](https://github.com/HL7Norway/ig-mal/actions/workflows/mal-gh-pages.yml)
 
 ## Plan
 
