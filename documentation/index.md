@@ -1,6 +1,6 @@
 # Dokumentasjon
 
-Denne siden inneholder en oversikt over dokumentasjonen i denne repoen.
+Denne siden inneholder en oversikt over dokumentasjonen for bruk av denne repoen.
 
 ## Filer
 
