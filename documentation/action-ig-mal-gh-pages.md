@@ -1,4 +1,4 @@
-# Dokumentasjon for mal-gh-pages.yml
+# mal-gh-pages.yml
 
 Denne filen er en GitHub Actions workflow som brukes til å generere og publisere en FHIR Implementation Guide (IG) til GitHub Pages. Her er en detaljert forklaring av hvert trinn i workflowen.
 
