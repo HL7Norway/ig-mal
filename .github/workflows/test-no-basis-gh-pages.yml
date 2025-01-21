@@ -1,4 +1,4 @@
-name: ig-mal-gh-pages
+name: test-no-basis-ig-mal-gh-pages
 
 on:
   workflow_dispatch:
