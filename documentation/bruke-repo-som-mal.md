@@ -70,5 +70,3 @@ menu:
   TOC: toc.html
 ```
 
-Følg disse trinnene for å komme i gang med å bruke denne repoen som en mal for din egen FHIR Implementation Guide, og bruk GitHub Actions for å generere og publisere den.
-```
