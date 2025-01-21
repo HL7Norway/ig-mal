@@ -3,6 +3,7 @@
 Under arbeid.
 
 [![ig-mal-gh-pages](https://github.com/HL7Norway/ig-mal/actions/workflows/mal-gh-pages.yml/badge.svg)](https://github.com/HL7Norway/ig-mal/actions/workflows/mal-gh-pages.yml)
+[![test-no-basis-ig-mal-gh-pages](https://github.com/HL7Norway/ig-mal/actions/workflows/test-no-basis-gh-pages.yml/badge.svg)](https://github.com/HL7Norway/ig-mal/actions/workflows/test-no-basis-gh-pages.yml)
 
 ## Plan
 
