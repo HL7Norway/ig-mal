@@ -79,10 +79,12 @@ Dette trinnet cacher IG Publisher input-cache for å forbedre ytelsen.
 
 ```yaml
   - name: NPM install no-basis
-    run: npm --registry https://packages.simplifier.net install hl7.fhir.no.basis@2.1.1
+    run: npm --registry https://packages.simplifier.net install hl7.fhir.no.basis@2.2.0
 ```
 
 Dette trinnet installerer `hl7.fhir.no.basis`-pakken ved hjelp av NPM.
+
+**NB! Fungerer ikke etter hensikt, se issue #9**
 
 ### Trinn 5: Last ned IG Publisher
 
