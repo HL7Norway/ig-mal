@@ -8,6 +8,7 @@ env:
 
 # The following jobs are equal for all IGs and can be moved to a common composite-action if 'uses'-support is added, see:
 # https://github.com/actions/runner/blob/main/docs/adrs/1144-composite-actions.md
+# TODO: "Hardkodet" for no-basis 2.2.0
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -19,7 +20,7 @@ jobs:
           echo "NPM install fhir r4 core 4.0.1 from package registry"
           npm --registry https://packages.simplifier.net install hl7.fhir.r4.core@4.0.1
           echo "NPM install fhir no-basis220 from local tgz"
-          npm install mal/snapshots/hl7.fhir.no.basis-2.2.0-snapshots.tgz
+          npm install ${{ env.IG }/snapshots/hl7.fhir.no.basis-2.2.0-snapshots.tgz
           echo "Create .fhir packages cache directory for no-basis"
           mkdir -p /github/home/.fhir/packages/hl7.fhir.no.basis#2.2.0/package
           echo "Copy local no-basis snapshot to .fhir package cache directory"
