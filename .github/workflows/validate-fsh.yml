@@ -13,6 +13,8 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: '3.x'
+    - name: Install fsh-sushi
+      run: npm install -g fsh-sushi
     - name: Install fsh-validator
       run: pip install -U git+https://github.com/glichtner/fsh-validator
     - name: Run fsh-validator
