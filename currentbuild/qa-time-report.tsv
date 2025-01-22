@@ -1,4 +1,5 @@
 Source File	Size	loadResources	load-configure	scan	loadDepInfo	loadInfo	load	generateSnapshots	checkR4R4B	generateNarratives	validate	loadLists	checkConformanceResources	checkConformanceResources2	checkConformanceResources3	generateLogicalMaps	validateExpressions	scanForUsageStats	checkURLsUnique	processProvenanceDetails	generate1	generate2	generateLogicals	makeDependencies	generateExampleZip	generateValidationPack	scanProfilesForR5	scanExamplesForR5
-/fsh-generated/resources/ImplementationGuide-hl7.fhir.no.mal.json	1820	-	0	0	0	0	0	0	6	207	0	0	0	0	0	0	0	0	0	0	65	101	0	0	0	2	0	1
-fsh-generated/resources/StructureDefinition-mal-patient.json	788	13	0	0	1	0	0	82	0	75	0	0	1	0	0	0	0	2	0	0	168	2123	0	0	0	8	0	2
-input/examples/Patient-example.json	500	12	0	0	0	0	0	0	0	349	0	0	0	0	0	0	0	0	0	0	10	50	0	0	0	0	0	0
+/fsh-generated/resources/ImplementationGuide-hl7.fhir.no.mal.json	2302	-	0	0	0	0	0	0	5	218	0	0	0	0	0	0	0	0	0	0	66	75	0	0	0	2	0	1
+fsh-generated/resources/StructureDefinition-mal-patient-test.json	840	19	1	0	0	0	0	121	0	70	0	0	1	0	0	0	0	2	0	0	297	3344	0	0	0	21	0	1
+fsh-generated/resources/StructureDefinition-mal-patient.json	788	16	0	0	0	0	0	75	0	29	0	0	0	0	0	0	0	1	0	0	131	706	0	0	0	10	0	2
+input/examples/Patient-example.json	500	19	0	0	0	0	0	0	0	257	0	0	0	0	0	0	0	0	0	0	7	48	0	0	0	0	0	0

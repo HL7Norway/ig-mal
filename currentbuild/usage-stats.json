@@ -9,10 +9,17 @@
       {
         "url": "http://hl7.no/fhir/ig/mal/StructureDefinition/mal-patient",
         "title": "Pasient"
+      },
+      {
+        "url": "http://hl7.no/fhir/ig/mal/StructureDefinition/mal-patient-test",
+        "title": "PasientNoBasisTest"
       }
     ]
   },
   "usage": {
+    "http://hl7.no/fhir/StructureDefinition/no-basis-middlename": [
+      "Patient.name"
+    ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
       "StructureDefinition.snapshot.element.constraint"
     ],
@@ -24,6 +31,12 @@
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
       "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/patient-citizenship": [
+      "Patient"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
       "StructureDefinition.snapshot.element.type"
