@@ -2,18 +2,20 @@
 
 Denne siden inneholder en oversikt over dokumentasjonen for bruk av denne repoen.
 
-## Action Deploy to FTP
-Dokumentasjon for bruk av GitHub Actions for å laste opp innhold til en FTP-server.
-- [action-deploy-to-ftp.md](https://github.com/HL7Norway/ig-mal/blob/main/documentation/action-deploy-to-ftp.md)
-
-## Action IG Mal GH Pages
-Dokumentasjon for bruk av GitHub Actions for å generere og publisere en FHIR Implementation Guide til GitHub Pages.
-- [action-ig-mal-gh-pages.md](https://github.com/HL7Norway/ig-mal/blob/main/documentation/action-ig-mal-gh-pages.md)
-
-## Action Plant UML
-Dokumentasjon for bruk av GitHub Actions for å generere PlantUML-diagrammer.
-- [action-plant-uml.md](https://github.com/HL7Norway/ig-mal/blob/main/documentation/action-plant-uml.md)
-
 ## Bruke Repo som Mal
 Instruksjoner for hvordan man kan bruke denne repoen som en mal for andre prosjekter.
 - [bruke-repo-som-mal.md](https://github.com/HL7Norway/ig-mal/blob/main/documentation/bruke-repo-som-mal.md)
+
+## Automatisering (actions)
+
+### IG Mal GH Pages
+Dokumentasjon for bruk av GitHub Actions for å generere og publisere en FHIR Implementation Guide til GitHub Pages.
+- [action-ig-mal-gh-pages.md](https://github.com/HL7Norway/ig-mal/blob/main/documentation/action-ig-mal-gh-pages.md)
+
+### Plant UML
+Dokumentasjon for bruk av GitHub Actions for å generere PlantUML-diagrammer.
+- [action-plant-uml.md](https://github.com/HL7Norway/ig-mal/blob/main/documentation/action-plant-uml.md)
+
+### Deploy to FTP
+Dokumentasjon for bruk av GitHub Actions for å laste opp innhold til en FTP-server.
+- [action-deploy-to-ftp.md](https://github.com/HL7Norway/ig-mal/blob/main/documentation/action-deploy-to-ftp.md)
