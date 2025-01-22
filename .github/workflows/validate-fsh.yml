@@ -14,4 +14,6 @@ jobs:
     - name: Install fsh-validator
       run: pip install -U git+https://github.com/glichtner/fsh-validator
     - name: Run fsh-validator
-      run: fsh-validator --all
+      run: fsh-validator --all --verbose
+
+  # fsh-validator [-h] [--all] [--subdir SUBDIR] [--validator-path PATH_VALIDATOR] [--verbose] [--no-sushi] [--log-path LOG_PATH] [filename [filename ...]]
