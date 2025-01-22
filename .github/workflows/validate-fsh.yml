@@ -1,14 +1,22 @@
 name: Validate FSH Files
+
 on:
-  workflow_dispatch: # Allows the workflow to be triggered manually
+  workflow_dispatch:
+
 env:
   IG: mal
+
 jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
 
     - name: Set up Python
       uses: actions/setup-python@v2
@@ -19,13 +27,13 @@ jobs:
       run: npm install -g fsh-sushi
 
     - name: Install hl7.fhir.no.basis-2.2.0-snapshots in local cache
-        run: |
-          echo "NPM install fhir no-basis220 from local tgz"
-          npm install ${{ env.IG }}/snapshots/hl7.fhir.no.basis-2.2.0-snapshots.tgz
-          echo "Create .fhir packages cache directory for no-basis"
-          mkdir -p /github/home/.fhir/packages/hl7.fhir.no.basis#2.2.0/package
-          echo "Copy local no-basis snapshot to .fhir package cache directory"
-          cp -r ./node_modules/hl7.fhir.no.basis/* /github/home/.fhir/packages/hl7.fhir.no.basis#2.2.0/package 
+      run: |
+        echo "NPM install fhir no-basis220 from local tgz"
+        npm install ${{ env.IG }}/snapshots/hl7.fhir.no.basis-2.2.0-snapshots.tgz
+        echo "Create .fhir packages cache directory for no-basis"
+        mkdir -p /github/home/.fhir/packages/hl7.fhir.no.basis#2.2.0/package
+        echo "Copy local no-basis snapshot to .fhir package cache directory"
+        cp -r ./node_modules/hl7.fhir.no.basis/* /github/home/.fhir/packages/hl7.fhir.no.basis#2.2.0/package 
 
     - name: Install fsh-validator
       run: pip install -U git+https://github.com/glichtner/fsh-validator
@@ -34,5 +42,3 @@ jobs:
       run: |
         cd ${{ env.IG }}
         fsh-validator --all --verbose
-
-  # fsh-validator [-h] [--all] [--subdir SUBDIR] [--validator-path PATH_VALIDATOR] [--verbose] [--no-sushi] [--log-path LOG_PATH] [filename [filename ...]]
