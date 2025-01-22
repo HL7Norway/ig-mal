@@ -8,9 +8,9 @@ Denne guiden vil hjelpe deg med å bruke denne repoen som en mal for å lage din
 2. Klikk på den grønne "Use this template"-knappen øverst til høyre.
 3. Velg "Create a new repository" fra rullegardinmenyen.
 
-## Trinn 2: Opprett en ny repository
+## Trinn 2: Opprett et nytt repository
 
-1. Skriv inn et nytt repo-navn for din IG, for eksempel `my-ig`.
+1. Skriv inn et nytt repo-navn for din IG, for eksempel `min-ig`.
 2. Legg til en beskrivelse hvis ønskelig.
 3. Velg om repoen skal være offentlig eller privat.
 4. Klikk på den grønne "Create repository from template"-knappen.
@@ -20,7 +20,7 @@ Denne guiden vil hjelpe deg med å bruke denne repoen som en mal for å lage din
 Åpne `ig.ini`-filen og oppdater banen til Implementation Guide JSON-filen:
 ```ini
 [IG]
-ig = fsh-generated/resources/ImplementationGuide-din-ig.json
+ig = fsh-generated/resources/ImplementationGuide-min-ig.json
 template = https://github.com/HL7Norway/ig-template
 ```
 
@@ -51,7 +51,7 @@ Etter at workflowen har kjørt ferdig, vil du finne utdata i `gh-pages`-branchen
 Her er et eksempel på en `sushi-config.yaml`-fil:
 ```yaml
 id: din.fhir.ig
-canonical: http://example.org/fhir/ig
+canonical: http://example.org/fhir/min-ig
 name: DinIG
 title: "Din Implementation Guide"
 description: En detaljert beskrivelse av din Implementation Guide.
