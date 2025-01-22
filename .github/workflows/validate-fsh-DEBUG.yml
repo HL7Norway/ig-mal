@@ -43,5 +43,5 @@ jobs:
 
     - name: Run fsh-validator
       run: |
-        cd ${{ env.IG }}/input/fsh/profiles
-        fsh-validator --all
+        cd ${{ env.IG }}/input/fsh/profiles/
+        fsh-validator mal-Patient.fsh
