@@ -16,6 +16,9 @@ jobs:
       with:
         node-version: '16'
 
+    - name: Verify Node.js version
+      run: node -v
+
     - name: Install SUSHI CLI
       run: npm install -g fsh-sushi
 
