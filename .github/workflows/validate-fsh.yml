@@ -9,14 +9,27 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
         python-version: '3.x'
+
     - name: Install fsh-sushi
       run: npm install -g fsh-sushi
+
+    - name: Install hl7.fhir.no.basis-2.2.0-snapshots in local cache
+        run: |
+          echo "NPM install fhir no-basis220 from local tgz"
+          npm install ${{ env.IG }}/snapshots/hl7.fhir.no.basis-2.2.0-snapshots.tgz
+          echo "Create .fhir packages cache directory for no-basis"
+          mkdir -p /github/home/.fhir/packages/hl7.fhir.no.basis#2.2.0/package
+          echo "Copy local no-basis snapshot to .fhir package cache directory"
+          cp -r ./node_modules/hl7.fhir.no.basis/* /github/home/.fhir/packages/hl7.fhir.no.basis#2.2.0/package 
+
     - name: Install fsh-validator
       run: pip install -U git+https://github.com/glichtner/fsh-validator
+
     - name: Run fsh-validator
       run: |
         cd ${{ env.IG }}
