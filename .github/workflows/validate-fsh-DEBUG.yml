@@ -42,4 +42,4 @@ jobs:
       run: pip install -U git+https://github.com/glichtner/fsh-validator
 
     - name: Run fsh-validator
-      run: fsh-validator ${{ env.IG }}/input/fsh/profiles/mal-patient.fsh
+      run: fsh-validator ${{ env.IG }}/input/fsh/profiles/mal-Patient.fsh
