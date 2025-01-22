@@ -1,0 +1,16 @@
+[
+  {
+    "id" : "hl7.fhir.no.mal",
+    "type" : "ImplementationGuide",
+    "url" : "http://hl7.no/fhir/ig/mal/ImplementationGuide/hl7.fhir.no.mal",
+    "version" : "0.1.0",
+    "name" : "Mal"
+  },
+  {
+    "id" : "mal-patient",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.no/fhir/ig/mal/StructureDefinition/mal-patient",
+    "version" : "0.1.0",
+    "name" : "MalPatient"
+  }
+]

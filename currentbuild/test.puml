@@ -1,0 +1,16 @@
+@startuml
+
+title Eksempel-diagram
+footer Undertekst A
+
+class Folk
+class Datamaskin
+class Sykkel
+class Tastatur
+
+Folk <-- Datamaskin
+Folk <-- Sykkel
+Tastatur --o Datamaskin
+
+@enduml
+
