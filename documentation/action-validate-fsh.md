@@ -1,4 +1,4 @@
-# Validate FSH Files
+# Validere FSH-filer
 
 Denne GitHub Actions workflowen er designet for å validere FSH-filer i et prosjekt.
 
