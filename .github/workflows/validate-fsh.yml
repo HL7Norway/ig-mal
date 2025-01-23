@@ -45,4 +45,4 @@ jobs:
     - name: Run fsh-validator
       run: |
         cd ${{ env.IG }}/input/fsh/profiles/
-        fsh-validator --all *.fsh
+        fsh-validator *.fsh
