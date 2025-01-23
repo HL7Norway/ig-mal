@@ -7,6 +7,13 @@
     "name" : "Mal"
   },
   {
+    "id" : "mal-observation-ldl",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.no/fhir/ig/mal/StructureDefinition/mal-observation-ldl",
+    "version" : "0.1.0",
+    "name" : "MalObservationLdl"
+  },
+  {
     "id" : "mal-patient",
     "type" : "StructureDefinition",
     "url" : "http://hl7.no/fhir/ig/mal/StructureDefinition/mal-patient",
