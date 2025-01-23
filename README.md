@@ -2,7 +2,7 @@
 
 Under arbeid.
 
-[![mal-gh-pages](https://github.com/HL7Norway/ig-mal/actions/workflows/mal-gh-pages.yml/badge.svg)](https://github.com/HL7Norway/ig-mal/actions/workflows/mal-gh-pages.yml)
+[![mal-gh-pages](https://github.com/HL7Norway/ig-mal/actions/workflows/mal-gh-pages.yml/badge.svg)](https://github.com/HL7Norway/ig-mal/actions/workflows/mal-gh-pages.yml)[![Validate FSH Files](https://github.com/HL7Norway/ig-mal/actions/workflows/validate-fsh.yml/badge.svg)](https://github.com/HL7Norway/ig-mal/actions/workflows/validate-fsh.yml)
 
 ## Plan
 
