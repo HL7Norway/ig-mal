@@ -8,9 +8,9 @@ Instruksjoner for hvordan man kan bruke denne repoen som en mal for andre prosje
 
 ## Automatisering (actions)
 
-### IG Mal GH Pages
+### Generere IG og publisere på GitHub Pages
 Dokumentasjon for bruk av GitHub Actions for å generere og publisere en FHIR Implementation Guide til GitHub Pages.
-- [action-ig-mal-gh-pages.md](https://github.com/HL7Norway/ig-mal/blob/main/documentation/action-ig-mal-gh-pages.md)
+- [action-mal-gh-pages.md](https://github.com/HL7Norway/ig-mal/blob/main/documentation/action-mal-gh-pages.md)
 
 ### Plant UML
 Dokumentasjon for bruk av GitHub Actions for å generere PlantUML-diagrammer.
