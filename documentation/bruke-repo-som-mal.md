@@ -4,8 +4,10 @@ Denne guiden vil hjelpe deg med å bruke denne repoen som en mal for å lage din
 
 ## Trinn 1: Bruk repoen som en mal
 
+![Use this template](use-this-template.png)
+
 1. Gå til [HL7Norway/ig-mal](https://github.com/HL7Norway/ig-mal) repoen på GitHub.
-2. Klikk på den grønne "Use this template"-knappen øverst til høyre.
+2. Klikk på den grønne "Use this template"-knappen øverst til høyre
 3. Velg "Create a new repository" fra rullegardinmenyen.
 
 ## Trinn 2: Opprett et nytt repository
