@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "Mal"] ; # 
   fhir:title [ fhir:v "Mal"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-01-23T11:45:38+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-01-23T16:04:00+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 Norge"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 Norge" ] ;
@@ -568,22 +568,6 @@
          ] ) ;
          fhir:name [ fhir:v "index.html"^^xsd:anyURI ] ;
          fhir:title [ fhir:v "Home" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "footer.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "footer.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Footer" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "oppgaver.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "oppgaver.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Oppgaver" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] )
      ] ;

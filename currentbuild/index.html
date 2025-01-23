@@ -193,24 +193,29 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#tittel" id="markdown-toc-tittel">Tittel</a>    <ul>
+      <li><a href="#mål" id="markdown-toc-mål">Mål</a></li>
+      <li><a href="#figur" id="markdown-toc-figur">Figur</a></li>
+    </ul>
+  </li>
+</ul>
+
 </div>
-<h3 id="tittel">Tittel</h3>
+<h2 id="tittel">Tittel</h2>
 
 <p>Introduksjonstekst</p>
 
-<h4 id="mål">Mål</h4>
+<h3 id="mål">Mål</h3>
 
-<h4 id="figur">Figur</h4>
+<p>Målet med denne implementasjonsguiden er…</p>
+
+<h3 id="figur">Figur</h3>
+
+<p>Eksempel på en figur laget med PlantUML.</p>
 
 <p><img src="test.svg" width="40%" /></p>
-
-<hr />
-
-<p><br clear="all" />
-Footer.md - her kan du legge inn tekst som skal gjengis på slutten av alle sider.
-<br clear="all" /></p>
 
 
 
@@ -237,7 +242,7 @@ Footer.md - her kan du legge inn tekst som skal gjengis på slutten av alle side
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.hl7.no">HL7 Norge</a>.  Package hl7.fhir.no.mal#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jan 23, 2025 11:45+0000">2025-01-23</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.hl7.no">HL7 Norge</a>.  Package hl7.fhir.no.mal#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jan 23, 2025 16:04+0000">2025-01-23</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

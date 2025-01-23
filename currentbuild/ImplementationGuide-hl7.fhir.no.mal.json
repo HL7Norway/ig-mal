@@ -10,7 +10,7 @@
   "name" : "Mal",
   "title" : "Mal",
   "status" : "draft",
-  "date" : "2025-01-23T11:45:38+00:00",
+  "date" : "2025-01-23T16:04:00+00:00",
   "publisher" : "HL7 Norge",
   "contact" : [{
     "name" : "HL7 Norge",
@@ -650,24 +650,6 @@
         }],
         "nameUrl" : "index.html",
         "title" : "Home",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "footer.html"
-        }],
-        "nameUrl" : "footer.html",
-        "title" : "Footer",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "oppgaver.html"
-        }],
-        "nameUrl" : "oppgaver.html",
-        "title" : "Oppgaver",
         "generation" : "markdown"
       }]
     },
