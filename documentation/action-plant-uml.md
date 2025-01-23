@@ -1,4 +1,4 @@
-# plant-uml.yml
+# Generere PlantUML (diagrammer)
 
 Denne filen er en GitHub Actions workflow som brukes til å generere PlantUML-diagrammer og publisere dem til repoen. Her er en detaljert forklaring av hvert trinn i workflowen.
 
