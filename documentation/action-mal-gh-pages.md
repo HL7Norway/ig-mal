@@ -1,4 +1,4 @@
-# mal-gh-pages.yml
+# Generere IG og publisere på GitHub Pages
 
 Denne workflow-filen er konfigurert for å automatisk bygge og publisere en FHIR implementasjonsguide (IG) ved bruk av GitHub Actions. Nedenfor følger en detaljert forklaring av scriptet og hvordan det kan tilpasses.
 
