@@ -1,12 +1,12 @@
-### Tittel
+## Tittel
 
 Introduksjonstekst
 
-#### Mål
+### Mål
 
 Målet med denne implementasjonsguiden er...
 
-#### Figur
+### Figur
 
 Eksempel på en figur laget med PlantUML.
 
