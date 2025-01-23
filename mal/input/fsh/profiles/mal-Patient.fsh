@@ -12,7 +12,7 @@ Description: "Informasjon om pasienten, basert på no-basis."
 
 // Eksempler
 Instance: Pasient-1
-InstanceOf: MalPasient
+InstanceOf: MalPatient
 Description: "Eksempel på pasient med etternavn og fødselsnummer"
 * identifier[FNR].system = "urn:oid:2.16.578.1.12.4.1.4.1"
 * identifier[FNR].value = "13031353453"
