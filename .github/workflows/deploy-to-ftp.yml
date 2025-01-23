@@ -1,3 +1,5 @@
+# Under utvikling. Må settes opp og testes.
+
 name: Deploy to FTP
 
 on:
