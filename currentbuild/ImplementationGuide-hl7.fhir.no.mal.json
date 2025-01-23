@@ -10,7 +10,7 @@
   "name" : "Mal",
   "title" : "Mal",
   "status" : "draft",
-  "date" : "2025-01-23T09:24:12+00:00",
+  "date" : "2025-01-23T10:55:16+00:00",
   "publisher" : "HL7 Norge",
   "contact" : [{
     "name" : "HL7 Norge",
@@ -631,19 +631,7 @@
         "reference" : "StructureDefinition/mal-patient"
       },
       "name" : "Pasient",
-      "description" : "Informasjon om pasienten",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/mal-patient-test"
-      },
-      "name" : "PasientNoBasisTest",
-      "description" : "Informasjon om pasienten, med no-basis TEST",
+      "description" : "Informasjon om pasienten, basert på no-basis.",
       "exampleBoolean" : false
     }],
     "page" : {

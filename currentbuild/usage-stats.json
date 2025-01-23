@@ -9,10 +9,6 @@
       {
         "url": "http://hl7.no/fhir/ig/mal/StructureDefinition/mal-patient",
         "title": "Pasient"
-      },
-      {
-        "url": "http://hl7.no/fhir/ig/mal/StructureDefinition/mal-patient-test",
-        "title": "PasientNoBasisTest"
       }
     ]
   },

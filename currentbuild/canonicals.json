@@ -12,12 +12,5 @@
     "url" : "http://hl7.no/fhir/ig/mal/StructureDefinition/mal-patient",
     "version" : "0.1.0",
     "name" : "MalPatient"
-  },
-  {
-    "id" : "mal-patient-test",
-    "type" : "StructureDefinition",
-    "url" : "http://hl7.no/fhir/ig/mal/StructureDefinition/mal-patient-test",
-    "version" : "0.1.0",
-    "name" : "MalPatientTest"
   }
 ]

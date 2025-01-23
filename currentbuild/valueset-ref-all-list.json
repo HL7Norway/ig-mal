@@ -12,8 +12,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.1"],
       "uses" : {
       },
-      "StructureDefinition-mal-patient.html" : "Pasient",
-      "StructureDefinition-mal-patient-test.html" : "PasientNoBasisTest"
+      "StructureDefinition-mal-patient.html" : "Pasient"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/identifier-type",
@@ -27,7 +26,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.45"],
       "uses" : {
       },
-      "StructureDefinition-mal-patient-test.html" : "PasientNoBasisTest"
+      "StructureDefinition-mal-patient.html" : "Pasient"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/identifier-use",
@@ -41,7 +40,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.57"],
       "uses" : {
       },
-      "StructureDefinition-mal-patient-test.html" : "PasientNoBasisTest"
+      "StructureDefinition-mal-patient.html" : "Pasient"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/languages",
@@ -55,8 +54,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.20"],
       "uses" : {
       },
-      "StructureDefinition-mal-patient.html" : "Pasient",
-      "StructureDefinition-mal-patient-test.html" : "PasientNoBasisTest"
+      "StructureDefinition-mal-patient.html" : "Pasient"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/link-type",
@@ -70,8 +68,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.423"],
       "uses" : {
       },
-      "StructureDefinition-mal-patient.html" : "Pasient",
-      "StructureDefinition-mal-patient-test.html" : "PasientNoBasisTest"
+      "StructureDefinition-mal-patient.html" : "Pasient"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/marital-status",
@@ -88,8 +85,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.29"],
       "uses" : {
       },
-      "StructureDefinition-mal-patient.html" : "Pasient",
-      "StructureDefinition-mal-patient-test.html" : "PasientNoBasisTest"
+      "StructureDefinition-mal-patient.html" : "Pasient"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/name-use",
@@ -103,8 +99,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.65"],
       "uses" : {
       },
-      "StructureDefinition-mal-patient.html" : "Pasient",
-      "StructureDefinition-mal-patient-test.html" : "PasientNoBasisTest"
+      "StructureDefinition-mal-patient.html" : "Pasient"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/patient-contactrelationship",
@@ -118,8 +113,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.1130"],
       "uses" : {
       },
-      "StructureDefinition-mal-patient.html" : "Pasient",
-      "StructureDefinition-mal-patient-test.html" : "PasientNoBasisTest"
+      "StructureDefinition-mal-patient.html" : "Pasient"
     }
   ]
 }

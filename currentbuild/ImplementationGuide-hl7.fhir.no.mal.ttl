@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "Mal"] ; # 
   fhir:title [ fhir:v "Mal"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-01-23T09:24:12+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-01-23T10:55:16+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 Norge"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 Norge" ] ;
@@ -546,19 +546,7 @@
          fhir:reference [ fhir:v "StructureDefinition/mal-patient" ]
        ] ;
        fhir:name [ fhir:v "Pasient" ] ;
-       fhir:description [ fhir:v "Informasjon om pasienten" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://hl7.no/fhir/ig/mal/StructureDefinition/mal-patient-test> ;
-         fhir:reference [ fhir:v "StructureDefinition/mal-patient-test" ]
-       ] ;
-       fhir:name [ fhir:v "PasientNoBasisTest" ] ;
-       fhir:description [ fhir:v "Informasjon om pasienten, med no-basis TEST" ] ;
+       fhir:description [ fhir:v "Informasjon om pasienten, basert på no-basis." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] ) ;
      fhir:page [
