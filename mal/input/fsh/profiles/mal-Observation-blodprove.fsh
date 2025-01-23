@@ -1,8 +1,8 @@
-Profile:     MalObservationLdl
-Id:          mal-observation-ldl
+Profile:     MalObservationBlood
+Id:          mal-observation-blodprove
 Parent:      Observation
-Title:       "P-LDL-kolesterol"
-Description: "Måleverdier for P-LDL-kolesterol"
+Title:       "Blodprøve"
+Description: "Profil for vanlige blodprøver"
 * ^status = #draft
 * ^date = "2025-01-22"
 * ^publisher = "Organisasjonen min"
