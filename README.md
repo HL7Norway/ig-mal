@@ -73,4 +73,6 @@ Det skal skilles på "private" og "offentlige" IGer, som skal publiseres og regi
 
 - https://github.com/HL7/fhir-ig-publisher/releases
 
+---
+<a href="https://github.com/HL7Norway/"><img src="documentation/HL7-norway-logo.png" width="100px" /></a>
 
