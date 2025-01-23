@@ -1,4 +1,4 @@
-# Dokumentasjon for bruk, konfigurering og automatisering
+# Bruk, konfigurering og automatisering
 
 Denne siden inneholder en oversikt over dokumentasjonen for bruk av denne repoen.
 
