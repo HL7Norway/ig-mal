@@ -1,4 +1,4 @@
-name: ig-mal-gh-pages
+name: ig-mal-gh-pages-old
 
 on:
   workflow_dispatch:
