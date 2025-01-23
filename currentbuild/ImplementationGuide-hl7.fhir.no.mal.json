@@ -10,7 +10,7 @@
   "name" : "Mal",
   "title" : "Mal",
   "status" : "draft",
-  "date" : "2025-01-23T11:14:07+00:00",
+  "date" : "2025-01-23T11:45:38+00:00",
   "publisher" : "HL7 Norge",
   "contact" : [{
     "name" : "HL7 Norge",
@@ -632,7 +632,7 @@
         "reference" : "Patient/Pasient-1"
       },
       "name" : "Pasient-1",
-      "description" : "Eksempel på pasient med etternavn og fødselsnummer",
+      "description" : "Eksempel på pasient med navn og fødselsnummer",
       "exampleCanonical" : "http://hl7.no/fhir/ig/mal/StructureDefinition/mal-patient"
     }],
     "page" : {

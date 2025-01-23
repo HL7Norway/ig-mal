@@ -6,7 +6,7 @@
     <profile value="http://hl7.no/fhir/ig/mal/StructureDefinition/mal-patient"/>
   </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Patient Pasient-1</b></p><a name="Pasient-1"> </a><a name="hcPasient-1"> </a><a name="Pasient-1-no-NO"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Lin  (no stated gender), DoB Unknown ( urn:oid:2.16.578.1.12.4.1.4.1#13031353453)</p><hr/></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Patient Pasient-1</b></p><a name="Pasient-1"> </a><a name="hcPasient-1"> </a><a name="Pasient-1-no-NO"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Rita Lin  (no stated gender), DoB Unknown ( urn:oid:2.16.578.1.12.4.1.4.1#13031353453)</p><hr/></div>
   </text>
   <identifier>
     <system value="urn:oid:2.16.578.1.12.4.1.4.1"/>
@@ -14,5 +14,6 @@
   </identifier>
   <name>
     <family value="Lin"/>
+    <given value="Rita"/>
   </name>
 </Patient>

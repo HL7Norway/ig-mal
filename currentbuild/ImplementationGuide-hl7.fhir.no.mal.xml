@@ -11,7 +11,7 @@
   <name value="Mal"/>
   <title value="Mal"/>
   <status value="draft"/>
-  <date value="2025-01-23T11:14:07+00:00"/>
+  <date value="2025-01-23T11:45:38+00:00"/>
   <publisher value="HL7 Norge"/>
   <contact>
     <name value="HL7 Norge"/>
@@ -475,7 +475,7 @@
         <reference value="Patient/Pasient-1"/>
       </reference>
       <name value="Pasient-1"/>
-      <description value="Eksempel på pasient med etternavn og fødselsnummer"/>
+      <description value="Eksempel på pasient med navn og fødselsnummer"/>
       <exampleCanonical value="http://hl7.no/fhir/ig/mal/StructureDefinition/mal-patient"/>
     </resource>
     <page>

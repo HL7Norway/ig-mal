@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "Mal"] ; # 
   fhir:title [ fhir:v "Mal"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-01-23T11:14:07+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-01-23T11:45:38+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 Norge"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 Norge" ] ;
@@ -547,7 +547,7 @@
          fhir:reference [ fhir:v "Patient/Pasient-1" ]
        ] ;
        fhir:name [ fhir:v "Pasient-1" ] ;
-       fhir:description [ fhir:v "Eksempel på pasient med etternavn og fødselsnummer" ] ;
+       fhir:description [ fhir:v "Eksempel på pasient med navn og fødselsnummer" ] ;
        fhir:example [
          fhir:v "http://hl7.no/fhir/ig/mal/StructureDefinition/mal-patient"^^xsd:anyURI ;
          fhir:link <http://hl7.no/fhir/ig/mal/StructureDefinition/mal-patient>
