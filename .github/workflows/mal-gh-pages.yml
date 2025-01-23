@@ -1,4 +1,4 @@
-name: test-no-basis-ig-mal-gh-pages
+name: mal-gh-pages
 
 on:
   workflow_dispatch:
@@ -8,7 +8,7 @@ env:
 
 # The following jobs are equal for all IGs and can be moved to a common composite-action if 'uses'-support is added, see:
 # https://github.com/actions/runner/blob/main/docs/adrs/1144-composite-actions.md
-# TODO: "Hardkodet" for no-basis 2.2.0
+# "Hardkodet" for no-basis 2.2.0
 jobs:
   publish:
     runs-on: ubuntu-latest
