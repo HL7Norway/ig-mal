@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "Mal"] ; # 
   fhir:title [ fhir:v "Mal"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-01-23T10:55:16+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-01-23T11:14:07+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 Norge"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 Norge" ] ;
@@ -528,17 +528,6 @@
      fhir:resource ( [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Patient" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://hl7.no/fhir/ig/mal/Patient/example> ;
-         fhir:reference [ fhir:v "Patient/example" ]
-       ] ;
-       fhir:name [ fhir:v "example" ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "StructureDefinition:resource" ]
        ] ) ;
        fhir:reference [
@@ -548,6 +537,21 @@
        fhir:name [ fhir:v "Pasient" ] ;
        fhir:description [ fhir:v "Informasjon om pasienten, basert på no-basis." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Patient" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.no/fhir/ig/mal/Patient/Pasient-1> ;
+         fhir:reference [ fhir:v "Patient/Pasient-1" ]
+       ] ;
+       fhir:name [ fhir:v "Pasient-1" ] ;
+       fhir:description [ fhir:v "Eksempel på pasient med etternavn og fødselsnummer" ] ;
+       fhir:example [
+         fhir:v "http://hl7.no/fhir/ig/mal/StructureDefinition/mal-patient"^^xsd:anyURI ;
+         fhir:link <http://hl7.no/fhir/ig/mal/StructureDefinition/mal-patient>
+       ]
      ] ) ;
      fhir:page [
        fhir:extension ( [

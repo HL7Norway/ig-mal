@@ -10,7 +10,7 @@
   "name" : "Mal",
   "title" : "Mal",
   "status" : "draft",
-  "date" : "2025-01-23T10:55:16+00:00",
+  "date" : "2025-01-23T11:14:07+00:00",
   "publisher" : "HL7 Norge",
   "contact" : [{
     "name" : "HL7 Norge",
@@ -614,17 +614,6 @@
     "resource" : [{
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Patient"
-      }],
-      "reference" : {
-        "reference" : "Patient/example"
-      },
-      "name" : "example",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
@@ -633,6 +622,18 @@
       "name" : "Pasient",
       "description" : "Informasjon om pasienten, basert på no-basis.",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/Pasient-1"
+      },
+      "name" : "Pasient-1",
+      "description" : "Eksempel på pasient med etternavn og fødselsnummer",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/mal/StructureDefinition/mal-patient"
     }],
     "page" : {
       "extension" : [{
