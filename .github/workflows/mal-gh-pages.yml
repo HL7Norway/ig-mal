@@ -1,4 +1,4 @@
-name: mal-gh-pages
+name: Generate IG and publish
 
 on:
   workflow_dispatch:
