@@ -26,7 +26,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.141"],
       "uses" : {
       },
-      "StructureDefinition-mal-observation-ldl.html" : "P-LDL-kolesterol"
+      "StructureDefinition-mal-observation-blodprove.html" : "Blodprøve"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/data-absent-reason",
@@ -40,7 +40,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.5"],
       "uses" : {
       },
-      "StructureDefinition-mal-observation-ldl.html" : "P-LDL-kolesterol"
+      "StructureDefinition-mal-observation-blodprove.html" : "Blodprøve"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/identifier-type",
@@ -82,7 +82,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.20"],
       "uses" : {
       },
-      "StructureDefinition-mal-observation-ldl.html" : "P-LDL-kolesterol",
+      "StructureDefinition-mal-observation-blodprove.html" : "Blodprøve",
       "StructureDefinition-mal-patient.html" : "Pasient"
     },
     {
@@ -142,7 +142,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.403"],
       "uses" : {
       },
-      "StructureDefinition-mal-observation-ldl.html" : "P-LDL-kolesterol"
+      "StructureDefinition-mal-observation-blodprove.html" : "Blodprøve"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-codes",
@@ -156,7 +156,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.396"],
       "uses" : {
       },
-      "StructureDefinition-mal-observation-ldl.html" : "P-LDL-kolesterol"
+      "StructureDefinition-mal-observation-blodprove.html" : "Blodprøve"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-interpretation",
@@ -172,7 +172,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.399"],
       "uses" : {
       },
-      "StructureDefinition-mal-observation-ldl.html" : "P-LDL-kolesterol"
+      "StructureDefinition-mal-observation-blodprove.html" : "Blodprøve"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-methods",
@@ -186,7 +186,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.395"],
       "uses" : {
       },
-      "StructureDefinition-mal-observation-ldl.html" : "P-LDL-kolesterol"
+      "StructureDefinition-mal-observation-blodprove.html" : "Blodprøve"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-status",
@@ -200,7 +200,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.400"],
       "uses" : {
       },
-      "StructureDefinition-mal-observation-ldl.html" : "P-LDL-kolesterol"
+      "StructureDefinition-mal-observation-blodprove.html" : "Blodprøve"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/patient-contactrelationship",
@@ -231,7 +231,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.407"],
       "uses" : {
       },
-      "StructureDefinition-mal-observation-ldl.html" : "P-LDL-kolesterol"
+      "StructureDefinition-mal-observation-blodprove.html" : "Blodprøve"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/referencerange-meaning",
@@ -247,7 +247,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.397"],
       "uses" : {
       },
-      "StructureDefinition-mal-observation-ldl.html" : "P-LDL-kolesterol"
+      "StructureDefinition-mal-observation-blodprove.html" : "Blodprøve"
     }
   ]
 }

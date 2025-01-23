@@ -10,7 +10,7 @@
   "name" : "Mal",
   "title" : "Mal",
   "status" : "draft",
-  "date" : "2025-01-23T18:56:54+00:00",
+  "date" : "2025-01-23T19:14:09+00:00",
   "publisher" : "HL7 Norge",
   "contact" : [{
     "name" : "HL7 Norge",
@@ -617,10 +617,10 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/mal-observation-ldl"
+        "reference" : "StructureDefinition/mal-observation-blodprove"
       },
-      "name" : "P-LDL-kolesterol",
-      "description" : "Måleverdier for P-LDL-kolesterol",
+      "name" : "Blodprøve",
+      "description" : "Profil for vanlige blodprøver",
       "exampleBoolean" : false
     },
     {

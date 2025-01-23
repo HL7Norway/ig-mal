@@ -7,8 +7,8 @@
   "profiles": {
     "Observation": [
       {
-        "url": "http://hl7.no/fhir/ig/mal/StructureDefinition/mal-observation-ldl",
-        "title": "P-LDL-kolesterol"
+        "url": "http://hl7.no/fhir/ig/mal/StructureDefinition/mal-observation-blodprove",
+        "title": "Blodprøve"
       }
     ],
     "Patient": [

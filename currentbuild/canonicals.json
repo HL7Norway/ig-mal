@@ -7,11 +7,11 @@
     "name" : "Mal"
   },
   {
-    "id" : "mal-observation-ldl",
+    "id" : "mal-observation-blodprove",
     "type" : "StructureDefinition",
-    "url" : "http://hl7.no/fhir/ig/mal/StructureDefinition/mal-observation-ldl",
+    "url" : "http://hl7.no/fhir/ig/mal/StructureDefinition/mal-observation-blodprove",
     "version" : "0.1.0",
-    "name" : "MalObservationLdl"
+    "name" : "MalObservationBlood"
   },
   {
     "id" : "mal-patient",

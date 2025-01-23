@@ -11,7 +11,7 @@
   <name value="Mal"/>
   <title value="Mal"/>
   <status value="draft"/>
-  <date value="2025-01-23T18:56:54+00:00"/>
+  <date value="2025-01-23T19:14:09+00:00"/>
   <publisher value="HL7 Norge"/>
   <contact>
     <name value="HL7 Norge"/>
@@ -461,10 +461,10 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/mal-observation-ldl"/>
+        <reference value="StructureDefinition/mal-observation-blodprove"/>
       </reference>
-      <name value="P-LDL-kolesterol"/>
-      <description value="Måleverdier for P-LDL-kolesterol"/>
+      <name value="Blodprøve"/>
+      <description value="Profil for vanlige blodprøver"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
