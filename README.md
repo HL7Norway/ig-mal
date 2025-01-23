@@ -4,18 +4,18 @@
 [![mal-gh-pages](https://github.com/HL7Norway/ig-mal/actions/workflows/mal-gh-pages.yml/badge.svg)](https://github.com/HL7Norway/ig-mal/actions/workflows/mal-gh-pages.yml)
 [![Validate FSH Files](https://github.com/HL7Norway/ig-mal/actions/workflows/validate-fsh.yml/badge.svg)](https://github.com/HL7Norway/ig-mal/actions/workflows/validate-fsh.yml)
 
-Dette er en mal du kan kopiere og bruke som utgangspunkt for en HL7 FHIR implementasjonsguide. Den benytter seg av FHIR Shorthand (FSH) for å definere profiler og verktøy slik at all utvikling kan skje på GitHub.
+Dette er en mal du kan kopiere og bruke som utgangspunkt for en HL7 FHIR implementasjonsguide. Den benytter seg av FHIR Shorthand (FSH) for å definere profiler og verktøy slik at all utvikling kan skje på GitHub. 
 
 ## Hvordan komme i gang
 
 ![Use this template](documentation/use-this-template.png)
 
 Se malens [dokumentasjon for bruk, konfigurering og automatisering](documentation/index.md), inkludert:
-- [Instruksjoner for hvordan man kan bruke denne repoen som en mal for andre prosjekter.](https://github.com/HL7Norway/ig-mal/blob/main/documentation/bruke-repo-som-mal.md)
-- [Bruk av Actions for å generere og publisere en FHIR Implementation Guide til GitHub Pages.](https://github.com/HL7Norway/ig-mal/blob/main/documentation/action-mal-gh-pages.md)
-- [Bruk av Actions for å generere PlantUML-diagrammer.](https://github.com/HL7Norway/ig-mal/blob/main/documentation/action-plant-uml.md)
-- [Bruk av Actions for å laste opp innhold til en FTP-server.](https://github.com/HL7Norway/ig-mal/blob/main/documentation/action-deploy-to-ftp.md)
-- [Hvordan du kan automatisk validere FHIR Shorthand i din IG uten å publisere på nytt.](https://github.com/HL7Norway/ig-mal/blob/main/documentation/action-validate-fsh.md)
+- [Hvordan bruke denne repoen som en mal for eget prosjekt](https://github.com/HL7Norway/ig-mal/blob/main/documentation/bruke-repo-som-mal.md)
+- [Generere IG og publisere på GitHub Pages](https://github.com/HL7Norway/ig-mal/blob/main/documentation/action-mal-gh-pages.md)
+- [Generere PlantUML (diagrammer)](https://github.com/HL7Norway/ig-mal/blob/main/documentation/action-plant-uml.md)
+- [Publisere til egen server med FTP](https://github.com/HL7Norway/ig-mal/blob/main/documentation/action-deploy-to-ftp.md)
+- [Validere FHIR Shorthand-filer](https://github.com/HL7Norway/ig-mal/blob/main/documentation/action-validate-fsh.md)
 
 Følg beste praksis for implementasjonsguider. Utvalgte ressurser:
 
