@@ -13,6 +13,7 @@ Plan for pågående utviklingsprosjekt, ikke bare denne IG-malen
    - Inkl FSH 
 4. Verktøystøtte, fortrinnsvis alt online
    - Dokumentasjon av bruk for av verktøy: [documentation/index.md](documentation/index.md)
+   - [FSH-validator](https://github.com/HL7Norway/ig-mal/actions/workflows/validate-fsh.yml)
 5. Enkelt kunne publisere og distribuere IGen på en valgfri måte (egen www, Simplifier.net, etc) ved hjelp av pakker, herunder opprettholde versjoner/history
 
 Oppgaver som må på startes/planlegges/utføres i parallell:
