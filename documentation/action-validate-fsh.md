@@ -1,6 +1,8 @@
 # Validere FSH-filer
 
-Denne GitHub Actions workflowen er designet for å validere FSH-filer i et prosjekt. Den benytter seg av [fsh-validator](https://github.com/glichtner/fsh-validator) - [se dokumentasjon](https://fsh-validator.readthedocs.io/en/latest/).
+Denne GitHub Actions workflowen er designet for å validere FHIR Shorthand (FSH)-filer i et prosjekt, slik at du slipper å generere ny IG hver gang. I tillegg har noen [online validatorer](https://fshonline.fshschool.org/) problemer hvis man f.eks. benytter seg av no-basis. 
+
+Den benytter seg av [fsh-validator](https://github.com/glichtner/fsh-validator) - [se dokumentasjon](https://fsh-validator.readthedocs.io/en/latest/).
 
 ## Trigger
 
