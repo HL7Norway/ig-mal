@@ -9,3 +9,12 @@ Description: "Informasjon om pasienten, basert på no-basis."
 
 * identifier MS
 * name.family MS
+
+// Eksempler
+Instance: Pasient-1
+InstanceOf: MalPasient
+Description: "Eksempel på pasient med etternavn og fødselsnummer"
+* identifier[FNR].system = "urn:oid:2.16.578.1.12.4.1.4.1"
+* identifier[FNR].value = "13031353453"
+* name.family = "Lin"
+* name.given = "Rita"
