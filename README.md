@@ -23,8 +23,10 @@ Følg beste praksis for implementasjonsguider. Utvalgte ressurser:
 - [Den gode implementasjonsguide (HL7 Norge](https://hl7norway.github.io/best-practice/docs/dgi/#den-gode-implementasjonsguide)
 
 
----
-
+<p style="padding: 100px;">
+<img src="documentation/HL7-norway-logo.png" width="100px" align="right" alt="HL7 Norway logo"/><br>
+</p>
+   
 
 ## Plan
 
@@ -73,6 +75,5 @@ Det skal skilles på "private" og "offentlige" IGer, som skal publiseres og regi
 
 - https://github.com/HL7/fhir-ig-publisher/releases
 
----
-<a href="https://github.com/HL7Norway/"><img src="documentation/HL7-norway-logo.png" width="100px" /></a>
+
 
