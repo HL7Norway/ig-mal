@@ -13,7 +13,7 @@ Denne siden inneholder en oversikt over dokumentasjonen for bruk av denne repoen
 ### Plant UML
 [Dokumentasjon for bruk av GitHub Actions for å generere PlantUML-diagrammer.](https://github.com/HL7Norway/ig-mal/blob/main/documentation/action-plant-uml.md)
 
-### Deploy to FTP
+### Publisere til egen server med FTP
 [Dokumentasjon for bruk av GitHub Actions for å laste opp innhold til en FTP-server.](https://github.com/HL7Norway/ig-mal/blob/main/documentation/action-deploy-to-ftp.md)
 
 ### Validere FSH-filer
