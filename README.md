@@ -8,6 +8,8 @@ Dette er en mal du kan kopiere og bruke som utgangspunkt for en HL7 FHIR impleme
 
 ## Hvordan komme i gang
 
+![Use this template](documentation/use-this-template.png)
+
 Se malens [dokumentasjon for bruk, konfigurering og automatisering](documentation/index.md), inkludert:
 - [Instruksjoner for hvordan man kan bruke denne repoen som en mal for andre prosjekter.](https://github.com/HL7Norway/ig-mal/blob/main/documentation/bruke-repo-som-mal.md)
 - [Bruk av Actions for å generere og publisere en FHIR Implementation Guide til GitHub Pages.](https://github.com/HL7Norway/ig-mal/blob/main/documentation/action-mal-gh-pages.md)
