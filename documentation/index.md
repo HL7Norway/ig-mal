@@ -2,7 +2,7 @@
 
 Denne siden inneholder en oversikt over dokumentasjonen for bruk av denne repoen.
 
-## Bruke Repo som Mal
+## Bruke repo som mal for egen IG
 Instruksjoner for hvordan man kan bruke denne repoen som en mal for andre prosjekter.
 - [bruke-repo-som-mal.md](https://github.com/HL7Norway/ig-mal/blob/main/documentation/bruke-repo-som-mal.md)
 
