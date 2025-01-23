@@ -24,9 +24,8 @@ Følg beste praksis for implementasjonsguider. Utvalgte ressurser:
 
 
 <p style="padding: 100px;">
-<img src="documentation/HL7-norway-logo.png" width="100px" align="right" alt="HL7 Norway logo"/><br>
+<img src="https://avatars.githubusercontent.com/u/39090915" width="100px" align="right" alt="HL7 Norway logo"/><br>
 </p>
-   
 
 ## Plan
 
