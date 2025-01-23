@@ -34,6 +34,8 @@ Rediger FSH-filene i `input/fsh/profiles` for å definere dine egne profiler og 
 
 Legg til dine egne eksempler i `input/examples` og sørg for at de valideres mot dine FSH-profiler.
 
+**NB! Katalogen er ikke opprettet i malen. Du kan med fordel lage eksempler i FSH-filen til selve profilen, se eksempel-profilen.**
+
 ## Trinn 6: Sett opp GitHub Actions
 
 Repoen inneholder allerede en GitHub Actions workflow for å generere og publisere Implementation Guide. Du kan finne denne filen i `.github/workflows/mal-gh-pages.yml`. 
