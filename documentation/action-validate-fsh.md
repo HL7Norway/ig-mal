@@ -1,6 +1,6 @@
 # Validere FSH-filer
 
-Denne GitHub Actions workflowen er designet for å validere FSH-filer i et prosjekt.
+Denne GitHub Actions workflowen er designet for å validere FSH-filer i et prosjekt. Den benytter seg av [fsh-validator](https://github.com/glichtner/fsh-validator) - [se dokumentasjon](https://fsh-validator.readthedocs.io/en/latest/).
 
 ## Trigger
 
