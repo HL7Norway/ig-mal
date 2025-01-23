@@ -1,4 +1,4 @@
-# Dokumentasjon
+# Dokumentasjon for bruk, konfigurering og automatisering
 
 Denne siden inneholder en oversikt over dokumentasjonen for bruk av denne repoen.
 
@@ -19,3 +19,7 @@ Dokumentasjon for bruk av GitHub Actions for å generere PlantUML-diagrammer.
 ### Deploy to FTP
 Dokumentasjon for bruk av GitHub Actions for å laste opp innhold til en FTP-server.
 - [action-deploy-to-ftp.md](https://github.com/HL7Norway/ig-mal/blob/main/documentation/action-deploy-to-ftp.md)
+
+### Validere FSH-filer
+Dokumentasjon for hvordan du kan automatisk validere FHIR Shorthand i din IG uten å publisere på nytt.
+- [action-validate-fsh.md](https://github.com/HL7Norway/ig-mal/blob/main/documentation/action-validate-fsh.md)
