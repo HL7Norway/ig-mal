@@ -7,4 +7,5 @@ Description: "Måleverdier for P-LDL-kolesterol"
 * ^date = "2025-01-22"
 * ^publisher = "Organisasjonen min"
 
+* subject only Reference(Patient)
 * effectiveDateTime MS
