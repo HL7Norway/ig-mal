@@ -44,11 +44,11 @@ jobs:
 
     - name: Run fsh-validator
       run: |
-        cd ${{ env.IG }}/input/fsh/profiles/
-        fsh-validator *.fsh --log-path fsh-validator.log
+        cd ${{ env.IG }}/input/fsh/
+        fsh-validator --all --log-path fsh-validator.log
 
     - name: Upload output file
       uses: actions/upload-artifact@v4
       with:
         name: fsh-validator.log
-        path: ${{ env.IG }}/input/fsh/profiles/fsh-validator.log
+        path: ${{ env.IG }}/input/fsh/fsh-validator.log
