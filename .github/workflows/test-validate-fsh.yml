@@ -44,7 +44,7 @@ jobs:
 
     - name: Run fsh-validator
       run: |
-        cd ${{ env.IG }}/input/fsh/profiles/
+        cd ${{ env.IG }}/input/fsh/
         fsh-validator *.fsh --log-path fsh-validator.log
 
     - name: Upload output file
