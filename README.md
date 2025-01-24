@@ -12,7 +12,7 @@ Dette er en mal du kan kopiere og bruke som utgangspunkt for en HL7 FHIR impleme
 
 Se malens [dokumentasjon for bruk, konfigurering og automatisering](documentation/index.md), inkludert:
 - [Hvordan bruke denne repoen som en mal for eget prosjekt](https://github.com/HL7Norway/ig-mal/blob/main/documentation/bruke-repo-som-mal.md)
-- [Generere IG og publisere på GitHub Pages](https://github.com/HL7Norway/ig-mal/blob/main/documentation/action-mal-gh-pages.md)
+- [Generere IG og publisere på GitHub Pages](https://github.com/HL7Norway/ig-mal/blob/main/documentation/action-ig-gh-pages.md)
 - [Generere PlantUML (diagrammer)](https://github.com/HL7Norway/ig-mal/blob/main/documentation/action-plant-uml.md)
 - [Publisere til egen server med FTP](https://github.com/HL7Norway/ig-mal/blob/main/documentation/action-deploy-to-ftp.md)
 - [Validere FHIR Shorthand-filer](https://github.com/HL7Norway/ig-mal/blob/main/documentation/action-validate-fsh.md)
