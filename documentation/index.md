@@ -8,7 +8,7 @@ Denne siden inneholder en oversikt over dokumentasjonen for bruk av denne repoen
 ## Automatisering (actions)
 
 ### Generere IG og publisere på GitHub Pages
-[Dokumentasjon for bruk av GitHub Actions for å generere og publisere en FHIR Implementation Guide til GitHub Pages.](https://github.com/HL7Norway/ig-mal/blob/main/documentation/action-mal-gh-pages.md)
+[Dokumentasjon for bruk av GitHub Actions for å generere og publisere en FHIR Implementation Guide til GitHub Pages.](https://github.com/HL7Norway/ig-mal/blob/main/documentation/action-ig-gh-pages.md)
 
 ### Generere PlantUML (diagrammer)
 [Dokumentasjon for bruk av GitHub Actions for å generere PlantUML-diagrammer.](https://github.com/HL7Norway/ig-mal/blob/main/documentation/action-plant-uml.md)
