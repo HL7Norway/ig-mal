@@ -2,13 +2,11 @@
 
 Denne filen er en GitHub Actions workflow som brukes til å generere PlantUML-diagrammer og publisere dem til repoen. Her er en detaljert forklaring av hvert trinn i workflowen.
 
-## Workflow Navn
+## Workflow-navn
 
 ```yaml
-name: generate plantuml
+name: Generate PlantUML
 ```
-
-Dette setter navnet på workflowen til `generate plantuml`.
 
 ## Aktivering av Workflow
 
