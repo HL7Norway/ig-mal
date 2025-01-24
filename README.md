@@ -24,4 +24,4 @@ Følg beste praksis for implementasjonsguider. Utvalgte ressurser:
 
 ---
 
-Malen er fortsatt under utvikling -- se [plan](PLAN.md).
+Malen er fortsatt under utvikling -- se [plan](CONTRIBUTING.md).
