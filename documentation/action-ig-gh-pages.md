@@ -6,12 +6,12 @@ Denne workflow-filen er konfigurert for å automatisk bygge og publisere en FHIR
 
 ### Workflow-navn og -trigger
 ```yaml
-name: mal-gh-pages
+name: ig-gh-pages
 
 on:
   workflow_dispatch:
 ```
-Workflow navnet er `mal-gh-pages` og er satt opp til å trigges manuelt via GitHub brukergrensesnittet.
+Workflow navnet er `ig-gh-pages` og er satt opp til å trigges manuelt via GitHub brukergrensesnittet.
 
 ### Miljøvariabler
 ```yaml
