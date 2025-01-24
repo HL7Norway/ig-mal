@@ -6,8 +6,8 @@
   "status" : "draft",
   "package-id" : "hl7.fhir.no.mal",
   "ig-ver" : "0.1.0",
-  "date" : "Fri, 24 Jan, 2025 07:24:05 +0000",
-  "dateISO8601" : "2025-01-24T07:24:05+00:00",
+  "date" : "Fri, 24 Jan, 2025 12:14:15 +0000",
+  "dateISO8601" : "2025-01-24T12:14:15+00:00",
   "errs" : 0,
   "warnings" : 7,
   "hints" : 0,
@@ -15,5 +15,5 @@
   "suppressed-warnings" : 3,
   "version" : "4.0.1",
   "tool" : "5.0.0 (3)",
-  "maxMemory" : 1335603112
+  "maxMemory" : 904431280
 }
