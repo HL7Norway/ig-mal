@@ -45,7 +45,9 @@ Det skal skilles på "private" og "offentlige" IGer, som skal publiseres og regi
 
 - https://github.com/HL7/fhir-ig-publisher/releases
 
+### Kontakt
 
+Espen Stranger Seland - [rockphotog](https://github.com/rockphotog)
 
 
 <p style="padding: 100px;">
