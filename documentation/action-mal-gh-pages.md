@@ -4,7 +4,7 @@ Denne workflow-filen er konfigurert for å automatisk bygge og publisere en FHIR
 
 ## Forklaring av Workflow
 
-### 1. Workflow Navn og Trigger
+### Workflow-navn og -trigger
 ```yaml
 name: mal-gh-pages
 
@@ -13,14 +13,14 @@ on:
 ```
 Workflow navnet er `mal-gh-pages` og er satt opp til å trigges manuelt via GitHub brukergrensesnittet.
 
-### 2. Miljøvariabler
+### Miljøvariabler
 ```yaml
 env:
   IG: mal
 ```
 Setter miljøvariabelen `IG` til `mal`, som representerer navnet på implementasjonsguiden.
 
-### 3. Jobb: Publish
+### Jobb: Publish
 ```yaml
 jobs:
   publish:
@@ -56,7 +56,7 @@ Kjører jobben `publish` på en Ubuntu-latest runner, og bruker en Docker-contai
   ```
   Publiserer den genererte HTML-siden til en separat gren for å hoste den med GitHub Pages.
 
-## Tilpasning for Eget Bruk
+## Tilpasning for eget bruk
 For å tilpasse dette scriptet til eget bruk, kan du gjøre følgende endringer:
 1. **Oppdater Miljøvariabler**
    Endre verdien av `IG` miljøvariabelen til navnet på din egen implementasjonsguide.
