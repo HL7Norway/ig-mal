@@ -2,7 +2,7 @@
 
 Denne filen er en GitHub Actions workflow som brukes til å laste opp innholdet fra `gh-pages`-branchen til en FTP-server for publisering til en web-server. Hemmelige variabler (secrets) brukes for å sikre autentiseringsinformasjon. Her er en detaljert forklaring av hvert trinn i workflowen og hvordan du bruker secrets.
 
-## Workflow Navn
+## Workflow-navn
 
 ```yaml
 name: Deploy to FTP
@@ -10,7 +10,7 @@ name: Deploy to FTP
 
 Dette setter navnet på workflowen til `Deploy to FTP`.
 
-## Aktivering av Workflow
+## Aktivering av workflow
 
 ```yaml
 on:
