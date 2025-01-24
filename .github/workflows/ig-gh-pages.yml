@@ -1,4 +1,4 @@
-name: Generate IG and publish
+name: Generate IG and publish to GitHub pages
 
 on:
   workflow_dispatch:
