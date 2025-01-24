@@ -50,5 +50,5 @@ jobs:
     - name: Upload output file
       uses: actions/upload-artifact@v4
       with:
-        name: sh-validator.log
+        name: fsh-validator.log
         path: ${{ env.IG }}/input/fsh/profiles/fsh-validator.log
