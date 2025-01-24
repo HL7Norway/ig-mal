@@ -69,4 +69,4 @@ For å tilpasse dette scriptet til eget bruk, kan du gjøre følgende endringer:
 - [FHIR IG Publisher Documentation](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation)
 - [Best Practices for Using GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/best-practices-for-using-github-actions)
 
-For å se hele scriptet i sin helhet, besøk [mal-gh-pages.yml](https://github.com/HL7Norway/ig-mal/blob/main/.github/workflows/mal-gh-pages.yml).
+For å se hele scriptet i sin helhet, besøk [ig-gh-pages.yml](https://github.com/HL7Norway/ig-mal/blob/main/.github/workflows/ig-gh-pages.yml).
