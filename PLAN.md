@@ -47,3 +47,15 @@ Det skal skilles på "private" og "offentlige" IGer, som skal publiseres og regi
 
 
 
+
+<p style="padding: 100px;">
+<img src="https://avatars.githubusercontent.com/u/39090915" width="100px" align="right" alt="HL7 Norway logo"/><br>
+</p>
+
+
+
+
+
+
+
+
