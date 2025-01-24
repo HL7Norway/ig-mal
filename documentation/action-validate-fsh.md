@@ -23,29 +23,29 @@ Husk å endre denne til ditt navn på katalogen som IG'en ligger i.
 #### Steg
 
 1. **Checkout repository**
-   - Bruker `actions/checkout@v3` for å sjekke ut koden fra repository.
+   - Bruker `actions/checkout@v4` for å sjekke ut koden fra repository.
 
    ```yaml
    - name: Checkout repository
-     uses: actions/checkout@v3
+     uses: actions/checkout@v4
    ```
 
 2. **Setup Node.js**
-   - Bruker `actions/setup-node@v2` for å sette opp Node.js versjon 16.
+   - Bruker `actions/setup-node@v4` for å sette opp Node.js versjon 16.
 
    ```yaml
    - name: Setup Node.js
-     uses: actions/setup-node@v2
+     uses: actions/setup-node@v4
      with:
        node-version: '16'
    ```
 
 3. **Set up Python**
-   - Bruker `actions/setup-python@v2` for å sette opp Python versjon 3.x.
+   - Bruker `actions/setup-python@v5` for å sette opp Python versjon 3.x.
 
    ```yaml
    - name: Set up Python
-     uses: actions/setup-python@v2
+     uses: actions/setup-python@v5
      with:
        python-version: '3.x'
    ```
