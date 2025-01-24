@@ -101,5 +101,6 @@ For å bruke denne workflowen som en mal, må brukeren:
 2. Justere eventuelle spesifikke versjoner eller avhengigheter i henhold til prosjektets behov.
 3. Manuelt utløse workflowen ved å bruke GitHub Actions grensesnittet eller API-et (siden workflowen er satt opp til å trigges manuelt med `workflow_dispatch`).
 
+
+
 For mer informasjon, se den originale workflow-filen [her](https://github.com/HL7Norway/ig-mal/blob/main/.github/workflows/validate-fsh.yml).
-```
