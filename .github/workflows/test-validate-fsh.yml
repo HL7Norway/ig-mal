@@ -1,16 +1,19 @@
-name: Validate FSH Files
+name: TEST Validate FSH Files
 
 on:
   workflow_dispatch:
 
-env:
-  IG: mal
+# env:
+  # IG: mal
   # IG: ${{ vars.IG_KORTNAVN }}
 
 jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
+    - name: Call config workflow 
+      uses: ./.github/workflows/config.yml
+
     - name: Checkout repository
       uses: actions/checkout@v4
       
@@ -54,11 +57,11 @@ jobs:
 
     - name: Run fsh-validator
       run: |
-        cd ${{ env.IG }}/input/fsh/
+        cd ${{ steps.set-var.outputs.IG_KORTNAVN }}/input/fsh/
         fsh-validator --all --log-path fsh-validator.log
 
     - name: Upload output file
       uses: actions/upload-artifact@v4
       with:
         name: fsh-validator.log
-        path: ${{ env.IG }}/input/fsh/fsh-validator.log
+        path: ${{ steps.set-var.outputs.IG_KORTNAVN }}/input/fsh/fsh-validator.log
