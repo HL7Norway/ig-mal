@@ -11,4 +11,4 @@ Denne filen er konfigurasjonen for Sushi, som er en kompilator for FHIR Shorthan
 
 <br>
 
-Se forøvrig dokumentasjon for [Bruk, konfigurering og automatisering](../documentation/index.md) og [Hvordan bruke denne repoen som en mal](../documentation/bruke-repo-som-mal.md). 
+Se forøvrig dokumentasjon for [Bruk, konfigurering og automatisering](../documentation/README.md) og [Hvordan bruke denne repoen som en mal](../documentation/bruke-repo-som-mal.md). 
