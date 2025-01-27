@@ -14,8 +14,21 @@ jobs:
     runs-on: ubuntu-latest
     container: hl7fhir/ig-publisher-base:latest 
     steps:
-      - uses: actions/checkout@v4    
-      - name: Install hl7.fhir.no.basis-2.2.0-snapshots in local cache and run IG Publisher
+      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '16'
+
+      - name: Cache Node.js modules
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install FHIR packages and run IG Publisher
         run: |
           echo "NPM install fhir r4 core 4.0.1 from package registry"
           npm --registry https://packages.simplifier.net install hl7.fhir.r4.core@4.0.1
