@@ -8,3 +8,5 @@ Denne katalogen inneholder alle inndataene for implementasjonsguiden. Dette inkl
 
 ## sushi-config.yaml
 Denne filen er konfigurasjonen for Sushi, som er en kompilator for FHIR Shorthand (FSH). Den inneholder metadata og spesifikasjoner som brukes for å generere FHIR-ressurser fra FSH-filer.
+
+Se forøvrig dokumentasjon for [Bruk, konfigurering og automatisering](../documentation/index.md).
