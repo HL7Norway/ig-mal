@@ -30,6 +30,7 @@ jobs:
         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
           ${{ runner.os }}-node-
+          ${{ runner.os }}-
 
     - name: Install fsh-sushi
       run: npm install -g fsh-sushi
