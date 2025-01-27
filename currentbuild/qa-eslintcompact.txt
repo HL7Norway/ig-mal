@@ -10,4 +10,4 @@ Generic: line 0, col 0, Warning - An HTML fragment from the set [dependency-tabl
 /__w/ig-mal/ig-mal/mal/fsh-generated/resources/StructureDefinition-mal-observation-blodprove.json: line 0, col 0, Warning - The Implementation Guide contains no examples for this profile (BUSINESSRULE)
 
 err = 0, warn = 7, info = 0
-IG Publisher Version: 1.8.8
+IG Publisher Version: 1.8.9
