@@ -3,8 +3,9 @@ name: Gen IG and publish GH pages
 on:
   workflow_dispatch:
 
+# CONFIGURATION: The "short name" of the IG and the folder must be the same
 env:
-  IG: mal
+  IG_SHORTNAME: mal
 
 # The following jobs are equal for all IGs and can be moved to a common composite-action if 'uses'-support is added, see:
 # https://github.com/actions/runner/blob/main/docs/adrs/1144-composite-actions.md
@@ -34,7 +35,7 @@ jobs:
 
       - name: Run 🔥 IG Publsher with 🍣 Sushi
         run: |
-          cd ${{ env.IG }}
+          cd ${{ env.IG_SHORTNAME }}
           echo "Get latest publisher"
           curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o ./input-cache/publisher.jar --create-dirs
           echo "Install Sushi compiler"
@@ -48,6 +49,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ${{ env.IG }}/output
+          publish_dir: ${{ env.IG_SHORTNAME }}/output
           destination_dir: currentbuild
           commit_message: '${{ env.IG }}: ${{ github.event.head_commit.message }}' 
