@@ -20,16 +20,6 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Cache Node.js modules
-        uses: actions/cache@v4
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-            ${{ runner.os }}-node-
-            ${{ runner.os }}-
-
       - name: Install FHIR packages and run IG Publisher
         run: |
           echo "NPM install fhir r4 core 4.0.1 from package registry"
