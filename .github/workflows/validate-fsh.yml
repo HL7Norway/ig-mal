@@ -3,8 +3,9 @@ name: Validate FSH Files
 on:
   workflow_dispatch:
 
+# CONFIGURATION: The "short name" of the IG and the folder must be the same
 env:
-  IG: mal
+  IG_SHORTNAME: mal
   # IG: ${{ vars.IG_KORTNAVN }}
 
 jobs:
@@ -54,11 +55,11 @@ jobs:
 
     - name: Run fsh-validator
       run: |
-        cd ${{ env.IG }}/input/fsh/
+        cd ${{ env.IG_SHORTNAME }}/input/fsh/
         fsh-validator --all --log-path fsh-validator.log
 
     - name: Upload output file
       uses: actions/upload-artifact@v4
       with:
         name: fsh-validator.log
-        path: ${{ env.IG }}/input/fsh/fsh-validator.log
+        path: ${{ env.IG_SHORTNAME }}/input/fsh/fsh-validator.log
