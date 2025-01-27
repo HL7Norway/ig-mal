@@ -1,3 +1,9 @@
+![Under utvikling!](https://img.shields.io/badge/Status-Under%20utvikling-orange)
+[![ig-gh-pages](https://github.com/HL7Norway/ig-mal/actions/workflows/ig-gh-pages.yml/badge.svg)](https://github.com/HL7Norway/ig-mal/actions/workflows/ig-gh-pages.yml)
+[![Validate FSH Files](https://github.com/HL7Norway/ig-mal/actions/workflows/validate-fsh.yml/badge.svg)](https://github.com/HL7Norway/ig-mal/actions/workflows/validate-fsh.yml)
+
+Malen er fortsatt under utvikling -- se [plan](CONTRIBUTING.md).
+
 # Mal for implementasjonsguider (IG)
 
 Dette er en mal du kan kopiere og bruke som utgangspunkt for en HL7 FHIR implementasjonsguide. Den benytter seg av FHIR Shorthand (FSH) for å definere profiler og verktøy slik at all utvikling kan skje på GitHub. 
@@ -17,11 +23,3 @@ Følg beste praksis for implementasjonsguider. Utvalgte ressurser:
 
 - [IG og dokumentasjon (HL7 Norge)](https://hl7norway.github.io/best-practice/docs/IG-og-dokumentasjon/)
 - [Den gode implementasjonsguide (HL7 Norge](https://hl7norway.github.io/best-practice/docs/dgi/#den-gode-implementasjonsguide)
-
----
-![Under utvikling!](https://img.shields.io/badge/Status-Under%20utvikling-orange)
-[![ig-gh-pages](https://github.com/HL7Norway/ig-mal/actions/workflows/ig-gh-pages.yml/badge.svg)](https://github.com/HL7Norway/ig-mal/actions/workflows/ig-gh-pages.yml)
-[![Validate FSH Files](https://github.com/HL7Norway/ig-mal/actions/workflows/validate-fsh.yml/badge.svg)](https://github.com/HL7Norway/ig-mal/actions/workflows/validate-fsh.yml)
-
-
-Malen er fortsatt under utvikling -- se [plan](CONTRIBUTING.md).
