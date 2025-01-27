@@ -1,0 +1,12 @@
+name: Configuration
+
+on: [workflow_call]
+
+jobs:
+  set-config:
+    runs-on: ubuntu-latest
+    outputs:
+      IG_KORTNAVN: ${{ steps.set-var.outputs.IG_KORTNAVN }}
+    steps:
+      - id: set-var
+        run: echo "::set-output name=IG_KORTNAVN::mal"
