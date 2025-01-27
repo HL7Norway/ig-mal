@@ -20,6 +20,7 @@ Denne guiden vil hjelpe deg med å bruke denne repoen som en mal for å lage din
 ## Trinn 3: Konfigurer Implementation Guide
 
 Åpne `ig.ini`-filen og oppdater banen til Implementation Guide JSON-filen:
+
 ```ini
 [IG]
 ig = fsh-generated/resources/ImplementationGuide-min-ig.json
@@ -38,7 +39,7 @@ Legg til dine egne eksempler i `input/examples` og sørg for at de valideres mot
 
 ## Trinn 6: Sett opp GitHub Actions
 
-Repoen inneholder allerede en GitHub Actions workflow for å generere og publisere Implementation Guide. Du kan finne denne filen i `.github/workflows/mal-gh-pages.yml`. 
+Repoen inneholder allerede en GitHub Actions workflow for å generere og publisere Implementation Guide. Du kan finne denne filen i `.github/workflows/mal-gh-pages.yml`.
 
 ## Trinn 7: Kjør GitHub Actions
 
@@ -53,6 +54,7 @@ Etter at workflowen har kjørt ferdig, vil du finne utdata i `gh-pages`-branchen
 ## Eksempel på sushi-config.yaml
 
 Her er et eksempel på en `sushi-config.yaml`-fil:
+
 ```yaml
 id: din.fhir.ig
 canonical: http://example.org/fhir/min-ig
@@ -73,4 +75,3 @@ menu:
   Artifacts: artifacts.html
   TOC: toc.html
 ```
-

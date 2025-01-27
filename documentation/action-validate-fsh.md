@@ -1,6 +1,6 @@
 # Validere FSH-filer
 
-Denne GitHub Actions workflowen er designet for å validere FHIR Shorthand (FSH)-filer i et prosjekt, slik at du slipper å generere ny IG hver gang. I tillegg har noen [online validatorer](https://fshonline.fshschool.org/) problemer hvis man f.eks. benytter seg av no-basis. 
+Denne GitHub Actions workflowen er designet for å validere FHIR Shorthand (FSH)-filer i et prosjekt, slik at du slipper å generere ny IG hver gang. I tillegg har noen [online validatorer](https://fshonline.fshschool.org/) problemer hvis man f.eks. benytter seg av no-basis.
 
 Den benytter seg av [fsh-validator](https://github.com/glichtner/fsh-validator) - [se dokumentasjon](https://fsh-validator.readthedocs.io/en/latest/).
 
@@ -12,7 +12,7 @@ Manuell utløsing (`workflow_dispatch`).
 
 - `IG`: mal
 
-Husk å endre denne til ditt navn på katalogen som IG'en ligger i. 
+Husk å endre denne til ditt navn på katalogen som IG'en ligger i.
 
 ## Jobber
 
@@ -100,7 +100,5 @@ For å bruke denne workflowen som en mal, må brukeren:
 1. Sikre at prosjektstrukturen matcher stiene som brukes i workflowen, spesielt `input/fsh/profiles/`.
 2. Justere eventuelle spesifikke versjoner eller avhengigheter i henhold til prosjektets behov.
 3. Manuelt utløse workflowen ved å bruke GitHub Actions grensesnittet eller API-et (siden workflowen er satt opp til å trigges manuelt med `workflow_dispatch`).
-
-
 
 For mer informasjon, se den originale workflow-filen [her](https://github.com/HL7Norway/ig-mal/blob/main/.github/workflows/validate-fsh.yml).

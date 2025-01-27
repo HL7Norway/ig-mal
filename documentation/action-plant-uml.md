@@ -58,7 +58,8 @@ Dette trinnet sjekker ut repoen slik at workflowen kan få tilgang til koden. `f
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
-Dette trinnet bruker `grassedge/generate-plantuml-action@v1.5` for å generere PlantUML-diagrammer fra filene i `mal/input/images`-mappen. 
+Dette trinnet bruker `grassedge/generate-plantuml-action@v1.5` for å generere PlantUML-diagrammer fra filene i `mal/input/images`-mappen.
+
 - `path`: Angir mappen som inneholder PlantUML-filene.
 - `message`: Angir commit-meldingen for endringene som gjøres.
 - `env.GITHUB_TOKEN`: Brukes for autentisering mot GitHub API for å kunne pushe endringer.
