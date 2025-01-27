@@ -4,7 +4,8 @@ on:
   workflow_dispatch:
 
 env:
-  IG: ${{ vars.IG_KORTNAVN }}
+  IG: mal
+  # IG: ${{ vars.IG_KORTNAVN }}
 
 jobs:
   validate:
