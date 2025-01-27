@@ -3,7 +3,7 @@ name: Validate FSH Files
 on:
   workflow_dispatch:
 
- env:
+env:
   IG: mal
   # IG: ${{ vars.IG_KORTNAVN }}
 
@@ -13,9 +13,6 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-
-#    - name: Call config workflow 
-#      uses: ./.github/workflows/config.yml
       
     - name: Setup Node.js
       uses: actions/setup-node@v4
