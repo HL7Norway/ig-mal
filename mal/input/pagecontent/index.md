@@ -1,6 +1,6 @@
 ### Tittel
 
-Introduksjonstekst
+Introduksjonstekst (husk at dette er en mal, og ALL tekst må endres - dette er kun et eksempel)
 
 ### Mål
 
