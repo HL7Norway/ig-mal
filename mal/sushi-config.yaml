@@ -10,7 +10,7 @@ description: Implementasjonsguide for å TODO
 status: draft
 version: 0.1.0
 fhirVersion: 4.0.1
-copyrightYear: 2024+
+copyrightYear: 2025+
 releaseLabel: ci-build
 jurisdiction: urn:iso:std:iso:3166#NO "Norway"
 publisher:
