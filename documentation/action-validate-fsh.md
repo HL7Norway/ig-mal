@@ -93,6 +93,17 @@ Husk å endre denne til ditt navn på katalogen som IG'en ligger i.
        fsh-validator *.fsh
    ```
 
+8. **Upload output file**
+   - Laster opp valideringsresultatene som en artefakt.
+
+   ```yaml
+   - name: Upload output file
+     uses: actions/upload-artifact@v2
+     with:
+       name: validation-results
+       path: ${{ env.IG }}/input/fsh/profiles/validation-results.txt
+   ```
+
 ## Konfigurasjon av brukeren
 
 For å bruke denne workflowen som en mal, må brukeren:
