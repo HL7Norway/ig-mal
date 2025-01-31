@@ -3,7 +3,7 @@ name: Gen IG and publish GH pages
 on:
   workflow_dispatch:
 
-# CONFIGURATION: The "short name" of the IG and the folder must be the same
+# The short name is used to identify the IG and the folder where the IG is located
 env:
   IG_SHORTNAME: mal
 
