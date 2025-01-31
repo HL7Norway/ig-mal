@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "Mal"] ; # 
   fhir:title [ fhir:v "Mal"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-01-31T12:55:53+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-01-31T15:36:34+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 Norge"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 Norge" ] ;
