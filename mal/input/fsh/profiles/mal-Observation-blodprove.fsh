@@ -11,12 +11,3 @@ Description: "Profil for vanlige blodprøver"
 * effectiveDateTime MS // Dato og tid for blodprøve
 * code MS // Kode for blodprøve 
 * valueQuantity MS // Resultat av blodprøve
-
-// Eksempel på en blodprøve
-Instance: Blodprøve-1
-InstanceOf: MalObservationBlood
-Description: "Eksempel på en blodprøve"
-* subject = Reference(Patient/Pasient-1)
-* effectiveDateTime = "2025-01-22"
-* code = "Kode for blodprøve"
-* valueQuantity = 5.0
