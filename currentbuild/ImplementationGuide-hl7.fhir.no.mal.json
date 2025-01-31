@@ -10,7 +10,7 @@
   "name" : "Mal",
   "title" : "Mal",
   "status" : "draft",
-  "date" : "2025-01-27T22:06:34+00:00",
+  "date" : "2025-01-31T08:29:59+00:00",
   "publisher" : "HL7 Norge",
   "contact" : [{
     "name" : "HL7 Norge",
@@ -64,7 +64,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "2024+"
+        "valueString" : "2025+"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -343,7 +343,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "2024+"
+        "valueString" : "2025+"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },

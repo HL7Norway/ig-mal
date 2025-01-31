@@ -3,14 +3,18 @@
 title Eksempel-diagram
 footer Undertekst A
 
-class Folk
-class Datamaskin
+class Folk {
+    -Navn : string
+    +Fødselsår : int
+}
 class Sykkel
 class Tastatur
+class Datamaskin {
+    +Svenskeknapp : boolean
+} 
 
 Folk <-- Datamaskin
 Folk <-- Sykkel
 Tastatur --o Datamaskin
 
 @enduml
-

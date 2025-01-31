@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "Mal"] ; # 
   fhir:title [ fhir:v "Mal"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-01-27T22:06:34+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-01-31T08:29:59+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 Norge"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 Norge" ] ;
@@ -77,7 +77,7 @@
          fhir:value [ fhir:v "copyrightyear" ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "2024+" ]
+         fhir:value [ fhir:v "2025+" ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
@@ -305,7 +305,7 @@
          fhir:value [ fhir:v "copyrightyear" ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "2024+" ]
+         fhir:value [ fhir:v "2025+" ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
