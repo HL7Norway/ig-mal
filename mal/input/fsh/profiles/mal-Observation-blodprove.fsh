@@ -7,7 +7,7 @@ Description: "Profil for vanlige blodprøver"
 * ^date = "2025-01-31"
 * ^publisher = "Organisasjonen min"
 
-* subject only Reference(Patient) 1..1 // Pasienten som blodprøven er tatt av
+* subject only Reference(Patient) // Pasienten som blodprøven er tatt av
 * effectiveDateTime MS // Dato og tid for blodprøve
 * code MS // Kode for blodprøve 
 * valueQuantity MS // Resultat av blodprøve
