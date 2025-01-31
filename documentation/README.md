@@ -1,6 +1,6 @@
 # Bruk, konfigurering og automatisering
 
-Denne siden gir en oversikt over dokumentasjonen for bruk av dette repoet.
+Denne siden gir en oversikt over dokumentasjonen for bruk av dette repoet. Her finner du informasjon om hvordan du kan bruke repoet som en mal for din egen Implementation Guide (IG), samt detaljer om ulike automatiseringsprosesser ved hjelp av GitHub Actions. Dette inkluderer generering og publisering av IG, generering av PlantUML-diagrammer, publisering til en FTP-server, og validering av FHIR Shorthand (FSH)-filer.
 
 ## Bruke repoet som mal for egen IG
 
