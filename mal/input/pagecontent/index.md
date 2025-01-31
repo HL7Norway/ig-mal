@@ -27,7 +27,9 @@ Guiden viser hvordan kliniske observasjoner som blodtrykk, puls og temperatur ka
 
 Eksempel på en figur laget med PlantUML.
 
-<img src="test.svg" width="40%" />
+<div style="text-align: center;">
+  <img src="test.svg" width="40%" />
+</div>
 
 ### Eksempel på FHIR-ressurs
 
