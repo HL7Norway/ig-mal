@@ -197,23 +197,104 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#tittel" id="markdown-toc-tittel">Tittel</a></li>
   <li><a href="#mål" id="markdown-toc-mål">Mål</a></li>
+  <li><a href="#omfang" id="markdown-toc-omfang">Omfang</a></li>
+  <li><a href="#brukstilfeller" id="markdown-toc-brukstilfeller">Brukstilfeller</a></li>
   <li><a href="#figur" id="markdown-toc-figur">Figur</a></li>
+  <li><a href="#eksempel-på-fhir-ressurs" id="markdown-toc-eksempel-på-fhir-ressurs">Eksempel på FHIR-ressurs</a></li>
 </ul>
 
 </div>
 <h3 id="tittel">Tittel</h3>
 
-<p>Introduksjonstekst</p>
+<p>Introduksjonstekst (husk at dette er en mal, og ALL tekst må endres - dette er kun et eksempel)</p>
 
 <h3 id="mål">Mål</h3>
 
-<p>Målet med denne implementasjonsguiden er…</p>
+<p>Målet med denne implementasjonsguiden er å gi en standardisert måte å representere og utveksle helsedata på ved hjelp av HL7 FHIR. Guiden beskriver hvordan ulike FHIR-profiler og ressurser kan brukes for å oppnå interoperabilitet mellom helsesystemer.</p>
+
+<h3 id="omfang">Omfang</h3>
+
+<p>Denne implementasjonsguiden dekker følgende områder:</p>
+<ul>
+  <li>Pasientadministrasjon</li>
+  <li>Kliniske observasjoner</li>
+  <li>Medisinsk historikk</li>
+  <li>Behandlingsplaner</li>
+  <li>Laboratorieresultater</li>
+</ul>
+
+<h3 id="brukstilfeller">Brukstilfeller</h3>
+
+<h4 id="pasientregistrering">Pasientregistrering</h4>
+<p>Denne guiden beskriver hvordan pasienter kan registreres i et helsesystem ved hjelp av FHIR <code class="language-plaintext highlighter-rouge">Patient</code>-ressursen. Eksempler inkluderer opprettelse, oppdatering og sletting av pasientdata.</p>
+
+<h4 id="kliniske-observasjoner">Kliniske observasjoner</h4>
+<p>Guiden viser hvordan kliniske observasjoner som blodtrykk, puls og temperatur kan representeres ved hjelp av FHIR <code class="language-plaintext highlighter-rouge">Observation</code>-ressursen.</p>
 
 <h3 id="figur">Figur</h3>
 
 <p>Eksempel på en figur laget med PlantUML.</p>
 
 <p><img src="test.svg" width="40%" /></p>
+
+<h3 id="eksempel-på-fhir-ressurs">Eksempel på FHIR-ressurs</h3>
+
+<p>Her er et eksempel på en FHIR <code class="language-plaintext highlighter-rouge">Patient</code>-ressurs som følger <code class="language-plaintext highlighter-rouge">no-basis-Patient</code>-profilen:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patient"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"http://hl7.no/fhir/StructureDefinition/no-basis-Patient"</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"use"</span><span class="p">:</span><span class="w"> </span><span class="s2">"official"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/v2/0203"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NN"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Norwegian national identity number"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:oid:2.16.578.1.12.4.1.4.1"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345678901"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"period"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-01-01"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"assigner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Folkeregisteret"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"use"</span><span class="p">:</span><span class="w"> </span><span class="s2">"official"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"family"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hansen"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"given"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"Ola"</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"gender"</span><span class="p">:</span><span class="w"> </span><span class="s2">"male"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"birthDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1980-01-01"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"use"</span><span class="p">:</span><span class="w"> </span><span class="s2">"home"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"line"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"Gateveien 1"</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Oslo"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"postalCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0123"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NO"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
 
 
@@ -240,7 +321,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.hl7.no">HL7 Norge</a>.  Package hl7.fhir.no.mal#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 31, 2025 08:29+0000">2025-01-31</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.hl7.no">HL7 Norge</a>.  Package hl7.fhir.no.mal#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 31, 2025 11:19+0000">2025-01-31</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
