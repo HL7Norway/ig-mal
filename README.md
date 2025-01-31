@@ -6,7 +6,7 @@ Malen er fortsatt under utvikling -- se [plan](CONTRIBUTING.md).
 
 # Mal for implementasjonsguider (IG)
 
-Dette er en mal du kan kopiere og bruke som utgangspunkt for en HL7 FHIR implementasjonsguide. Den benytter seg av FHIR Shorthand (FSH) for å definere profiler og verktøy slik at all utvikling kan skje på GitHub. 
+Dette er en mal du kan kopiere og bruke som utgangspunkt for en HL7 FHIR implementasjonsguide. Den benytter seg av FHIR Shorthand (FSH) for å definere profiler og verktøy slik at all utvikling kan skje på GitHub.
 
 ## Hvordan komme i gang
 
