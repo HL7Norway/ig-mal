@@ -45,15 +45,6 @@ Her er et eksempel på en FHIR `Patient`-ressurs som følger `no-basis-Patient`-
   "identifier": [
     {
       "use": "official",
-      "type": {
-        "coding": [
-          {
-            "system": "http://hl7.org/fhir/v2/0203",
-            "code": "NN",
-            "display": "Norwegian national identity number"
-          }
-        ]
-      },
       "system": "urn:oid:2.16.578.1.12.4.1.4.1",
       "value": "12345678901",
       "period": {
