@@ -31,7 +31,7 @@ Eksempel på en figur laget med PlantUML.
 
 ### Eksempel på FHIR-ressurs
 
-Her er et eksempel på en FHIR `Patient`-ressurs som følger `mal-Patient`-profilen:
+Her er et eksempel på en FHIR `Patient`-ressurs som følger `no-basis-Patient`-profilen:
 
 ```json
 {
@@ -39,26 +39,52 @@ Her er et eksempel på en FHIR `Patient`-ressurs som følger `mal-Patient`-profi
   "id": "example",
   "meta": {
     "profile": [
-      "http://hl7.no/fhir/StructureDefinition/mal-Patient"
+      "http://hl7.no/fhir/StructureDefinition/no-basis-Patient"
     ]
   },
   "identifier": [
     {
-      "use": "usual",
-      "system": "http://hospital.smarthealthit.org",
-      "value": "12345"
+      "use": "official",
+      "type": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/v2/0203",
+            "code": "NN",
+            "display": "Norwegian national identity number"
+          }
+        ]
+      },
+      "system": "urn:oid:2.16.578.1.12.4.1.4.1",
+      "value": "12345678901",
+      "period": {
+        "start": "2023-01-01"
+      },
+      "assigner": {
+        "display": "Folkeregisteret"
+      }
     }
   ],
   "name": [
     {
       "use": "official",
-      "family": "Doe",
+      "family": "Hansen",
       "given": [
-        "John"
+        "Ola"
       ]
     }
   ],
   "gender": "male",
-  "birthDate": "1974-12-25"
+  "birthDate": "1980-01-01",
+  "address": [
+    {
+      "use": "home",
+      "line": [
+        "Gateveien 1"
+      ],
+      "city": "Oslo",
+      "postalCode": "0123",
+      "country": "NO"
+    }
+  ]
 }
 ```
