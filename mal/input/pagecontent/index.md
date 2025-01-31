@@ -9,6 +9,7 @@ Målet med denne implementasjonsguiden er å gi en standardisert måte å repres
 ### Omfang
 
 Denne implementasjonsguiden dekker følgende områder:
+
 - Pasientadministrasjon
 - Kliniske observasjoner
 - Medisinsk historikk
@@ -18,15 +19,14 @@ Denne implementasjonsguiden dekker følgende områder:
 ### Brukstilfeller
 
 #### Pasientregistrering
+
 Denne guiden beskriver hvordan pasienter kan registreres i et helsesystem ved hjelp av FHIR `Patient`-ressursen. Eksempler inkluderer opprettelse, oppdatering og sletting av pasientdata.
 
 #### Kliniske observasjoner
+
 Guiden viser hvordan kliniske observasjoner som blodtrykk, puls og temperatur kan representeres ved hjelp av FHIR `Observation`-ressursen.
 
 ### Figur
 
 Eksempel på en figur laget med PlantUML.
 
-<div style="text-align: center;">
-  <img src="test.svg" width="40%" />
-</div>
