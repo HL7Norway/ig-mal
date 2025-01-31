@@ -1,8 +1,10 @@
 @startuml
 
+' Tittel og bunntekst for diagrammet
 title Eksempel-diagram
 footer Undertekst A
 
+' Klassedefinisjoner med attributter
 class Folk {
     -Navn : string
     +Fødselsår : int
@@ -11,10 +13,11 @@ class Sykkel
 class Tastatur
 class Datamaskin {
     +Svenskeknapp : boolean
-} 
+}
 
-Folk <-- Datamaskin
-Folk <-- Sykkel
-Tastatur --o Datamaskin
+' Relasjoner mellom klasser
+Folk <-- Datamaskin : bruker
+Folk <-- Sykkel : eier
+Tastatur --o Datamaskin : består av
 
 @enduml
