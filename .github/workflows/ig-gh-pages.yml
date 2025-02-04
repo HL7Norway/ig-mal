@@ -33,7 +33,7 @@ jobs:
           echo "Copy local no-basis snapshot to .fhir package cache directory"
           cp -r ./node_modules/hl7.fhir.no.basis/* /github/home/.fhir/packages/hl7.fhir.no.basis#2.2.0/package 
 
-      - name: Run 🔥 IG Publsher with 🍣 Sushi
+      - name: Run 🔥 IG Publisher with 🍣 Sushi
         run: |
           cd ${{ env.IG_SHORTNAME }}
           echo "Get latest publisher"
