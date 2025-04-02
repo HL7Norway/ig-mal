@@ -59,6 +59,10 @@
   "baseDefinition" : "http://hl7.no/fhir/StructureDefinition/no-basis-Patient",
   "derivation" : "constraint",
   "snapshot" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version",
+      "valueString" : "2.0.10"
+    }],
     "element" : [{
       "id" : "Patient",
       "path" : "Patient",
