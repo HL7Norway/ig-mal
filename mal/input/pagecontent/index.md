@@ -30,5 +30,5 @@ Guiden viser hvordan kliniske observasjoner som blodtrykk, puls og temperatur ka
 
 Eksempel på en figur laget med PlantUML.
 
-{% include test.svg %}
+{% include test.puml %}
 
