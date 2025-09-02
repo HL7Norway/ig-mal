@@ -10,8 +10,6 @@ Description: "Informasjon om pasienten, basert på no-basis."
 * identifier MS
 * name.family MS
 
-// Pasient: "Doktor, jeg tror jeg har brukket armen på flere steder." Lege: "Da bør du kanskje unngå de stedene i fremtiden."
-
 // Eksempel på pasient med navn og fødselsnummer
 
 Instance: Pasient-1
