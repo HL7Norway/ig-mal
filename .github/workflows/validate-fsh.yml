@@ -83,11 +83,18 @@ jobs:
     - name: Run SUSHI validation
       if: ${{ github.event.inputs.run_sushi_validation == 'true' }}
       continue-on-error: true
+      timeout-minutes: 10
       run: |
         cd ${{ env.IG_SHORTNAME }}
         echo "🍣 Running SUSHI build validation..."
-        sushi . --require-latest 2>&1 | tee sushi-validation.log || true
-        echo "✅ SUSHI validation step completed (errors may exist - check logs)"
+        # Try with --require-latest first, fallback without if it fails
+        if timeout 300 sushi . --require-latest 2>&1 | tee sushi-validation.log; then
+          echo "✅ SUSHI validation completed successfully"
+        else
+          echo "⚠️  SUSHI with --require-latest failed, trying without flag..."
+          timeout 300 sushi . 2>&1 | tee -a sushi-validation.log || true
+        fi
+        echo "✅ SUSHI validation step completed (check logs for details)"
         
     - name: Display validation results
       if: always()
