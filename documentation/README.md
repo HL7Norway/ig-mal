@@ -6,6 +6,11 @@ Denne siden gir en oversikt over dokumentasjonen for bruk av dette repoet. Her f
 
 [Følg disse instruksjonene for å bruke dette repoet som en mal for andre prosjekter.](https://github.com/HL7Norway/ig-mal/blob/main/documentation/bruke-repo-som-mal.md)
 
+### Rask oppstart
+
+- [Setup-checklist for nye brukere](setup-checklist.md) - trinn-for-trinn guide
+- [Detaljert oppsettsguide](bruke-repo-som-mal.md) - utdypende instruksjoner
+
 ## Automatisering (actions)
 
 ### Generere IG og publisere på GitHub Pages

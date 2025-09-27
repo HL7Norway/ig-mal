@@ -6,13 +6,24 @@ Den benytter seg av [fsh-validator](https://github.com/glichtner/fsh-validator) 
 
 ## Trigger
 
-Manuell utløsing (`workflow_dispatch`).
+Workflowen kan utløses på flere måter:
+
+- **Manuell utløsing** (`workflow_dispatch`) med valgbare parametere
+- **Pull requests** som endrer FSH-filer eller sushi-config.yaml
+- **Push til main** som endrer FSH-filer eller sushi-config.yaml
 
 ## Miljøvariabler
 
-- `IG`: mal
+- `IG_SHORTNAME`: mal
 
-Husk å endre denne til ditt navn på katalogen som IG'en ligger i.
+**Viktig:** Husk å endre denne til ditt navn på katalogen som IG'en ligger i når du bruker malen.
+
+## Manuelle kjøringsvalg
+
+Når du kjører workflowen manuelt, kan du velge:
+
+- **Run SUSHI validation**: Kjører en omfattende SUSHI-byggvalidering (standard: av)
+- **Fail workflow if SUSHI validation has errors**: Lar workflowen feile ved SUSHI-feil (standard: av)
 
 ## Jobber
 
@@ -31,13 +42,13 @@ Husk å endre denne til ditt navn på katalogen som IG'en ligger i.
    ```
 
 2. **Setup Node.js**
-   - Bruker `actions/setup-node@v4` for å sette opp Node.js versjon 16.
+   - Bruker `actions/setup-node@v4` for å sette opp Node.js versjon 20.
 
    ```yaml
    - name: Setup Node.js
      uses: actions/setup-node@v4
      with:
-       node-version: '16'
+       node-version: '20'
    ```
 
 3. **Set up Python**
@@ -84,32 +95,99 @@ Husk å endre denne til ditt navn på katalogen som IG'en ligger i.
    ```
 
 7. **Run fsh-validator**
-   - Kjører `fsh-validator` for å validere alle FSH-filer i spesifisert katalog.
+   - Kjører `fsh-validator` for å validere alle FSH-filer.
 
    ```yaml
    - name: Run fsh-validator
      run: |
-       cd ${{ env.IG }}/input/fsh/profiles/
-       fsh-validator *.fsh
+       cd ${{ env.IG_SHORTNAME }}/input/fsh/
+       fsh-validator --all --log-path fsh-validator.log
    ```
 
-8. **Upload output file**
-   - Laster opp valideringsresultatene som en artefakt.
+8. **Run SUSHI validation** (valgfritt)
+   - Kjører kun hvis aktivert manuelt. Utfører en fullstendig SUSHI-byggevalidering.
 
    ```yaml
-   - name: Upload output file
-     uses: actions/upload-artifact@v2
-     with:
-       name: validation-results
-       path: ${{ env.IG }}/input/fsh/profiles/validation-results.txt
+   - name: Run SUSHI validation
+     if: ${{ github.event.inputs.run_sushi_validation == 'true' }}
+     continue-on-error: true
+     timeout-minutes: 10
+     run: |
+       cd ${{ env.IG_SHORTNAME }}
+       sushi . --require-latest 2>&1 | tee sushi-validation.log
    ```
 
-## Konfigurasjon av brukeren
+9. **Display validation results**
+   - Viser resultater fra både FSH og SUSHI validering (hvis kjørt).
 
-For å bruke denne workflowen som en mal, må brukeren:
+10. **Upload validation artifacts**
+    - Laster opp alle valideringslogger som artefakter.
 
-1. Sikre at prosjektstrukturen matcher stiene som brukes i workflowen, spesielt `input/fsh/profiles/`.
-2. Justere eventuelle spesifikke versjoner eller avhengigheter i henhold til prosjektets behov.
-3. Manuelt utløse workflowen ved å bruke GitHub Actions grensesnittet eller API-et (siden workflowen er satt opp til å trigges manuelt med `workflow_dispatch`).
+    ```yaml
+    - name: Upload validation artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: fsh-validation-results-${{ github.run_number }}
+        path: |
+          ${{ env.IG_SHORTNAME }}/input/fsh/fsh-validator.log
+          ${{ env.IG_SHORTNAME }}/sushi-validation.log
+    ```
+
+11. **Generate job summary**
+    - Lager en detaljert rapport som vises i GitHub Actions UI med feil- og advarselstelling.
+
+## Konfigurasjon for nye brukere
+
+Når du bruker ig-mal som template, må du:
+
+### 1. Oppdater miljøvariabel
+
+Endre `IG_SHORTNAME` i `.github/workflows/validate-fsh.yml`:
+
+```yaml
+env:
+  IG_SHORTNAME: ditt-ig-mappenavn  # Endre fra 'mal'
+```
+
+### 2. Sikre mappestruktur
+
+Workflowen forventer denne strukturen:
+
+```text
+ditt-ig-mappenavn/
+├── input/
+│   └── fsh/
+│       ├── profiles/
+│       ├── valuesets/
+│       └── aliases.fsh
+└── sushi-config.yaml
+```
+
+### 3. Teste workflowen
+
+**Automatisk kjøring:**
+
+- Workflowen kjører automatisk ved pull requests og push til main
+- Kun FSH-validering kjøres automatisk
+
+**Manuell kjøring:**
+
+1. Gå til "Actions" → "Validate FSH Files"
+2. Klikk "Run workflow"
+3. Velg ønskede alternativer:
+   - ☐ Run SUSHI validation (anbefalt for grundig testing)
+   - ☐ Fail workflow if SUSHI validation has errors (kun hvis du vil at SUSHI-feil skal stoppe workflowen)
+
+### 4. Tolke resultater
+
+Workflowen genererer en detaljert rapport som viser:
+
+- Antall FSH-feil og advarsler
+- SUSHI-valideringsresultater (hvis aktivert)
+- Lenke til fullstendige logger
+
+**Grønn status:** Alle valideringer bestått  
+**Gul status:** Advarsler funnet, men ikke kritiske feil  
+**Rød status:** Feil funnet som må rettes
 
 For mer informasjon, se den originale workflow-filen [her](https://github.com/HL7Norway/ig-mal/blob/main/.github/workflows/validate-fsh.yml).
