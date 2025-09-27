@@ -5,9 +5,9 @@ Title:       "Blodprøve"
 Description: "Profil for vanlige blodprøver"
 * ^status = #draft
 * ^date = "2025-01-31"
-* ^publisher = "Organisasjonen min"
+* ^publisher = "HL7 Norge"
 
-* subject only Reference(Patient) // Pasienten som blodprøven er tatt av
+* subject only Reference(MalPatient) // Pasienten som blodprøven er tatt av
 * effectiveDateTime MS // Dato og tid for blodprøve
 * code MS // Kode for blodprøve 
 * valueQuantity MS // Resultat av blodprøve

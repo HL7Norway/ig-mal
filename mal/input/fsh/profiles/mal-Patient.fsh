@@ -5,7 +5,7 @@ Title:       "Pasient"
 Description: "Informasjon om pasienten, basert på no-basis."
 * ^status = #draft
 * ^date = "2025-01-22"
-* ^publisher = "Organisasjonen min"
+* ^publisher = "HL7 Norge"
 
 * identifier MS
 * name.family MS
