@@ -2,6 +2,15 @@ name: Validate FSH Files
 
 on:
   workflow_dispatch:
+  pull_request:
+    paths:
+      - 'mal/input/fsh/**'
+      - 'mal/sushi-config.yaml'
+  push:
+    branches: [main]
+    paths:
+      - 'mal/input/fsh/**'
+      - 'mal/sushi-config.yaml'
 
 # CONFIGURATION: The "short name" of the IG and the folder must be the same
 env:
@@ -18,7 +27,7 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '16'
+        node-version: '20'
         
     - name: Setup Python
       uses: actions/setup-python@v5
@@ -56,10 +65,71 @@ jobs:
     - name: Run fsh-validator
       run: |
         cd ${{ env.IG_SHORTNAME }}/input/fsh/
+        echo "🔍 Running FSH validation..."
         fsh-validator --all --log-path fsh-validator.log
+        echo "✅ FSH validation completed"
+        
+    - name: Display validation results
+      if: always()
+      run: |
+        cd ${{ env.IG_SHORTNAME }}/input/fsh/
+        if [ -f fsh-validator.log ]; then
+          echo "📊 Validation Results:"
+          echo "===================="
+          cat fsh-validator.log
+          
+          # Check if there are any errors
+          if grep -q "ERROR\|FATAL" fsh-validator.log; then
+            echo "❌ Validation failed with errors"
+            exit 1
+          elif grep -q "WARN" fsh-validator.log; then
+            echo "⚠️  Validation completed with warnings"
+          else
+            echo "✅ Validation passed successfully"
+          fi
+        else
+          echo "⚠️  No validation log found"
+        fi
 
-    - name: Upload output file
+    - name: Upload validation artifacts
       uses: actions/upload-artifact@v4
+      if: always()
       with:
-        name: fsh-validator.log
-        path: ${{ env.IG_SHORTNAME }}/input/fsh/fsh-validator.log
+        name: fsh-validation-results-${{ github.run_number }}
+        path: |
+          ${{ env.IG_SHORTNAME }}/input/fsh/fsh-validator.log
+          ${{ env.IG_SHORTNAME }}/input/fsh/**/*.fsh
+          
+    - name: Generate job summary
+      if: always()
+      run: |
+        cd ${{ env.IG_SHORTNAME }}/input/fsh/
+        echo "## 🔍 FSH Validation Results" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        if [ -f fsh-validator.log ]; then
+          error_count=$(grep -c "ERROR\|FATAL" fsh-validator.log || true)
+          warning_count=$(grep -c "WARN" fsh-validator.log || true)
+          
+          echo "| Metric | Count |" >> $GITHUB_STEP_SUMMARY
+          echo "|--------|-------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Errors | $error_count |" >> $GITHUB_STEP_SUMMARY
+          echo "| Warnings | $warning_count |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          if [ $error_count -gt 0 ]; then
+            echo "❌ **Validation Failed** - Please fix errors before merging" >> $GITHUB_STEP_SUMMARY
+          elif [ $warning_count -gt 0 ]; then
+            echo "⚠️ **Validation Passed with Warnings** - Consider addressing warnings" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "✅ **Validation Passed** - All FSH files are valid" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Detailed Log" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          cat fsh-validator.log >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+        else
+          echo "⚠️ No validation log generated" >> $GITHUB_STEP_SUMMARY
+        fi
