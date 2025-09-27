@@ -2,7 +2,7 @@
 
 Denne checklisten hjelper deg med å sette opp ig-mal for ditt eget prosjekt. Følg trinnene i rekkefølge for best resultat.
 
-## ☐ 1. Opprett repo fra template
+## 1. Opprett repo fra template
 
 - [ ] Klikk "Use this template" på [HL7Norway/ig-mal](https://github.com/HL7Norway/ig-mal)
 - [ ] Velg "Create a new repository"
@@ -10,7 +10,7 @@ Denne checklisten hjelper deg med å sette opp ig-mal for ditt eget prosjekt. F�
 - [ ] Velg synlighet (offentlig/privat)
 - [ ] Klikk "Create repository from template"
 
-## ☐ 2. Konfigurer grunnleggende innstillinger
+## 2. Konfigurer grunnleggende innstillinger
 
 ### GitHub Actions
 - [ ] Gå til "Settings" → "Actions" → "General"
@@ -22,7 +22,7 @@ Denne checklisten hjelper deg med å sette opp ig-mal for ditt eget prosjekt. F�
 - [ ] Velg "Deploy from a branch"
 - [ ] Vent med å sette opp til etter første vellykket IG-bygg
 
-## ☐ 3. Tilpass konfigurasjonsfiler
+## 3. Tilpass konfigurasjonsfiler
 
 ### Oppdater sushi-config.yaml
 - [ ] Åpne `mal/sushi-config.yaml`
@@ -39,12 +39,12 @@ Denne checklisten hjelper deg med å sette opp ig-mal for ditt eget prosjekt. F�
 - [ ] Åpne `.github/workflows/validate-fsh.yml`
 - [ ] Endre `IG_SHORTNAME: mal` til samme mappenavn
 
-## ☐ 4. Gi nytt navn til IG-mappen (anbefalt)
+## 4. Gi nytt navn til IG-mappen (anbefalt)
 
 - [ ] Gi nytt navn til `mal/`-mappen til noe beskrivende (f.eks. `lab-ig/`)
 - [ ] Sørg for at `IG_SHORTNAME` i GitHub Actions matcher det nye navnet
 
-## ☐ 5. Tilpass FSH-innhold
+## 5. Tilpass FSH-innhold
 
 ### Profiler
 - [ ] Åpne `[ditt-mappenavn]/input/fsh/profiles/mal-Patient.fsh`
@@ -63,7 +63,7 @@ Denne checklisten hjelper deg med å sette opp ig-mal for ditt eget prosjekt. F�
 - [ ] Skriv om innhold til å beskrive din IG
 - [ ] Legg til eller fjern seksjoner etter behov
 
-## ☐ 6. Test oppsettet
+## 6. Test oppsettet
 
 ### Valider FSH-filer
 - [ ] Gå til "Actions" → "Validate FSH Files"
@@ -78,7 +78,7 @@ Denne checklisten hjelper deg med å sette opp ig-mal for ditt eget prosjekt. F�
 - [ ] La "Fail workflow..." stå som av
 - [ ] Sjekk resultatet - det kan ha advarsler, men ikke kritiske feil
 
-## ☐ 7. Bygg og publiser IG
+## 7. Bygg og publiser IG
 
 ### Første bygg
 - [ ] Gå til "Actions" → "Build and Deploy IG to GitHub Pages"
@@ -91,7 +91,7 @@ Denne checklisten hjelper deg med å sette opp ig-mal for ditt eget prosjekt. F�
 - [ ] Klikk "Save"
 - [ ] Vent noen minutter, så vil din IG være tilgjengelig på `https://[brukernavn].github.io/[repo-navn]/`
 
-## ☐ 8. Siste kvalitetskontroll
+## 8. Siste kvalitetskontroll
 
 - [ ] Besøk din publiserte IG-URL
 - [ ] Sjekk at tittel og innhold er riktig
@@ -99,7 +99,7 @@ Denne checklisten hjelper deg med å sette opp ig-mal for ditt eget prosjekt. F�
 - [ ] Sjekk at eksempler validerer mot profilene
 - [ ] Sørg for at ingen placeholder-tekst ("TODO", "Mal", etc.) er igjen
 
-## ☐ 9. Dokumenter og del
+## 9. Dokumenter og del
 
 - [ ] Oppdater repo-beskrivelsen på GitHub
 - [ ] Legg til lenke til publisert IG i README
