@@ -2,6 +2,8 @@
 
 Denne GitHub Actions workflow laster opp innholdet fra `gh-pages`-branchen til din egen web-server via FTP, SFTP eller rsync+SSH. Workflowen støtter flere autentiseringsmetoder og gir fleksible konfigurasjonsalternativer.
 
+NB: Denne funksjonen er ikke tilstrekkelig testet ennå - Espen tar gjerne i mot bistand - bruk gjerne *issues*. 
+
 ## ✨ Funksjoner
 
 - **Flere protokoller:** FTP, FTPS, SFTP og rsync over SSH
