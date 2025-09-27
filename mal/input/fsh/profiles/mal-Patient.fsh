@@ -10,12 +10,24 @@ Description: "Informasjon om pasienten, basert på no-basis."
 * identifier MS
 * name.family MS
 
-// Eksempel på pasient med navn og fødselsnummer
+// Eksempel på norsk pasient med fødselsnummer og adresse
 
 Instance: Pasient-1
 InstanceOf: MalPatient
-Description: "Eksempel på pasient med navn og fødselsnummer"
+Description: "Eksempel på norsk pasient med fødselsnummer, navn og kontaktinformasjon"
 * identifier.system = "urn:oid:2.16.578.1.12.4.1.4.1"
 * identifier.value = "13031353453"
-* name.family = "Lin"
-* name.given = "Rita"
+* name.family = "Hansen"
+* name.given[0] = "Kari"
+* name.given[1] = "Elisabeth"
+* telecom[0].system = #phone
+* telecom[0].value = "+47 12 34 56 78"
+* telecom[0].use = #mobile
+* telecom[1].system = #email
+* telecom[1].value = "kari.hansen@example.no"
+* gender = #female
+* birthDate = "1990-03-13"
+* address.line = "Storgata 123"
+* address.city = "Bergen"
+* address.postalCode = "5020"
+* address.country = "NO"
