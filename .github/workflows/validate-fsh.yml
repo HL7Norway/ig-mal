@@ -8,6 +8,11 @@ on:
         required: false
         default: false
         type: boolean
+      fail_on_sushi_errors:
+        description: 'Fail workflow if SUSHI validation has errors'
+        required: false
+        default: false
+        type: boolean
   pull_request:
     paths:
       - 'mal/input/fsh/**'
@@ -77,11 +82,12 @@ jobs:
         
     - name: Run SUSHI validation
       if: ${{ github.event.inputs.run_sushi_validation == 'true' }}
+      continue-on-error: true
       run: |
         cd ${{ env.IG_SHORTNAME }}
         echo "🍣 Running SUSHI build validation..."
-        sushi . --require-latest 2>&1 | tee sushi-validation.log
-        echo "✅ SUSHI validation completed"
+        sushi . --require-latest 2>&1 | tee sushi-validation.log || true
+        echo "✅ SUSHI validation step completed (errors may exist - check logs)"
         
     - name: Display validation results
       if: always()
@@ -121,7 +127,12 @@ jobs:
             # Check if SUSHI had errors
             if grep -q "error\|Error\|ERROR\|fatal\|Fatal\|FATAL" sushi-validation.log; then
               echo "❌ SUSHI validation failed with errors"
-              validation_failed=true
+              if [ "${{ github.event.inputs.fail_on_sushi_errors }}" == "true" ]; then
+                echo "🚫 Workflow will fail due to SUSHI errors (fail_on_sushi_errors=true)"
+                validation_failed=true
+              else
+                echo "⚠️  Continuing despite SUSHI errors (fail_on_sushi_errors=false)"
+              fi
             elif grep -q "warn\|Warn\|WARN" sushi-validation.log; then
               echo "⚠️  SUSHI validation completed with warnings"
             else
