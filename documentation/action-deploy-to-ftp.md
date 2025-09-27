@@ -23,6 +23,19 @@ NB: Denne funksjonen er ikke tilstrekkelig testet ennå - Espen tar gjerne i mot
 
 > **Hvorfor kun manuell?** Dette gir deg full kontroll over når og hvordan du publiserer til din egen server, og unngår utilsiktede deployments.
 
+## 🚀 Rask test av oppsettet
+
+**Før første deployment, test med dry-run:**
+
+1. Sett opp nødvendige secrets (se under)
+2. Gå til "Actions" → "Deploy to FTP/SFTP Server"
+3. Klikk "Run workflow"
+4. **Aktiver "Dry run"** ✅
+5. Velg deployment-metode
+6. Kjør workflowen
+
+Dette viser deg hva som ville blitt overført uten å faktisk gjøre det, og bekrefter at oppsettet fungerer.
+
 ## 🔧 Oppsett av GitHub Secrets
 
 Før du kan bruke workflowen, må du konfigurere nødvendige secrets i GitHub:

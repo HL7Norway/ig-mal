@@ -4,7 +4,7 @@
 # VIKTIG: Denne workflowen kjører KUN manuelt - ikke automatisk
 # Dette gir deg full kontroll over når og hvordan du publiserer til din egen server
 
-name: Deploy to FTP Server
+name: Deploy to FTP/SFTP Server
 
 on:
   workflow_dispatch:
@@ -33,40 +33,74 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - name: Show workflow inputs
+      run: |
+        echo "🚀 FTP/SFTP Deployment Workflow"
+        echo "================================"
+        echo "Deploy method: ${{ github.event.inputs.deploy_method || 'ftp' }}"
+        echo "Target directory: ${{ github.event.inputs.target_directory || 'default' }}"
+        echo "Dry run: ${{ github.event.inputs.dry_run || 'false' }}"
+        echo "Triggered by: ${{ github.actor }}"
+        echo "Repository: ${{ github.repository }}"
+        
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
         ref: gh-pages
         fetch-depth: 1
 
+    - name: Verify gh-pages content
+      run: |
+        echo "📂 Checking gh-pages content..."
+        ls -la
+        if [ ! -f "index.html" ]; then
+          echo "⚠️  Warning: No index.html found. Make sure IG has been built and published to gh-pages branch."
+        else
+          echo "✅ Found IG content to deploy"
+        fi
+
     - name: Install deployment tools
       run: |
+        echo "🛠️  Installing deployment tools..."
         sudo apt-get update
         sudo apt-get install -y lftp rsync openssh-client
+        echo "✅ Tools installed successfully"
 
     - name: Validate required secrets
+      env:
+        FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
       run: |
-        if [ -z "${{ secrets.FTP_SERVER }}" ]; then
+        echo "🔍 Validating secrets..."
+        if [ -z "$FTP_SERVER" ]; then
           echo "❌ FTP_SERVER secret is required"
           exit 1
         fi
-        if [ -z "${{ secrets.FTP_USERNAME }}" ]; then
+        if [ -z "$FTP_USERNAME" ]; then
           echo "❌ FTP_USERNAME secret is required"
           exit 1
         fi
         # Check authentication method
-        if [ -z "${{ secrets.FTP_PASSWORD }}" ] && [ -z "${{ secrets.SSH_PRIVATE_KEY }}" ]; then
+        if [ -z "$FTP_PASSWORD" ] && [ -z "$SSH_PRIVATE_KEY" ]; then
           echo "❌ Either FTP_PASSWORD or SSH_PRIVATE_KEY secret is required"
           exit 1
         fi
+        echo "✅ Required secrets are configured"
 
     - name: Setup SSH key (for SFTP/SSH)
-      if: ${{ secrets.SSH_PRIVATE_KEY && (github.event.inputs.deploy_method == 'sftp' || github.event.inputs.deploy_method == 'rsync-ssh') }}
+      if: ${{ github.event.inputs.deploy_method == 'sftp' || github.event.inputs.deploy_method == 'rsync-ssh' }}
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        FTP_SERVER: ${{ secrets.FTP_SERVER }}
       run: |
+        echo "🔑 Setting up SSH key for secure connection..."
         mkdir -p ~/.ssh
-        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+        echo "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
         chmod 600 ~/.ssh/deploy_key
-        ssh-keyscan -H ${{ secrets.FTP_SERVER }} >> ~/.ssh/known_hosts
+        ssh-keyscan -H $FTP_SERVER >> ~/.ssh/known_hosts
+        echo "✅ SSH key configured"
 
     - name: Deploy via FTP/FTPS
       if: ${{ github.event.inputs.deploy_method == 'ftp' || github.event.inputs.deploy_method == '' }}
@@ -79,26 +113,35 @@ jobs:
         USE_SSL: ${{ secrets.FTP_USE_SSL || 'false' }}
         DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
       run: |
-        echo "🚀 Deploying to FTP server: $FTP_SERVER"
-        echo "📁 Target directory: $REMOTE_DIR"
+        echo "🚀 Deploying via FTP/FTPS"
+        echo "📡 Server: $FTP_SERVER:$FTP_PORT"
+        echo "� User: $FTP_USERNAME" 
+        echo "�📁 Target: $REMOTE_DIR"
+        echo "🔐 SSL: $USE_SSL"
+        echo "🧪 Dry run: $DRY_RUN"
+        echo ""
         
-        # Build lftp command
-        LFTP_CMD="set ftp:ssl-allow $USE_SSL; set ftp:ssl-protect-data $USE_SSL;"
-        LFTP_CMD="$LFTP_CMD open -p $FTP_PORT $FTP_SERVER;"
-        LFTP_CMD="$LFTP_CMD user $FTP_USERNAME $FTP_PASSWORD;"
+        # Build lftp command with better error handling
+        LFTP_CMD="set ftp:ssl-allow $USE_SSL; set ftp:ssl-protect-data $USE_SSL; set net:timeout 30;"
+        LFTP_CMD="$LFTP_CMD open -p $FTP_PORT $FTP_SERVER || exit 1;"
+        LFTP_CMD="$LFTP_CMD user $FTP_USERNAME $FTP_PASSWORD || exit 1;"
         
         if [ "$DRY_RUN" = "true" ]; then
           echo "🔍 DRY RUN - showing what would be uploaded:"
-          LFTP_CMD="$LFTP_CMD mirror -R --dry-run --verbose ./ $REMOTE_DIR;"
+          LFTP_CMD="$LFTP_CMD mirror -R --dry-run --verbose --exclude-glob='.git*' ./ $REMOTE_DIR;"
         else
-          echo "📤 Uploading files..."
-          LFTP_CMD="$LFTP_CMD mirror -R --delete --verbose --exclude-glob='.git*' ./ $REMOTE_DIR;"
+          echo "📤 Uploading files to $REMOTE_DIR..."
+          LFTP_CMD="$LFTP_CMD mirror -R --delete --verbose --exclude-glob='.git*' --exclude-glob='.github*' ./ $REMOTE_DIR;"
         fi
         
         LFTP_CMD="$LFTP_CMD bye;"
         
-        echo "$LFTP_CMD" | lftp
-        echo "✅ FTP deployment completed"
+        if echo "$LFTP_CMD" | lftp; then
+          echo "✅ FTP deployment completed successfully"
+        else
+          echo "❌ FTP deployment failed"
+          exit 1
+        fi
 
     - name: Deploy via SFTP
       if: ${{ github.event.inputs.deploy_method == 'sftp' }}
@@ -156,11 +199,25 @@ jobs:
 
     - name: Deployment summary
       if: always()
+      env:
+        FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        DEPLOY_METHOD: ${{ github.event.inputs.deploy_method || 'ftp' }}
+        TARGET_DIR: ${{ github.event.inputs.target_directory || secrets.FTP_REMOTE_DIR || 'default' }}
+        DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
       run: |
         echo "## 📋 Deployment Summary" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
-        echo "- **Server:** ${{ secrets.FTP_SERVER }}" >> $GITHUB_STEP_SUMMARY
-        echo "- **Method:** ${{ github.event.inputs.deploy_method || 'ftp' }}" >> $GITHUB_STEP_SUMMARY
-        echo "- **Directory:** ${{ github.event.inputs.target_directory || secrets.FTP_REMOTE_DIR || 'default' }}" >> $GITHUB_STEP_SUMMARY
-        echo "- **Dry Run:** ${{ github.event.inputs.dry_run || 'false' }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Server:** ${FTP_SERVER:-'[Not configured]'}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Method:** $DEPLOY_METHOD" >> $GITHUB_STEP_SUMMARY
+        echo "- **Directory:** $TARGET_DIR" >> $GITHUB_STEP_SUMMARY  
+        echo "- **Dry Run:** $DRY_RUN" >> $GITHUB_STEP_SUMMARY
         echo "- **Status:** ${{ job.status }}" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### 💡 Next Steps" >> $GITHUB_STEP_SUMMARY
+        if [ "$DRY_RUN" = "true" ]; then
+          echo "- Review the dry-run output above" >> $GITHUB_STEP_SUMMARY
+          echo "- If satisfied, run again without dry-run to deploy" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "- Check your website to verify the deployment" >> $GITHUB_STEP_SUMMARY
+          echo "- Your IG should now be accessible at your server" >> $GITHUB_STEP_SUMMARY
+        fi
