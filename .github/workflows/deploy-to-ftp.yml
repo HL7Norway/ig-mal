@@ -1,35 +1,166 @@
-# Under utvikling. Må settes opp og testes.
+# Deploy Implementation Guide til FTP/SFTP server
+# Støtter FTP, FTPS og SFTP med fleksibel konfigurasjon
 
-name: Deploy to FTP
+name: Deploy to FTP/SFTP Server
 
 on:
   push:
     branches:
       - gh-pages
   workflow_dispatch:
+    inputs:
+      deploy_method:
+        description: 'Deployment method'
+        required: true
+        default: 'ftp'
+        type: choice
+        options:
+        - ftp
+        - sftp
+        - rsync-ssh
+      target_directory:
+        description: 'Remote target directory (optional override)'
+        required: false
+        type: string
+      dry_run:
+        description: 'Dry run - show what would be deployed without actually deploying'
+        required: false
+        default: false
+        type: boolean
 
 jobs:
-  ftp-deploy:
+  deploy:
     runs-on: ubuntu-latest
-
+    
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
+        ref: gh-pages
         fetch-depth: 1
 
-    - name: Install lftp
-      run: sudo apt-get install lftp
+    - name: Install deployment tools
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y lftp rsync openssh-client
 
-    - name: Deploy to FTP server
+    - name: Validate required secrets
+      run: |
+        if [ -z "${{ secrets.FTP_SERVER }}" ]; then
+          echo "❌ FTP_SERVER secret is required"
+          exit 1
+        fi
+        if [ -z "${{ secrets.FTP_USERNAME }}" ]; then
+          echo "❌ FTP_USERNAME secret is required"
+          exit 1
+        fi
+        # Check authentication method
+        if [ -z "${{ secrets.FTP_PASSWORD }}" ] && [ -z "${{ secrets.SSH_PRIVATE_KEY }}" ]; then
+          echo "❌ Either FTP_PASSWORD or SSH_PRIVATE_KEY secret is required"
+          exit 1
+        fi
+
+    - name: Setup SSH key (for SFTP/SSH)
+      if: ${{ secrets.SSH_PRIVATE_KEY && (github.event.inputs.deploy_method == 'sftp' || github.event.inputs.deploy_method == 'rsync-ssh') }}
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+        chmod 600 ~/.ssh/deploy_key
+        ssh-keyscan -H ${{ secrets.FTP_SERVER }} >> ~/.ssh/known_hosts
+
+    - name: Deploy via FTP/FTPS
+      if: ${{ github.event.inputs.deploy_method == 'ftp' || github.event.inputs.deploy_method == '' }}
       env:
         FTP_SERVER: ${{ secrets.FTP_SERVER }}
         FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        REMOTE_DIR: ${{ github.event.inputs.target_directory || secrets.FTP_REMOTE_DIR || '/public_html' }}
+        FTP_PORT: ${{ secrets.FTP_PORT || '21' }}
+        USE_SSL: ${{ secrets.FTP_USE_SSL || 'false' }}
+        DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
       run: |
-        lftp -f "
-        open $FTP_SERVER
-        user $FTP_USERNAME $FTP_PASSWORD
-        mirror -R ./ /path/to/remote/directory
-        bye
-        "
+        echo "🚀 Deploying to FTP server: $FTP_SERVER"
+        echo "📁 Target directory: $REMOTE_DIR"
+        
+        # Build lftp command
+        LFTP_CMD="set ftp:ssl-allow $USE_SSL; set ftp:ssl-protect-data $USE_SSL;"
+        LFTP_CMD="$LFTP_CMD open -p $FTP_PORT $FTP_SERVER;"
+        LFTP_CMD="$LFTP_CMD user $FTP_USERNAME $FTP_PASSWORD;"
+        
+        if [ "$DRY_RUN" = "true" ]; then
+          echo "🔍 DRY RUN - showing what would be uploaded:"
+          LFTP_CMD="$LFTP_CMD mirror -R --dry-run --verbose ./ $REMOTE_DIR;"
+        else
+          echo "📤 Uploading files..."
+          LFTP_CMD="$LFTP_CMD mirror -R --delete --verbose --exclude-glob='.git*' ./ $REMOTE_DIR;"
+        fi
+        
+        LFTP_CMD="$LFTP_CMD bye;"
+        
+        echo "$LFTP_CMD" | lftp
+        echo "✅ FTP deployment completed"
+
+    - name: Deploy via SFTP
+      if: ${{ github.event.inputs.deploy_method == 'sftp' }}
+      env:
+        FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+        REMOTE_DIR: ${{ github.event.inputs.target_directory || secrets.FTP_REMOTE_DIR || '/home/${{ secrets.FTP_USERNAME }}/public_html' }}
+        SFTP_PORT: ${{ secrets.SFTP_PORT || '22' }}
+        DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
+      run: |
+        echo "🚀 Deploying to SFTP server: $FTP_SERVER"
+        echo "📁 Target directory: $REMOTE_DIR"
+        
+        # Build lftp command for SFTP
+        LFTP_CMD="set sftp:connect-program 'ssh -i ~/.ssh/deploy_key -p $SFTP_PORT';"
+        LFTP_CMD="$LFTP_CMD open sftp://$FTP_USERNAME@$FTP_SERVER;"
+        
+        if [ "$DRY_RUN" = "true" ]; then
+          echo "🔍 DRY RUN - showing what would be uploaded:"
+          LFTP_CMD="$LFTP_CMD mirror -R --dry-run --verbose ./ $REMOTE_DIR;"
+        else
+          echo "📤 Uploading files..."
+          LFTP_CMD="$LFTP_CMD mirror -R --delete --verbose --exclude-glob='.git*' ./ $REMOTE_DIR;"
+        fi
+        
+        LFTP_CMD="$LFTP_CMD bye;"
+        
+        echo "$LFTP_CMD" | lftp
+        echo "✅ SFTP deployment completed"
+
+    - name: Deploy via rsync over SSH
+      if: ${{ github.event.inputs.deploy_method == 'rsync-ssh' }}
+      env:
+        FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+        REMOTE_DIR: ${{ github.event.inputs.target_directory || secrets.FTP_REMOTE_DIR || '/home/${{ secrets.FTP_USERNAME }}/public_html' }}
+        SSH_PORT: ${{ secrets.SSH_PORT || '22' }}
+        DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
+      run: |
+        echo "🚀 Deploying via rsync+SSH to: $FTP_SERVER"
+        echo "📁 Target directory: $REMOTE_DIR"
+        
+        RSYNC_OPTS="-avz --delete --exclude='.git*'"
+        
+        if [ "$DRY_RUN" = "true" ]; then
+          echo "🔍 DRY RUN - showing what would be synced:"
+          RSYNC_OPTS="$RSYNC_OPTS --dry-run"
+        else
+          echo "📤 Syncing files..."
+        fi
+        
+        rsync $RSYNC_OPTS -e "ssh -i ~/.ssh/deploy_key -p $SSH_PORT -o StrictHostKeyChecking=no" \
+          ./ $FTP_USERNAME@$FTP_SERVER:$REMOTE_DIR/
+        echo "✅ rsync deployment completed"
+
+    - name: Deployment summary
+      if: always()
+      run: |
+        echo "## 📋 Deployment Summary" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "- **Server:** ${{ secrets.FTP_SERVER }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Method:** ${{ github.event.inputs.deploy_method || 'ftp' }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Directory:** ${{ github.event.inputs.target_directory || secrets.FTP_REMOTE_DIR || 'default' }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Dry Run:** ${{ github.event.inputs.dry_run || 'false' }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Status:** ${{ job.status }}" >> $GITHUB_STEP_SUMMARY

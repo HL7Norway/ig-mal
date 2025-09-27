@@ -1,90 +1,167 @@
-# Publisere til egen server med FTP
+# Publisere til egen server med FTP/SFTP
 
-Denne filen er en GitHub Actions workflow som brukes til å laste opp innholdet fra `gh-pages`-branchen til en FTP-server for publisering til en web-server. Hemmelige variabler (secrets) brukes for å sikre autentiseringsinformasjon. Her er en detaljert forklaring av hvert trinn i workflowen og hvordan du bruker secrets.
+Denne GitHub Actions workflow laster opp innholdet fra `gh-pages`-branchen til din egen web-server via FTP, SFTP eller rsync+SSH. Workflowen støtter flere autentiseringsmetoder og gir fleksible konfigurasjonsalternativer.
 
-## Workflow-navn
+## ✨ Funksjoner
 
-```yaml
-name: Deploy to FTP
-```
-
-Dette setter navnet på workflowen til `Deploy to FTP`.
+- **Flere protokoller:** FTP, FTPS, SFTP og rsync over SSH
+- **Fleksibel autentisering:** Passord eller SSH-nøkler
+- **Sikker konfiguration:** Alle sensitive data lagres som GitHub Secrets
+- **Dry-run modus:** Test deployment uten å faktisk overføre filer
+- **Automatisk aktivering:** Kjører automatisk ved publisering av IG
+- **Manuell kontroll:** Kan kjøres manuelt med egne innstillinger
 
 ## Aktivering av workflow
 
-```yaml
-on:
-  push:
-    branches:
-      - gh-pages
-  workflow_dispatch:
+**Automatisk:**
+
+- Kjører ved push til `gh-pages`-branchen (etter IG-generering)
+
+**Manuell:**
+
+- Gå til "Actions" → "Deploy to FTP/SFTP Server" → "Run workflow"
+- Velg deployment-metode, målkatalog og dry-run alternativer
+
+## 🔧 Oppsett av GitHub Secrets
+
+Før du kan bruke workflowen, må du konfigurere nødvendige secrets i GitHub:
+
+### Obligatoriske secrets
+
+- `FTP_SERVER`: Server-adresse (f.eks. `ftp.example.com` eller `192.168.1.100`)
+- `FTP_USERNAME`: Brukernavnet for innlogging
+
+### Autentisering (velg én metode)
+
+**Metode 1: Passord (FTP/FTPS/SFTP)**
+- `FTP_PASSWORD`: Passordet for brukeren
+
+**Metode 2: SSH-nøkkel (SFTP/rsync-ssh)**
+- `SSH_PRIVATE_KEY`: Privat SSH-nøkkel (hele innholdet av `~/.ssh/id_rsa`)
+
+### Valgfrie secrets for tilpasning
+
+- `FTP_REMOTE_DIR`: Målkatalog på serveren (standard: `/public_html`)
+- `FTP_PORT`: FTP-port (standard: `21`)
+- `SFTP_PORT`: SFTP/SSH-port (standard: `22`)
+- `FTP_USE_SSL`: Bruk SSL/TLS for FTP (standard: `false`)
+
+### Slik legger du til secrets
+
+1. Gå til repoet på GitHub → "Settings" → "Secrets and variables" → "Actions"
+2. Klikk "New repository secret"
+3. Legg inn navn og verdi
+4. Gjenta for alle nødvendige secrets
+
+## 🚀 Deployment-metoder
+
+### 1. FTP/FTPS (standard)
+
+**Best for:** Tradisjonelle web-hosting tjenester
+
+**Eksempel secrets:**
+```
+FTP_SERVER: ftp.mittdomene.no
+FTP_USERNAME: mittbrukernavn
+FTP_PASSWORD: mittpassord
+FTP_REMOTE_DIR: /public_html/ig
+FTP_USE_SSL: true
 ```
 
-Denne delen spesifiserer at workflowen kjøres automatisk ved push til `gh-pages`-branchen eller manuelt ved bruk av "Run workflow"-knappen i GitHub Actions-grensesnittet.
+### 2. SFTP
 
-## Jobber
+**Best for:** Sikre servere med SSH-tilgang
 
-Workflowen består av en jobb kalt `ftp-deploy`.
-
-```yaml
-jobs:
-  ftp-deploy:
-    runs-on: ubuntu-latest
+**Eksempel secrets:**
+```
+FTP_SERVER: server.example.com
+FTP_USERNAME: mittbrukernavn
+SSH_PRIVATE_KEY: -----BEGIN OPENSSH PRIVATE KEY-----
+...nøkkelinnhold...
+-----END OPENSSH PRIVATE KEY-----
+FTP_REMOTE_DIR: /var/www/html/ig
 ```
 
-Denne jobben kjører på `ubuntu-latest`-miljøet.
+### 3. rsync over SSH
 
-### Trinn 1: Sjekk ut koden
+**Best for:** Linux-servere med full SSH-tilgang og rsync installert
 
-```yaml
-steps:
-  - name: Checkout repository
-    uses: actions/checkout@v4
-    with:
-      fetch-depth: 1
+**Fordeler:** Raskeste synkronisering, smart filoverføring
+
+## 🧪 Testing med dry-run
+
+Før du deployer "for ekte", test først:
+
+1. Gå til "Actions" → "Deploy to FTP/SFTP Server"
+2. Klikk "Run workflow"
+3. Aktiver "Dry run" 
+4. Velg deployment-metode
+5. Kjør workflowen
+
+Dette viser hva som ville blitt overført uten å faktisk gjøre det.
+
+## 🔒 Sikkerhetstips
+
+### SSH-nøkler (anbefalt for SFTP/rsync)
+
+1. **Generer dedikert nøkkel:**
+   ```bash
+   ssh-keygen -t rsa -b 4096 -f ~/.ssh/github_deploy -C "github-deploy"
+   ```
+
+2. **Legg til offentlig nøkkel på serveren:**
+   ```bash
+   cat ~/.ssh/github_deploy.pub >> ~/.ssh/authorized_keys
+   ```
+
+3. **Bruk privat nøkkel som `SSH_PRIVATE_KEY` secret**
+
+### Begrens tilgang
+
+- Opprett egen bruker for deployment på serveren
+- Gi kun nødvendige rettigheter (skriv til web-katalogen)
+- Bruk SSH-nøkkel med passphrase (GitHub håndterer dette)
+
+## 🛠️ Feilsøking
+
+### Vanlige problemer
+
+**Connection refused:**
+- Sjekk server-adresse og port
+- Kontroller at FTP/SSH-tjenesten kjører
+
+**Permission denied:**
+- Verifiser brukernavn og passord/nøkkel
+- Sjekk at brukeren har skrivetilgang til målkatalogen
+
+**SSL/TLS feil:**
+- Sett `FTP_USE_SSL: false` for usikre servere
+- Eller konfigurer serveren med gyldig SSL-sertifikat
+
+### Debug-tips
+
+1. Aktiver dry-run for å se kommandoene som kjøres
+2. Sjekk workflow-loggene for detaljerte feilmeldinger
+3. Test FTP/SSH-tilkoblingen manuelt fra din lokale maskin
+
+## 📋 Eksempel på komplett oppsett
+
+### For FTP med SSL
+```
+FTP_SERVER: ftp.mittdomene.no
+FTP_USERNAME: web_admin
+FTP_PASSWORD: SikkerPassord123!
+FTP_REMOTE_DIR: /public_html/implementasjonsguide
+FTP_USE_SSL: true
 ```
 
-Dette trinnet sjekker ut repoen slik at workflowen kan få tilgang til koden. `fetch-depth: 1` begrenser historikken som hentes for å redusere nedlastingstiden.
-
-### Trinn 2: Installer lftp
-
-```yaml
-  - name: Install lftp
-    run: sudo apt-get install lftp
+### For SFTP
+```
+FTP_SERVER: server.eksempel.no
+FTP_USERNAME: deploy_user
+SSH_PRIVATE_KEY: [Full SSH private key]
+FTP_REMOTE_DIR: /var/www/html/ig
+SFTP_PORT: 2222
 ```
 
-Dette trinnet installerer `lftp` for å håndtere FTP-opplastinger.
-
-### Trinn 3: Deploy til FTP-server
-
-```yaml
-  - name: Deploy to FTP server
-    env:
-      FTP_SERVER: ${{ secrets.FTP_SERVER }}
-      FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-      FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-    run: |
-      lftp -f "
-      open $FTP_SERVER
-      user $FTP_USERNAME $FTP_PASSWORD
-      mirror -R ./ /path/to/remote/directory
-      bye
-      "
-```
-
-Dette trinnet bruker `lftp`-kommandoen for å laste opp innholdet til FTP-serveren.
-
-### Bruk av Secrets
-
-- **env**: Miljøvariablene `FTP_SERVER`, `FTP_USERNAME`, og `FTP_PASSWORD` er definert som secrets. Secrets er sikre variabler som brukes til å lagre sensitiv informasjon som autentiseringsdetaljer. Disse kan legges til i repoet under `Settings` > `Secrets and variables` > `Actions`.
-
-## Hvordan legge til Secrets i GitHub
-
-1. Gå til repoet ditt på GitHub.
-2. Klikk på `Settings`.
-3. Velg `Secrets and variables` > `Actions`.
-4. Klikk på `New repository secret`.
-5. Legg til en ny secret ved å fylle inn navn (f.eks. `FTP_SERVER`) og verdi (f.eks. `ftp.example.com`).
-6. Gjenta for `FTP_USERNAME` og `FTP_PASSWORD`.
-
-Ved å bruke secrets på denne måten, sikrer du at autentiseringsinformasjonen din er beskyttet og ikke eksponeres i koden.
+Med dette oppsettet vil din Implementation Guide automatisk publiseres til din egen server hver gang GitHub Pages oppdateres!

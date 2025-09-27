@@ -9,8 +9,9 @@ Dette er en mal du kan bruke som utgangspunkt for en HL7 FHIR implementasjonsgui
 ## ✨ Hva får du med malen?
 
 - **FSH-profiler:** Eksempelprofiler basert på no-basis
-- **Automatisk validering:** FSH og SUSHI-validering via GitHub Actions
+- **Automatisk validering:** FSH og SUSHI-validering via GitHub Actions  
 - **Automatisk publisering:** Bygg og publiser IG til GitHub Pages
+- **FTP/SFTP deployment:** Publiser til din egen web-server (noe eksperimentell)
 - **Dokumentasjonsstruktur:** Klar mappestruktur for innhold
 - **PlantUML-støtte:** Automatisk generering av diagrammer
 
