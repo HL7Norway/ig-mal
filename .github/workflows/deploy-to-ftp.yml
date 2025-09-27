@@ -4,7 +4,7 @@
 # VIKTIG: Denne workflowen kjører KUN manuelt - ikke automatisk
 # Dette gir deg full kontroll over når og hvordan du publiserer til din egen server
 
-name: Deploy to FTP/SFTP Server
+name: Deploy to FTP Server
 
 on:
   workflow_dispatch:
