@@ -1,12 +1,12 @@
 # Deploy Implementation Guide til FTP/SFTP server
 # Støtter FTP, FTPS og SFTP med fleksibel konfigurasjon
+# 
+# VIKTIG: Denne workflowen kjører KUN manuelt - ikke automatisk
+# Dette gir deg full kontroll over når og hvordan du publiserer til din egen server
 
 name: Deploy to FTP/SFTP Server
 
 on:
-  push:
-    branches:
-      - gh-pages
   workflow_dispatch:
     inputs:
       deploy_method:

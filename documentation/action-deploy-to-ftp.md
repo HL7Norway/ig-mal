@@ -13,14 +13,13 @@ Denne GitHub Actions workflow laster opp innholdet fra `gh-pages`-branchen til d
 
 ## Aktivering av workflow
 
-**Automatisk:**
-
-- Kjører ved push til `gh-pages`-branchen (etter IG-generering)
-
-**Manuell:**
+**Kun manuell aktivering:**
 
 - Gå til "Actions" → "Deploy to FTP/SFTP Server" → "Run workflow"
 - Velg deployment-metode, målkatalog og dry-run alternativer
+- Workflowen kjører IKKE automatisk - du må starte den selv
+
+> **Hvorfor kun manuell?** Dette gir deg full kontroll over når og hvordan du publiserer til din egen server, og unngår utilsiktede deployments.
 
 ## 🔧 Oppsett av GitHub Secrets
 
