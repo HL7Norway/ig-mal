@@ -110,22 +110,28 @@ jobs:
         
         echo ""
         
-        # Display SUSHI validation results if enabled
-        cd ${{ env.IG_SHORTNAME }}
-        if [ "${{ github.event.inputs.run_sushi_validation }}" == "true" ] && [ -f sushi-validation.log ]; then
-          echo "🍣 SUSHI Validation Results:"
-          echo "============================"
-          cat sushi-validation.log
-          
-          # Check if SUSHI had errors
-          if grep -q "error\|Error\|ERROR\|fatal\|Fatal\|FATAL" sushi-validation.log; then
-            echo "❌ SUSHI validation failed with errors"
-            validation_failed=true
-          elif grep -q "warn\|Warn\|WARN" sushi-validation.log; then
-            echo "⚠️  SUSHI validation completed with warnings"
+        # Display SUSHI validation results if it was run
+        if [ "${{ github.event.inputs.run_sushi_validation }}" == "true" ]; then
+          cd ${{ github.workspace }}/${{ env.IG_SHORTNAME }}
+          if [ -f sushi-validation.log ]; then
+            echo "🍣 SUSHI Validation Results:"
+            echo "============================"
+            cat sushi-validation.log
+            
+            # Check if SUSHI had errors
+            if grep -q "error\|Error\|ERROR\|fatal\|Fatal\|FATAL" sushi-validation.log; then
+              echo "❌ SUSHI validation failed with errors"
+              validation_failed=true
+            elif grep -q "warn\|Warn\|WARN" sushi-validation.log; then
+              echo "⚠️  SUSHI validation completed with warnings"
+            else
+              echo "✅ SUSHI validation passed successfully"
+            fi
           else
-            echo "✅ SUSHI validation passed successfully"
+            echo "⚠️  SUSHI validation was enabled but no log found"
           fi
+        else
+          echo "ℹ️  SUSHI validation was not enabled"
         fi
         
         # Exit with error if any validation failed
