@@ -10,4 +10,4 @@ Description: "Profil for vanlige blodprøver"
 * subject only Reference(MalPatient) // Pasienten som blodprøven er tatt av
 * effectiveDateTime MS // Dato og tid for blodprøve
 * code MS // Kode for blodprøve 
-* valueQuantity MS // Resultat av blodprøve
+* valueQuantity MS // Resultat av blodprøve - TEST
