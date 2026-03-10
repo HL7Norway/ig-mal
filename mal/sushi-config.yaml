@@ -11,7 +11,7 @@ description: Implementasjonsguide for å TODO
 status: draft
 version: 0.1.0
 fhirVersion: 4.0.1
-copyrightYear: 2025+
+copyrightYear: 2026+
 releaseLabel: ci-build
 jurisdiction: urn:iso:std:iso:3166#NO "Norway"
 # Oppdater navn og URL til din organisasjon
