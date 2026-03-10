@@ -19,7 +19,7 @@ publisher:
   name: HL7 Norge
   url: https://www.hl7.no
 dependencies:
-  hl7.fhir.no.basis: 2.2.0
+  hl7.fhir.no.basis: 2.2.2
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │

@@ -48,7 +48,7 @@ Kjører jobben `publish` på en Ubuntu-latest runner, og bruker en Docker-contai
 - **Installer FHIR Pakker og Kjør IG Publisher**
 
   ```yaml
-  - name: Install hl7.fhir.no.basis-2.2.0-snapshots in local cache and run IG Publisher
+  - name: Install hl7.fhir.no.basis-2.2.2-snapshots in local cache and run IG Publisher
     run: |
       # Kommandoer for å installere nødvendige pakker og kjøre IG Publisher
   ```
