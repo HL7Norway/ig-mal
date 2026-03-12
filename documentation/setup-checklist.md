@@ -15,6 +15,10 @@ Denne checklisten hjelper deg med å sette opp ig-mal for ditt eget prosjekt. F�
 ### GitHub Actions
 - [ ] Gå til "Settings" → "Actions" → "General"
 - [ ] Velg "Allow all actions and reusable workflows"
+
+Under "Workflow permissions":
+
+- [ ] Velg "Read and write permissions"
 - [ ] Sørg for at "Allow GitHub Actions to create and approve pull requests" er aktivert
 
 ### GitHub Pages (for senere)
