@@ -57,7 +57,7 @@ Eksempel på en figur laget med PlantUML.
   "name" : "Mal",
   "title" : "Mal",
   "status" : "draft",
-  "date" : "2026-03-12T12:57:39+00:00",
+  "date" : "2026-03-12T13:22:38+00:00",
   "publisher" : "HL7 Norge",
   "contact" : [{
     "name" : "HL7 Norge",
