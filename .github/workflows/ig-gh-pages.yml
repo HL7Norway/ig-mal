@@ -13,13 +13,13 @@ env:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    container: hl7fhir/ig-publisher-base:latest 
+    container: hl7fhir/ig-publisher-base:latest
     steps:
       - uses: actions/checkout@v4
       - name: 🖥️ Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '16'
+          node-version: "22"
 
       - name: Install 🔥 FHIR packages 🇳🇴
         run: |
@@ -31,7 +31,7 @@ jobs:
           echo "Create .fhir packages cache directory for no-basis"
           mkdir -p /github/home/.fhir/packages/hl7.fhir.no.basis#2.2.2/package
           echo "Copy local no-basis snapshot to .fhir package cache directory"
-          cp -r ./node_modules/hl7.fhir.no.basis/* /github/home/.fhir/packages/hl7.fhir.no.basis#2.2.2/package 
+          cp -r ./node_modules/hl7.fhir.no.basis/* /github/home/.fhir/packages/hl7.fhir.no.basis#2.2.2/package
 
       - name: Run 🔥 IG Publisher with 🍣 Sushi
         run: |
@@ -42,7 +42,7 @@ jobs:
           npm install -g fsh-sushi
           echo "Run IG publisher"
           java -jar ./input-cache/publisher.jar publisher -ig ig.ini
-          
+
       # Publishes the HTML page to a seperate branch in order to host it using GitHub-Pages.
       # This will overwrite the currently published HTML page.
       - name: 🚀 Deploy to GitHub-Pages
@@ -51,4 +51,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ${{ env.IG_SHORTNAME }}/output
           destination_dir: currentbuild
-          commit_message: '${{ env.IG }}: ${{ github.event.head_commit.message }}' 
+          commit_message: "${{ env.IG }}: ${{ github.event.head_commit.message }}"
