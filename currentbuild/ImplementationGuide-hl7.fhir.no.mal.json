@@ -3,14 +3,14 @@
   "id" : "hl7.fhir.no.mal",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.no.mal</b></p><a name=\"hl7.fhir.no.mal\"> </a><a name=\"hchl7.fhir.no.mal\"> </a><a name=\"hl7.fhir.no.mal-no-NO\"> </a><h2>Mal</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.no/fhir/ig/mal/ImplementationGuide/hl7.fhir.no.mal</pre><div><p>Implementasjonsguide for å TODO</p>\n</div></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.no.mal</b></p><a name=\"hl7.fhir.no.mal\"> </a><a name=\"hchl7.fhir.no.mal\"> </a><h2>Mal</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.no/fhir/ig/mal/ImplementationGuide/hl7.fhir.no.mal</pre><div><p>Implementasjonsguide for å TODO</p>\n</div></div>"
   },
   "url" : "http://hl7.no/fhir/ig/mal/ImplementationGuide/hl7.fhir.no.mal",
   "version" : "0.1.0",
   "name" : "Mal",
   "title" : "Mal",
   "status" : "draft",
-  "date" : "2025-04-04T11:22:52+00:00",
+  "date" : "2026-03-12T12:57:39+00:00",
   "publisher" : "HL7 Norge",
   "contact" : [{
     "name" : "HL7 Norge",
@@ -38,7 +38,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "6.2.0"
+    "version" : "7.1.0"
   },
   {
     "id" : "hl7ext",
@@ -54,7 +54,7 @@
     "id" : "hl7_fhir_no_basis",
     "uri" : "http://fhir.org/packages/hl7.fhir.no.basis/ImplementationGuide/hl7.fhir.no.basis",
     "packageId" : "hl7.fhir.no.basis",
-    "version" : "2.2.0"
+    "version" : "2.2.2"
   }],
   "definition" : {
     "extension" : [{
@@ -64,7 +64,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "2025+"
+        "valueString" : "2026+"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -334,7 +334,7 @@
     },
     {
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-      "valueCode" : "hl7.fhir.uv.tools.r4#0.4.1"
+      "valueCode" : "hl7.fhir.uv.tools.r4#0.9.0"
     },
     {
       "extension" : [{
@@ -343,7 +343,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "2025+"
+        "valueString" : "2026+"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -644,7 +644,7 @@
         "reference" : "Patient/Pasient-1"
       },
       "name" : "Pasient-1",
-      "description" : "Eksempel på pasient med navn og fødselsnummer",
+      "description" : "Eksempel på norsk pasient med fødselsnummer, navn og kontaktinformasjon",
       "exampleCanonical" : "http://hl7.no/fhir/ig/mal/StructureDefinition/mal-patient"
     }],
     "page" : {
