@@ -133,7 +133,7 @@ publisher:
   name: Din Organisasjon
   url: https://www.din-organisasjon.no
 dependencies:
-  hl7.fhir.no.basis: 2.2.0
+  hl7.fhir.no.basis: 2.2.2
 menu:
   Hjem: index.html
   Artefakter: artifacts.html
