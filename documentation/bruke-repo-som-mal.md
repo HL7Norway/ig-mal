@@ -76,7 +76,10 @@ Du kan lage eksempler på to måter:
 - **I FSH-profiler:** Som `Instance`-objekter i samme fil som profilen (anbefalt for maler)
 - **Separate filer:** Opprett `input/examples/` og legg JSON/XML-eksempler der
 
-**_NOTE:_** fsh-validator krever at det **skal finnes** eksempel til hver profil og at den er i **samme fil** som profilen.
+**_NOTE:_** fsh-validator legger inn noen ekstra krav/forventninger som må overholdes:
+-  Det skal finnes eksempel til hver profil.
+-  Eksempel skal ligge i samme fil som profilen.
+-  Eksempel må referere profil med id (ikke symbolsk navn).
 
 ## Trinn 6: Test og valider
 
