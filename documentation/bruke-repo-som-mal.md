@@ -76,6 +76,8 @@ Du kan lage eksempler på to måter:
 - **I FSH-profiler:** Som `Instance`-objekter i samme fil som profilen (anbefalt for maler)
 - **Separate filer:** Opprett `input/examples/` og legg JSON/XML-eksempler der
 
+**_NOTE:_** fsh-validator krever at det **skal finnes** eksempel til hver profil og at den er i **samme fil** som profilen.
+
 ## Trinn 6: Test og valider
 
 ### 6.1 Aktiver GitHub Actions
@@ -126,7 +128,7 @@ description: "Detaljert beskrivelse av implementasjonsguiden din"
 status: draft
 version: 0.1.0
 fhirVersion: 4.0.1
-copyrightYear: 2025+
+copyrightYear: 2026+
 releaseLabel: ci-build
 jurisdiction: urn:iso:std:iso:3166#NO "Norway"
 publisher:
