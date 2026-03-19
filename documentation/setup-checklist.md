@@ -93,7 +93,7 @@ Under "Workflow permissions":
 - [ ] Gå til "Settings" → "Pages"
 - [ ] Velg "Deploy from a branch" → `gh-pages` → `/root`
 - [ ] Klikk "Save"
-- [ ] Vent noen minutter, så vil din IG være tilgjengelig på `https://[brukernavn].github.io/[repo-navn]/`
+- [ ] Vent noen minutter, så vil din IG være tilgjengelig på `https://[brukernavn].github.io/[repo-navn]/currentbuild`
 
 ## 8. Siste kvalitetskontroll
 
