@@ -85,7 +85,9 @@ GitHub Actions er allerede konfigurert, men du må kanskje aktivere dem:
 1. Gå til "Settings" → "Actions" → "General" i din repo
 2. Sørg for at "Allow all actions and reusable workflows" er valgt
 
-### 6.2 Test validering
+### 6.2 Test/validering
+
+Dette er en kjappere validering som er grei å kjøre for å teste før full publisering i trinn 7. 
 
 1. Gå til "Actions"-fanen i din repo
 2. Velg "Validate FSH Files"
