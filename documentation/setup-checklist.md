@@ -36,6 +36,12 @@ Under "Workflow permissions":
 - [ ] Oppdater `description` fra "TODO" til faktisk beskrivelse
 - [ ] Oppdater `publisher` navn og URL
 
+### Oppdater ig.ini
+- [ ] Åpne `[ditt-mappenavn]/ig.ini`
+- [ ] Endre `ImplementationGuide-hl7.fhir.no.mal.json` til `ImplementationGuide-[din-id].json` (samme ID som i sushi-config.yaml)
+
+`template` kan også endres etter eget ønske, men vi foreslår at du bruker HL7 Norge sin mal i første omgang for enkelhetens skyld.
+
 ### Oppdater GitHub Actions
 - [ ] Åpne `.github/workflows/ig-gh-pages.yml`
 - [ ] Endre `IG_SHORTNAME: mal` til ditt mappenavn
