@@ -21,11 +21,6 @@ Under "Workflow permissions":
 - [ ] Velg "Read and write permissions"
 - [ ] Sørg for at "Allow GitHub Actions to create and approve pull requests" er aktivert
 
-### GitHub Pages (for senere)
-- [ ] Gå til "Settings" → "Pages"
-- [ ] Velg "Deploy from a branch"
-- [ ] Vent med å sette opp til etter første vellykket IG-bygg
-
 ## 3. Tilpass konfigurasjonsfiler
 
 ### Oppdater sushi-config.yaml
