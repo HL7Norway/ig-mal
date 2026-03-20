@@ -102,7 +102,9 @@ Dette er en kjappere validering som er grei å kjøre for å teste før full pub
 4. Etter vellykket kjøring, aktiver GitHub Pages:
    - Gå til "Settings" → "Pages"
    - Velg "Deploy from a branch" → `gh-pages` → `/root`
-   - Din IG vil være tilgjengelig på `https://[ditt-brukernavn].github.io/[repo-navn]/`
+   - Din IG vil være tilgjengelig på `https://[kontonavn].github.io/[repo-navn]/currentbuild`
+
+Kontonavn er navnet på kontoen som repo'et er på, f.eks. "HL7Norway" eller din organisasjon/brukernavn. 
 
 ## Checklist for oppsett
 
