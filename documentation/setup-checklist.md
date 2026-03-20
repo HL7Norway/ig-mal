@@ -21,10 +21,14 @@ Under "Workflow permissions":
 - [ ] Velg "Read and write permissions"
 - [ ] Sørg for at "Allow GitHub Actions to create and approve pull requests" er aktivert
 
-## 3. Tilpass konfigurasjonsfiler
+## 3. Gi nytt navn til IG-mappen (anbefalt)
+
+- [ ] Gi nytt navn til `mal/`-mappen til noe beskrivende (f.eks. `lab-ig/`)
+
+## 4. Tilpass konfigurasjonsfiler
 
 ### Oppdater sushi-config.yaml
-- [ ] Åpne `mal/sushi-config.yaml`
+- [ ] Åpne `[ditt-mappenavn]/sushi-config.yaml`
 - [ ] Endre `id: hl7.fhir.no.mal` til din unike ID
 - [ ] Endre `canonical: http://hl7.no/fhir/ig/mal` til din URL
 - [ ] Endre `name: Mal` til ditt IG-navn (uten mellomrom)
@@ -37,11 +41,6 @@ Under "Workflow permissions":
 - [ ] Endre `IG_SHORTNAME: mal` til ditt mappenavn
 - [ ] Åpne `.github/workflows/validate-fsh.yml`
 - [ ] Endre `IG_SHORTNAME: mal` til samme mappenavn
-
-## 4. Gi nytt navn til IG-mappen (anbefalt)
-
-- [ ] Gi nytt navn til `mal/`-mappen til noe beskrivende (f.eks. `lab-ig/`)
-- [ ] Sørg for at `IG_SHORTNAME` i GitHub Actions matcher det nye navnet
 
 ## 5. Tilpass FSH-innhold
 
