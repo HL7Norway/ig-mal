@@ -18,12 +18,17 @@ Denne checklisten hjelper deg med å sette opp ig-mal for ditt eget prosjekt. F�
 
 Under "Workflow permissions":
 
-- [ ] Velg "Read and write permissions"
-- [ ] Sørg for at "Allow GitHub Actions to create and approve pull requests" er aktivert
+- [ ] Velg "Read and write permissions" slik at publiseringsworkflowen kan skrive til `gh-pages`
+- [ ] Kontroller at workflowene har tilgang til å skrive repository-innhold (`contents: write`)
+
+Pull request-tillatelsen "Allow GitHub Actions to create and approve pull requests" er ikke nødvendig for workflowene i denne malen.
 
 ## 3. Gi nytt navn til IG-mappen (anbefalt)
 
 - [ ] Gi nytt navn til `mal/`-mappen til noe beskrivende (f.eks. `lab-ig/`)
+- [ ] Bruk det nye mappenavnet som `IG_SHORTNAME` i `.github/workflows/ig-gh-pages.yml` og `.github/workflows/validate-fsh.yml`
+- [ ] Oppdater path-filtrene for `pull_request` og `push` i `.github/workflows/validate-fsh.yml` fra `mal/...` til det nye mappenavnet
+- [ ] Oppdater `path` i `.github/workflows/plant-uml.yml` fra `mal/input/images` til det nye mappenavnet
 
 ## 4. Tilpass konfigurasjonsfiler
 
@@ -47,6 +52,8 @@ Under "Workflow permissions":
 - [ ] Endre `IG_SHORTNAME: mal` til ditt mappenavn
 - [ ] Åpne `.github/workflows/validate-fsh.yml`
 - [ ] Endre `IG_SHORTNAME: mal` til samme mappenavn
+- [ ] Oppdater `mal/...`-stiene under `pull_request.paths` og `push.paths` i `validate-fsh.yml`
+- [ ] Åpne `.github/workflows/plant-uml.yml` og oppdater `path: mal/input/images`
 
 ## 5. Tilpass FSH-innhold
 
@@ -85,7 +92,7 @@ Under "Workflow permissions":
 ## 7. Bygg og publiser IG
 
 ### Første bygg
-- [ ] Gå til "Actions" → "Build and Deploy IG to GitHub Pages"
+- [ ] Gå til "Actions" → "Gen IG and publish GH pages"
 - [ ] Klikk "Run workflow" → "Run workflow"
 - [ ] Vent på at jobben blir ferdig (kan ta 5-10 minutter)
 
