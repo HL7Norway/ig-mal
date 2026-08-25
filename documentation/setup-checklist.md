@@ -2,6 +2,8 @@
 
 Denne checklisten hjelper deg med å sette opp ig-mal for ditt eget prosjekt. Følg trinnene i rekkefølge for best resultat.
 
+*NB: Hvis du bruker ig-mal med formål om å teste og lære, anbefales å bare beholde navnet ("mal") for å spare tid.* 
+
 ## 1. Opprett repo fra template
 
 - [ ] Klikk "Use this template" på [HL7Norway/ig-mal](https://github.com/HL7Norway/ig-mal)
@@ -128,7 +130,7 @@ Gratulerer! Du har nå satt opp din egen FHIR Implementation Guide basert på ig
 Fremover vil du typisk:
 - Oppdatere FSH-profiler og eksempler
 - Kjøre "Validate FSH Files" før større endringer
-- Kjøre "Build and Deploy IG" når du vil publisere oppdateringer
+	- Kjøre "Gen IG and publish GH pages" når du vil publisere oppdateringer
 - Overvåke GitHub Actions for eventuelle feil
 
 ## 🆘 Trenger du hjelp?

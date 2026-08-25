@@ -36,7 +36,19 @@ publisher:
   url: https://www.example.org
 ```
 
-### 3.2 Oppdater miljøvariabel i GitHub Actions
+### 3.2 Oppdater `ig.ini`
+
+Åpne `[ditt-mappenavn]/ig.ini` og oppdater `ig` slik at filnavnet bruker samme ID som i `sushi-config.yaml`:
+
+```ini
+[IG]
+ig = fsh-generated/resources/ImplementationGuide-ditt.fhir.ig.navn.json
+template = https://github.com/HL7Norway/ig-template
+```
+
+Behold `template` med HL7 Norge sin mal med mindre du har en annen template du skal bruke.
+
+### 3.3 Oppdater miljøvariabel i GitHub Actions
 
 Åpne `.github/workflows/ig-gh-pages.yml` og `.github/workflows/validate-fsh.yml`, og endre:
 
@@ -45,10 +57,12 @@ env:
   IG_SHORTNAME: ditt-ig-navn    # Endre fra 'mal'
 ```
 
-### 3.3 Flytt eller gi nytt navn til `mal/`-mappen
+I `validate-fsh.yml` må du også oppdatere `mal/...`-stiene under `pull_request.paths` og `push.paths` til det nye mappenavnet. Publiseringsworkflowen trenger skrivetilgang til repository-innhold (`contents: write`) for å kunne oppdatere `gh-pages`. Innstillingen for at GitHub Actions skal kunne opprette og godkjenne pull requests er ikke nødvendig for workflowene i denne malen.
+
+### 3.4 Flytt eller gi nytt navn til `mal/`-mappen
 
 Du bør endre navnet på `mal/`-mappen til noe som passer ditt prosjekt, f.eks. `min-ig/`.  
-Husk å oppdatere `IG_SHORTNAME` i GitHub Actions tilsvarende.
+Husk å oppdatere `IG_SHORTNAME` i GitHub Actions tilsvarende. Oppdater også `path` i `.github/workflows/plant-uml.yml` fra `mal/input/images` til det nye mappenavnet.
 
 ## Trinn 4: Tilpass FSH-innhold
 
@@ -84,6 +98,7 @@ GitHub Actions er allerede konfigurert, men du må kanskje aktivere dem:
 
 1. Gå til "Settings" → "Actions" → "General" i din repo
 2. Sørg for at "Allow all actions and reusable workflows" er valgt
+3. Under "Workflow permissions", velg "Read and write permissions" slik at publiseringsworkflowen kan skrive til `gh-pages`
 
 ### 6.2 Test/validering
 
@@ -97,7 +112,7 @@ Dette er en kjappere validering som er grei å kjøre for å teste før full pub
 ## Trinn 7: Publiser din IG
 
 1. Gå til "Actions"-fanen
-2. Velg workflowen "Build and Deploy IG to GitHub Pages"  
+2. Velg workflowen "Gen IG and publish GH pages"
 3. Klikk "Run workflow" for å generere og publisere
 4. Etter vellykket kjøring, aktiver GitHub Pages:
    - Gå til "Settings" → "Pages"
@@ -112,7 +127,10 @@ For å sikre at du har fulgt alle trinn:
 
 - [ ] Opprettet repo fra template
 - [ ] Oppdatert `sushi-config.yaml` med dine verdier
+- [ ] Oppdatert `ig.ini` med samme IG-ID som i `sushi-config.yaml`
 - [ ] Endret `IG_SHORTNAME` i `.github/workflows/`-filene
+- [ ] Oppdatert path-filtrene i `validate-fsh.yml`
+- [ ] Oppdatert PlantUML-stien i `plant-uml.yml` hvis `mal/` er omdøpt
 - [ ] Gitt nytt navn til `mal/`-mappen (valgfritt, men anbefalt)
 - [ ] Tilpasset FSH-profiler og eksempler
 - [ ] Oppdatert `index.md` med din dokumentasjon
