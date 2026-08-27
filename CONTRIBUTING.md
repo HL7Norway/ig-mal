@@ -23,7 +23,7 @@ Det skal skilles på "private" og "offentlige" IGer, som skal publiseres og regi
 
 #### Registre
 
-- [Standarder (Helsedirektoratet)](https://www.ehelse.no/standardisering/standarder)
+- [Referansekatalogen for e-helse](https://www.helsedirektoratet.no/digitalisering-og-e-helse/referansekatalogen-for-e-helse)
 - [Implementation Guide Registry](https://www.fhir.org/guides/registry/)
 - [HL7 Norge på Simplifier.net](https://simplifier.net/organization/hl7norway/) (også publisering)
 
