@@ -36,4 +36,4 @@ Følg beste praksis for implementasjonsguider. Utvalgte ressurser:
 
 ---
 
-> **Status:** Malen er under kontinuerlig utvikling. Se [plan og bidrag](CONTRIBUTING.md) for mer informasjon.
+> **Status:** Malen er under kontinuerlig utvikling. Se [plan og bidrag](CONTRIBUTING.md) for mer informasjon. 
