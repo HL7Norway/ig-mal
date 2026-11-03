@@ -121,7 +121,7 @@ Dette er en kjappere validering som er grei å kjøre for å teste før full pub
 
 Kontonavn er navnet på kontoen som repo'et er på, f.eks. "HL7Norway" eller din organisasjon/brukernavn. 
 
-## Checklist for oppsett
+## Sjekkliste for oppsett
 
 For å sikre at du har fulgt alle trinn:
 
@@ -136,6 +136,8 @@ For å sikre at du har fulgt alle trinn:
 - [ ] Oppdatert `index.md` med din dokumentasjon
 - [ ] Testet FSH-validering i GitHub Actions
 - [ ] Kjørt IG-generering og aktivert GitHub Pages
+
+Se også [utvidet sjekkliste](setup-checklist.md).
 
 ## Eksempel på komplett sushi-config.yaml
 
