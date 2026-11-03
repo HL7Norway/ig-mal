@@ -31,7 +31,7 @@ Se malens [dokumentasjon for bruk, konfigurering og automatisering](documentatio
 
 ## 🎯 Beste praksis
 
-Følg beste praksis for implementasjonsguider. Utvalgte ressurser:
+Følg beste praksis for implementasjonsguider - ut godt utgangspunkt er våre sider for [beste praksis](https://hl7norway.github.io/best-practice/).
 
 
 ---
