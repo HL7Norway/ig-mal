@@ -17,11 +17,11 @@ on:
     paths:
       - 'mal/input/fsh/**'
       - 'mal/sushi-config.yaml'
-  push:
-    branches: [main]
-    paths:
-      - 'mal/input/fsh/**'
-      - 'mal/sushi-config.yaml'
+#  push:
+#    branches: [main]
+#    paths:
+#      - 'mal/input/fsh/**'
+#      - 'mal/sushi-config.yaml'
 
 # CONFIGURATION: The "short name" of the IG and the folder must be the same
 env:
