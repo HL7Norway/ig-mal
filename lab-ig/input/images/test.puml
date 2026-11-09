@@ -1,23 +1,58 @@
 @startuml
+title FHIR-ressurser for å finne forskningsstudier
+left to right direction
+skinparam classAttributeIconSize 0
+skinparam shadowing false
 
-' Tittel og bunntekst for diagrammet
-title Eksempel-diagram
-footer Undertekst A
-
-' Klassedefinisjoner med attributter
-class Folk {
-    -Navn : string
-    +Fødselsår : int
-}
-class Sykkel
-class Tastatur
-class Datamaskin {
-    +Svenskeknapp : boolean
+class ResearchStudy {
+    +title : string
+    +status : code
+    +sponsor : Reference(Organization)
+    +site : Reference(Organization)
+    +enrollment : Reference(Group)
 }
 
-' Relasjoner mellom klasser
-Folk <-- Datamaskin : bruker
-Folk <-- Sykkel : eier
-Tastatur --o Datamaskin : består av
+class Group {
+    +type : code
+    +membership : code
+    +characteristic : kriterier
+}
 
+class Organization {
+    +name : string
+}
+
+class Location {
+    +address : Address
+    +position : coordinates
+}
+
+class Questionnaire
+class QuestionnaireResponse {
+    +answer : user data
+}
+
+class Patient
+class Condition
+class Observation
+class MedicationStatement
+
+ResearchStudy --> Organization : site (0..*)
+ResearchStudy --> Group : enrollment (0..*)
+Location --> Organization : managingOrganization (0..1)
+Questionnaire "1" --> "0..*" QuestionnaireResponse : collects answers
+QuestionnaireResponse --> Patient : subject (0..1)
+Condition --> Patient : subject
+Observation --> Patient : subject (0..1)
+MedicationStatement --> Patient : subject
+
+note bottom of Group
+    Inclusion and exclusion criteria
+    can be evaluated individually.
+end note
+
+note bottom of Patient
+    Use only the data needed
+    for preliminary matching.
+end note
 @enduml
