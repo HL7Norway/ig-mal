@@ -15,10 +15,9 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
 ```
 
-Denne delen spesifiserer at workflowen kjøres automatisk ved push til `main`-branchen eller manuelt ved å bruke "Run workflow"-knappen i GitHub Actions-grensesnittet.
+Denne delen spesifiserer at workflowen kjøres automatisk ved push til `main`-branchen.
 
 ## Jobber
 
@@ -64,4 +63,4 @@ Dette trinnet bruker `grassedge/generate-plantuml-action@v1.5` for å generere P
 - `message`: Angir commit-meldingen for endringene som gjøres.
 - `env.GITHUB_TOKEN`: Brukes for autentisering mot GitHub API for å kunne pushe endringer.
 
-Ved å følge denne workflowen, kan du automatisk generere og publisere PlantUML-diagrammer til repoen ved hver push til `main`-branchen eller ved manuell kjøring av workflowen.
+Ved å følge denne workflowen, kan du automatisk generere og publisere PlantUML-diagrammer til repoen ved hver push til `main`-branchen.
