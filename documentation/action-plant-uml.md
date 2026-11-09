@@ -52,13 +52,13 @@ Dette trinnet sjekker ut repoen slik at workflowen kan få tilgang til koden. `f
     id: plantuml
     uses: grassedge/generate-plantuml-action@v1.5
     with:
-      path: mal/input/images
+      path: lab-ig/input/images
       message: "Render PlantUML files"
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
-Dette trinnet bruker `grassedge/generate-plantuml-action@v1.5` for å generere PlantUML-diagrammer fra filene i `mal/input/images`-mappen.
+Dette trinnet bruker `grassedge/generate-plantuml-action@v1.5` for å generere PlantUML-diagrammer fra filene i `lab-ig/input/images`-mappen.
 
 - `path`: Angir mappen som inneholder PlantUML-filene.
 - `message`: Angir commit-meldingen for endringene som gjøres.

@@ -23,7 +23,7 @@ Denne guiden vil hjelpe deg med å bruke denne repoen som en mal for å lage din
 
 ### 3.1 Oppdater `sushi-config.yaml`
 
-Åpne `mal/sushi-config.yaml` og endre følgende felter:
+Åpne `lab-ig/sushi-config.yaml` og endre følgende felter:
 
 ```yaml
 id: ditt.fhir.ig.navn           # Endre fra hl7.fhir.no.mal
@@ -54,15 +54,15 @@ Behold `template` med HL7 Norge sin mal med mindre du har en annen template du s
 
 ```yaml
 env:
-  IG_SHORTNAME: ditt-ig-navn    # Endre fra 'mal'
+  IG_SHORTNAME: ditt-ig-navn    # Endre fra 'lab-ig'
 ```
 
-I `validate-fsh.yml` må du også oppdatere `mal/...`-stiene under `pull_request.paths` og `push.paths` til det nye mappenavnet. Publiseringsworkflowen trenger skrivetilgang til repository-innhold (`contents: write`) for å kunne oppdatere `gh-pages`. Innstillingen for at GitHub Actions skal kunne opprette og godkjenne pull requests er ikke nødvendig for workflowene i denne malen.
+I `validate-fsh.yml` må du også oppdatere `lab-ig/...`-stiene under `pull_request.paths` og `push.paths` til det nye mappenavnet. Publiseringsworkflowen trenger skrivetilgang til repository-innhold (`contents: write`) for å kunne oppdatere `gh-pages`. Innstillingen for at GitHub Actions skal kunne opprette og godkjenne pull requests er ikke nødvendig for workflowene i denne malen.
 
-### 3.4 Flytt eller gi nytt navn til `mal/`-mappen
+### 3.4 Flytt eller gi nytt navn til `lab-ig/`-mappen
 
-Du bør endre navnet på `mal/`-mappen til noe som passer ditt prosjekt, f.eks. `min-ig/`.  
-Husk å oppdatere `IG_SHORTNAME` i GitHub Actions tilsvarende. Oppdater også `path` i `.github/workflows/plant-uml.yml` fra `mal/input/images` til det nye mappenavnet.
+Du kan endre navnet på `lab-ig/`-mappen til noe som passer ditt prosjekt, f.eks. `min-ig/`.  
+Husk å oppdatere `IG_SHORTNAME` i GitHub Actions tilsvarende. Oppdater også `path` i `.github/workflows/plant-uml.yml` fra `lab-ig/input/images` til det nye mappenavnet.
 
 ## Trinn 4: Tilpass FSH-innhold
 
@@ -102,7 +102,7 @@ GitHub Actions er allerede konfigurert, men du må kanskje aktivere dem:
 
 ### 6.2 Test/validering
 
-Dette er en kjappere validering som er grei å kjøre for å teste før full publisering i trinn 7. 
+Dette er en kjappere validering som er grei å kjøre for å teste før full publisering i trinn 7.
 
 1. Gå til "Actions"-fanen i din repo
 2. Velg "Validate FSH Files"
@@ -119,7 +119,7 @@ Dette er en kjappere validering som er grei å kjøre for å teste før full pub
    - Velg "Deploy from a branch" → `gh-pages` → `/root`
    - Din IG vil være tilgjengelig på `https://[kontonavn].github.io/[repo-navn]/currentbuild`
 
-Kontonavn er navnet på kontoen som repo'et er på, f.eks. "HL7Norway" eller din organisasjon/brukernavn. 
+Kontonavn er navnet på kontoen som repo'et er på, f.eks. "HL7Norway" eller din organisasjon/brukernavn.
 
 ## Sjekkliste for oppsett
 
@@ -130,8 +130,8 @@ For å sikre at du har fulgt alle trinn:
 - [ ] Oppdatert `ig.ini` med samme IG-ID som i `sushi-config.yaml`
 - [ ] Endret `IG_SHORTNAME` i `.github/workflows/`-filene
 - [ ] Oppdatert path-filtrene i `validate-fsh.yml`
-- [ ] Oppdatert PlantUML-stien i `plant-uml.yml` hvis `mal/` er omdøpt
-- [ ] Gitt nytt navn til `mal/`-mappen (valgfritt, men anbefalt)
+- [ ] Oppdatert PlantUML-stien i `plant-uml.yml` hvis `lab-ig/` er omdøpt
+- [ ] Gitt nytt navn til `lab-ig/`-mappen hvis ønskelig
 - [ ] Tilpasset FSH-profiler og eksempler
 - [ ] Oppdatert `index.md` med din dokumentasjon
 - [ ] Testet FSH-validering i GitHub Actions

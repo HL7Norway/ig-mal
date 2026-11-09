@@ -15,17 +15,17 @@ on:
         type: boolean
   pull_request:
     paths:
-      - 'mal/input/fsh/**'
-      - 'mal/sushi-config.yaml'
+      - 'lab-ig/input/fsh/**'
+      - 'lab-ig/sushi-config.yaml'
   push:
     branches: [main]
     paths:
-      - 'mal/input/fsh/**'
-      - 'mal/sushi-config.yaml'
+      - 'lab-ig/input/fsh/**'
+      - 'lab-ig/sushi-config.yaml'
 
 # CONFIGURATION: The "short name" of the IG and the folder must be the same
 env:
-  IG_SHORTNAME: mal
+  IG_SHORTNAME: lab-ig
   # IG: ${{ vars.IG_KORTNAVN }}
 
 jobs:
