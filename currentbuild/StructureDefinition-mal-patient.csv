@@ -27,7 +27,8 @@ anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Patient.extension:citizenship","Patient.extension","citizenship","statsborgerskap
 ","",0,*,"","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/patient-citizenship]]} {[]}
-","The citizenship of the patient","The citizenship of the patient. should be a country code from ISO 3166 code system","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","The citizenship of the patient","The citizenship of the patient. should be a country code from ISO 3166 code system","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Patient.extension:citizenship.id","Patient.extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
@@ -36,9 +37,9 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Patient.extension:citizenship.extension:code","Patient.extension.extension","code","","",0,1,"","","","Extension {[]} {[]}
-","Extension","no-basis-Patient introduces iso 3166 codes
+","Nation code of citizenship","no-basis-Patient introduces iso 3166 codes
 
-Nation code representing the citizenship of patient.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+Nation code representing the citizenship of patient.","","","","","","","","","",,"example","","urn:iso:std:iso:3166","",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Patient.extension:citizenship.extension:code.id","Patient.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"

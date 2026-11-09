@@ -16,9 +16,9 @@ Profil for vanlige blodprøver
 
 **Usages:**
 
-* This Profile is not used by any profiles in this Implementation Guide
+* This Profile is not used by any profiles in this Specification
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.mal|current/StructureDefinition/mal-observation-blodprove)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/hl7.fhir.no.mal|current/StructureDefinition/StructureDefinition-mal-observation-blodprove.json)
 
 ### Formal Views of Profile Content
 
