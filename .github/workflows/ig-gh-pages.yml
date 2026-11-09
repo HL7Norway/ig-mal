@@ -13,6 +13,8 @@ env:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     container: hl7fhir/ig-publisher-base:latest
     steps:
       - uses: actions/checkout@v7
